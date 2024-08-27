@@ -55,10 +55,11 @@
             font-weight: bold;
         }
 
-        .about {
-            padding: 64px;
-            text-align: left;
-        }
+       .about {
+    padding: 64px;
+    text-align: left;
+}
+
 .about h1 {
     font-size: 64px;
     font-weight: bold;
@@ -67,67 +68,75 @@
     width: 100%;
 }
 
+.about h2 {
+    font-size: 64px;
+    font-weight: 600;
+    color: #2A642A;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
 
-        .about h2 {
-            font-size: 64px;
-            font-weight: 600;
-            color: #2A642A;
-            text-align: center;
-            margin-top: 20px;
-            width: 100%;
-        }
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 80px 100px;
+    gap: 20px; /* Reduced gap between sections */
+}
 
-        .section-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 80px 100px;
-        }
+.section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 30px; /* Reduce the gap between sections */
+    width: 48%; /* Make each section occupy 48% of the container's width */
+}
 
-        .section {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 40px;
-            gap: 20px; /* Add space between sections */
-            width: 48%; /* Make each section occupy 48% of the container's width */
-        }
+.section-header {
+    font-size: 42px; /* Slightly larger */
+    font-weight: 600; /* Semi-bold */
+    color: black;
+    margin-right: 20px; /* Space between header and card */
+}
 
-        .section-header {
-            font-size: 40px;
-            font-weight: 600; /* Semi-bold */
-            color: black;
-            margin-right: 20px; /* Space between header and card */
-        }
-
-      .section-card {
-    width: 300px; /* Set a uniform width for all cards */
-    height: 150px; /* Adjust height automatically based on content */
+.section-card {
+    width: 400px; /* Increase the width of the cards */
+    height: 200px; /* Increase the height of the cards */
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 50px; /* Increase padding inside the card */
     background-color: #FFFFFF;
     overflow: hidden; /* Prevents scrollbars */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+    font-size: 18px; /* Increase font size inside the cards */
 }
 
+.section-card {
+    padding: 20px 20px 50px 20px; /* Reduce top padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts at the top */
+}
+
+.section-card p {
+    font-size: 23px; /* Increase the font size for paragraphs */
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #333; /* Optional: Change text color for better visibility */
+}
 
 .section-card:hover {
     transform: translateY(-10px); /* Make the card "hover" */
     box-shadow: 1px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
-
-        .vision-header, .mission-header, .values-header {
-            color: black;
-        }
-.section-card {
-    width: 300px; /* Set a uniform width for all cards */
+.vision-header, .mission-header, .values-header {
+    color: black;
 }
 
 .card-vision {
     color: #2A642A;
-    /* Remove specific width if previously set */
 }
 
 .card-mission {
@@ -136,64 +145,64 @@
 
 .card-values {
     color: #2A6A2A;
-    width: 300px; /* Ensure it matches the width of other cards */
 }
 
-        /* Specific style for Values section */
-        .values-section {
-            justify-content: flex-end;
-            margin-top: 40px; /* Further lowering the entire Values section */
-        }
+.values-section {
+    justify-content: flex-end;
+    margin-top: 40px; /* Further lowering the entire Values section */
+}
 
-        .values-header {
-            order: 2; /* Keep header to the right of the card */
-            margin-left: 20px; /* Space between card and header */
-            margin-right: 0; /* Remove default right margin */
-            margin-top: 40px; /* Further lower the Values header */
-        }
+.values-header {
+    order: 2; /* Keep header to the right of the card */
+    margin-left: 20px; /* Space between card and header */
+    margin-right: 0; /* Remove default right margin */
+    margin-top: 40px; /* Further lower the Values header */
+}
 
-        .card-values {
-            order: 1; /* Ensure card is on the left */
-            margin-top: 40px; /* Further lower the Values card */
-        }
+.card-values {
+    order: 1; /* Ensure card is on the left */
+    margin-top: 40px; /* Further lower the Values card */
+}
 
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-            .logo {
-                align-self: flex-end;
-            }
+    .logo {
+        align-self: flex-end;
+    }
 
-            .about h1 {
-                font-size: 48px;
-            }
+    .about h1 {
+        font-size: 48px;
+    }
 
-            .about h2 {
-                font-size: 48px;
-            }
+    .about h2 {
+        font-size: 48px;
+    }
 
-            .section-container {
-                margin: 40px 20px;
-            }
+    .section-container {
+        margin: 40px 20px;
+    }
 
-            .section {
-                flex-direction: column;
-                width: 100%; /* Full width for smaller screens */
-            }
+    .section {
+        flex-direction: column;
+        width: 100%; /* Full width for smaller screens */
+    }
 
-            .section-header {
-                font-size: 32px;
-                margin-right: 0; /* Remove margin for smaller screens */
-            }
+    .section-header {
+        font-size: 32px;
+        margin-right: 0; /* Remove margin for smaller screens */
+    }
 
-            .section-card {
-                width: calc(100% - 40px);
-                margin-bottom: 40px; /* Space between cards in column layout */
-            }
-        }
+    .section-card {
+        width: calc(100% - 40px);
+        margin-bottom: 40px; /* Space between cards in column layout */
+        font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+}
+
  .team-section {
     padding: 100px 100px 0; /* Adjust padding as needed */
 }
