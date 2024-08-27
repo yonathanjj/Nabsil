@@ -380,7 +380,12 @@ background: linear-gradient(to top, #001d00 40%, #808080 80%, #ffffff);
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
      
-
+@media (max-width: 768px) {
+    .footer {
+        height: auto; /* Adjust height for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
 
 .footer p {
     margin: 0; /* Remove default margins for paragraph text */
