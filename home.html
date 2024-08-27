@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home - Nabsil Grain Bank</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            z-index: 1000; /* Ensure it overlays the images */
+        }
+
+        .logo {
+            width: 50px;
+            height: 79px;
+            background-image: url('icon2.png'); /* replace with your logo image path */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .action-button {
+            background-color: #2A642A;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            height: 920px; /* Set fixed height */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .active-slide {
+            display: block;
+        }
+
+        .slide-content {
+            position: absolute;
+            color: white;
+            padding: 20px;
+        }
+
+        .slide-content h1 {
+            font-size: 55px; /* Slightly reduced font size */
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: -25px; /* Reduced gap between header and subtext */
+        }
+
+        .slide-content p {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .register-button {
+            background-color: #001d00;
+            color: white;
+            padding: 15px 30px; /* Increase padding for larger button */
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block; /* Ensure it's a block element */
+            animation: pulse 1.5s infinite; /* Added animation */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .register-button.hidden {
+            display: none; /* Hide the button on all but the first slide */
+        }
+
+        .dot-container {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #2A642A;
+        }
+.about-section {
+    background-color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: right; /* Align the header content to the right */
+    margin-top: 50px;
+}
+
+.about-section h1 {
+    font-size: 64px;
+    color: #001d00;
+    margin: 0;
+    margin-right: 50px; /* 50px gap from the right side of the screen */
+    display: inline-block;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    margin-top: 20px; /* Space between the header and content */
+    position: relative;
+    margin-left: 50px; /* 50px gap from the left side of the screen */
+}
+
+.about-image {
+    width: 800px;
+    height: 470px;
+    border-radius: 10px;
+    background-image: url('abouth.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.about-overlay {
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgba(42, 100, 42, 0.8); /* Lightened 2A642A color with transparency */
+    position: absolute;
+    right: 10px;
+    top: -50%; /* Center overlay vertically relative to the image */
+    transform: translateY(-50%); /* Center it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: transform 0.4s ease, background-color 0.4s ease; /* Smooth transition for transform and color */
+}
+
+.about-overlay p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+/* Hover effect */
+.about-overlay:hover {
+    transform: translateY(-50%) scale(1.05); /* Slightly enlarge the overlay */
+    background-color: rgba(42, 100, 42, 1); /* Change the background color on hover */
+}
+
+
+
+
+        }
+.about-image {
+    width: 950px;
+    height: 570px;
+    border-radius: 10px;
+    background-image: url('abouth.jpg');
+    background-size: cover;
+    background-position: left;
+    position: relative; /* Set relative positioning */
+    top: 0; /* Use top, right, bottom, and left for adjustments */
+    left: 0;
+    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Smooth transition for transform and shadow */
+}
+
+.about-image:hover {
+    /* Remove the hover effects */
+    /* transform: scale(1.05); */
+    /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); */
+}
+
+
+
+        .about-overlay {
+            position: absolute;
+            right: 45px;
+            top: 250px; /* Adjust top to move overlay up or down */
+            width: -250px;
+            height: 300px;
+            background-color: rgba(0, 29, 0, 0.9); /* 90% transparent overlay */
+            border-radius: 10px;
+        }
+
+        .read-more-button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #001d00;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            z-index: 1000; /* Ensure it overlays the image and overlay */
+        }
+        .text-and-lines {
+    position: absolute;
+    right: 50px; /* 50px gap from the right side of the screen */
+    top: 0;
+    width: 350px; /* Adjust the width as necessary */
+    color: rgba(42, 100, 42, 0.5); /* Very light #2A642A color */
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.text-and-lines {
+    position: absolute;
+    right: 80px; /* 50px gap from the right side of the screen */
+    top: 1700px; /* Adjusted the top value to move it below the overlay and image */
+    width: 350px; /* Adjust the width as necessary */
+    color: #2A642A; /* Darker, bolder green color */
+    font-size: 20px;
+    line-height: 1.5;
+}
+.text-item {
+    margin-bottom: 20px; /* Space between each text item */
+    text-align: left;
+    font-weight: bold; /* Make the text bold */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transform and color transitions */
+}
+
+.text-item p {
+    margin: 0;
+    color: #2A642A; /* Ensure the text is the bolder color */
+    font-weight: bold; /* Ensure the text is bold */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.text-item:hover p {
+    color: #4A8F4A; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge text on hover */
+}
+
+.text-item hr {
+    margin: 5px 0;
+    border: none;
+    border-top: 2px solid #2A642A; /* Line color to match the text */
+    width: 100%; /* Adjust the width of the line */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth border color and transform transitions */
+}
+
+.text-item:hover hr {
+    border-color: #4A8F4A; /* Change line color on hover */
+    transform: scaleX(1.05); /* Slightly enlarge the line on hover */
+}
+.promise-header {
+    position: absolute;
+    left: 50px; /* Gap from the left side of the screen */
+    top: calc(50% + 1350px); /* Position it below the image with some space */
+    background-color: rgba(255, 255, 255, 0.9); /* Slight background color for overlap effect */
+    padding: 10px 20px; /* Add some padding around the text */
+    border-radius: 10px; /* Rounded corners for the header */
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+.promise-header h2 {
+    margin: 0;
+    color: #001d00; /* Text color */
+    font-size: 50px; /* Font size */
+}
+.promise-text {
+    position: relative;
+    left: 10px; /* Align with the promise header */
+    top: 300px; /* Space between the header and the text */
+    width: 500px; /* Adjust width as needed */
+    color: #001d00; /* Dark color for the text */
+    font-size: 20px; /* Match the font size with the text-and-lines section */
+    line-height: 1.5; /* Line height for readability */
+    font-weight: normal; /* Normal font weight for the paragraph */
+}
+
+.promise-text p {
+    margin: 0; /* Remove default margins */
+}
+.read-more-button {
+    position: absolute;
+    bottom: 90px; /* Space from the bottom of the overlay */
+    right: 40px; /* Space from the right side of the overlay */
+    background-color: #001d00; /* Dark green color */
+    color: white;
+    padding: 20px 30px; /* Increase padding for better button size */
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center; /* Ensure text alignment is centered */
+    z-index: 1100; /* Ensure it overlays the overlay */
+    /* Adjusting the position to move it further down */
+    top: calc(49% + 150px); /* Moves the button 20px further down from the center */
+}
+.footer {
+    width: 345.5%; /* Set to 100% to match the page width */
+    height: 300px; /* Define the height of the footer */
+/* Set the background color of the footer with a gradient */
+/* Set the background color of the footer with an adjusted gradient */
+/* Set the background color of the footer with an extended gradient */
+background: linear-gradient(to top, #001d00 40%, #808080 80%, #ffffff);
+    position: absolute;
+    bottom: -300px; /* Align the footer to the bottom of the page */
+    left: -780px; /* Align the footer text to the left side */
+    padding: 20px; /* Add some padding to the footer content */
+    color: white; /* Set the text color to white */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.footer p {
+    margin: 0; /* Remove default margins for paragraph text */
+    text-align: left; /* Align text to the left */
+    font-size: 18px; /* Set the font size */
+    line-height: 1.5; /* Set the line height for readability */
+}
+.footer h2 {
+    text-align: left; /* Aligns the "Contact Us" header to the left */
+    margin-left: 0; /* Removes any left margin if present */
+    padding-left: 0; /* Removes any left padding if present */
+}
+.contact-header {
+    position: relative;
+    /* Add your existing styles here */
+}
+
+.quick-links {
+    position: absolute;
+    right: 580px;
+    top: 325px;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.quick-links h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff; /* Update to desired color */
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffffff; /* Update to desired color */
+}
+
+.arrow {
+    margin-right: 10px;
+}
+/* New styles for Services */
+.services {
+    float: right;
+    width: 45%;
+    margin-left: 60%; /* Adjust this value to move the section further to the right */
+    margin-top: 315px; /* Adjust this value to move the section down */
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff; /* Color of services header */
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffffff; /* Color of services text */
+}
+
+.services .arrow {
+    margin-right: 10px;
+}
+
+/* Ensure proper spacing and alignment */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container > div {
+    width: 45%;
+}
+/* Newsletter section styling */
+.newsletter-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    margin: 20px;
+}
+
+.newsletter-header {
+    margin-right: -20px;
+    margin-top: 325px; /* Keep this as is */
+    position: relative;
+    left: 50px; /* Add or adjust left to move the header to the right */
+    color: #ffffff; /* Set text color to white */
+}
+
+
+/* Styling for the email box and sign-up button */
+.email-box-container {
+    position: relative;
+    margin-top: 360px; /* Add margin-top to move the input box down */
+    left: -50px; /* Move the container to the left */
+}
+.email-box {
+    width: 130px;
+    height: 57px;
+    border: 2px solid #ffffff; /* Stroke border */
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    background-color: transparent; /* Make background transparent to show only the edge */
+}
+
+.sign-up-box {
+    position: absolute;
+    right: -80px;
+    height: 57px;
+    width: 100px;
+    background-color: #E5D0CC;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.sign-up-box:hover {
+    background-color: #c0c0c0;
+}
+/* Icons container styling */
+.icons-container {
+    display: flex;
+    flex-direction: row; /* Arrange icons horizontally */
+    gap: 20px; /* 10px gap between icons */
+    margin-top: 450px; /* Adjust margin-top to move icons down */
+    position: relative;
+    left: -170px; /* Adjust left to move icons to the left */
+}
+
+.icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+}
+/* Horizontal Line in the Footer */
+.footer-line {
+    border: none; /* Remove default border */
+    height: 1px; /* Line thickness */
+    background-color: #00a652; /* Line color */
+    margin: 30px 0; /* Spacing above and below the line */
+    position: absolute; /* Position it absolutely to stretch across */
+    left: 0; /* Align to the left of the footer */
+    right: 0; /* Align to the right of the footer */
+    bottom: 0; /* Align to the bottom of the footer */
+    width: 100vw; /* Ensure it spans the full viewport width */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    position: absolute; /* Position it absolutely within the footer */
+    left: 0; /* Align to the left of the footer */
+    bottom: -5px; /* Adjust spacing from the bottom of the footer */
+    width: 100%; /* Ensure it spans the full width */
+    padding: 0 20px; /* Add padding to ensure content is not touching edges */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Footer Icon */
+.footer-icon {
+    width: 20px; /* Adjust the icon size as needed */
+    height: 20px; /* Maintain aspect ratio or adjust as needed */
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+/* Footer Text */
+.footer-text {
+    color: #ffffff; /* Text color to match the line color */
+    font-size: 14px; /* Font size for the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+ooter {
+    overflow: hidden; /* Prevent child elements from causing horizontal overflow */
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+<li><a href="../home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+<li><a href="take-action.html" class="action-button">Take Action</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="slideshow-container">
+        <div class="slide active-slide" style="background-image: url('h1.jpg');">
+            <div class="slide-content" style="left: 5%; top: 50%; transform: translateY(-50%);">
+                <h1>NABSIL Grain Bank</h1>
+                <p>Your Growth Partner</p>
+                <a href="take-action.html" class="register-button">Register</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('h2.jpg');">
+            <div class="slide-content" style="right: 5%; top: 50%; transform: translateY(-50%); text-align: right;">
+                <h1>Empowering Farmers<br>Transforming Agriculture</h1>
+                <!-- Register button removed -->
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('bj.jpg');">
+            <div class="slide-content" style="left: 5%; top: 50%; transform: translateY(-50%);">
+                <h1>Revolutionizing Agricultural Value <br>Chains in Africa</h1>
+                <!-- Register button removed -->
+            </div>
+        </div>
+
+        <div class="dot-container">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+<div class="about-section">
+    <h1>About</h1>
+    <div class="about-content">
+        <div class="about-image"></div>
+        <div class="about-overlay">
+            <p>NABSIL Grain Bank is an integrated agricultural solutions provider working to transform and uplift the grain ecosystem across Africa.</p>
+            <!-- Read More button -->
+            <a href="about.html" class="read-more-button">Read More</a>
+        </div>
+    </div>
+
+
+    <!-- New header for "Our Promise" -->
+<div class="promise-header">
+    <h2>Our Promise</h2>
+</div>
+
+<!-- New text below "Our Promise" header -->
+<div class="promise-text">
+    <p>NABSIL Grain Bank is dedicated to transforming Africa's<br> grain sector through secure storage, innovative trading,<br> financial solutions, and optimized logistics.</p>
+</div>
+
+<!-- Existing text and horizontal lines -->
+<div class="text-and-lines">
+    <div class="text-item">
+        <p>Mitigate grain losses</p>
+        <hr>
+    </div>
+    <div class="text-item">
+        <p>Immediate liquidity</p>
+        <hr>
+    </div>
+    <div class="text-item">
+        <p>Integrated supply chain</p>
+        <hr>
+    </div>
+    <div class="text-item">
+        <p>Transparency</p>
+        <hr>
+    </div>
+    <div class="text-item">
+        <p>Peace of mind</p>
+        <hr>
+    </div>
+    <div class="text-item">
+        <p>Quality assurance</p>
+        <hr>
+    </div>
+
+
+
+   <footer class="footer">
+         <h2>Contact Us</h2>
+
+            <p><img src="p.png" alt="Phone Icon" style="width: 16px; height: 16px;"> +1-234-567-890</p>
+            <p><img src="l.png" alt="Email Icon" style="width: 16px; height: 16px;"> contact@nabsilgrainbank.com</p>
+            <p><img src="e.png" alt="Location Icon" style="width: 16px; height: 16px;"> 123 Grain St, City, Country</p>
+        </div>
+</div>
+
+<header class="contact-header">
+    <!-- Existing header content -->
+    <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><span class="arrow">→</span> About Us</li>
+            <li><span class="arrow">→</span> Our Services</li>
+            <li><span class="arrow">→</span> Terms & Condition</li>
+        </ul>
+    </div>
+    <!-- New section for Services -->
+<div class="services">
+    <h2>Services</h2>
+    <ul>
+        <li><span class="arrow">→</span>Trade</li>
+        <li><span class="arrow">→</span>Market</li>
+        <li><span class="arrow">→</span>Register</li>
+    </ul>
+</div>
+
+    <div class="newsletter-container">
+        <h2 class="newsletter-header">Newsletter</h2>
+        <div class="email-box-container">
+            <input type="text" class="email-box" placeholder="Your email">
+            <button class="sign-up-box">Sign Up</button>
+        </div>
+         <div class="icons-container">
+        <img src="x.png" alt="Icon 1" class="icon">
+        <img src="in.png" alt="Icon 2" class="icon">
+        <img src="ing.png" alt="Icon 3" class="icon">
+    </div>
+    </div>
+<footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <img src="c.png" class="footer-icon" alt="Icon">
+        <span class="footer-text">All Rights Reserved NABSIL</span>
+    </div>
+</footer>
+
+
+
+
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        setInterval(function() {
+            slideIndex++;
+            if (slideIndex > document.getElementsByClassName("slide").length) {
+                slideIndex = 1;
+            }
+            showSlides(slideIndex);
+        }, 8000); /* Set time interval for each slide */
+    </script>
+
+</body>
+</html>

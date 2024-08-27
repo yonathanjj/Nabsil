@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service - Nabsil Grain Bank</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 50px;
+            height: 79px;
+            background-image: url('icon2.png'); /* replace with your logo image path */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .action-button {
+            background-color: #2A642A;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .services {
+            padding: 64px 64px 64px 20px; /* Adjust padding to align header properly */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .services h1 {
+            color: #001D00;
+            font-size: 64px;
+            font-weight: 600; /* Semi-bold */
+            margin: 0;
+            margin-bottom: 20px;
+            align-self: flex-start; /* Align to the left */
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 0; /* No gap between cards */
+        }
+
+        .card {
+            width: 333px;
+            height: 623.25px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 273px;
+            height: 277px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin: 3px auto 0;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h2 {
+            color: #FFFFFF;
+            font-size: 32px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #FFFFFF;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .card1 { background-color: #00A652; }
+        .card2 { background-color: #520052; }
+        .card3 { background-color: #000062; }
+        .card4 { background-color: #000000; }
+
+        .highlight-paragraph {
+            font-size: 27px;
+            color: #2A642A;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0 20px; /* Add some padding for better readability */
+        }
+
+        .additional-info {
+            text-align: right;
+            padding: 0 20px;
+        }
+
+        .additional-info h2 {
+            color: #001D00;
+            font-size: 32px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .additional-info p {
+            color: #2A642A;
+            font-size: 27px;
+            margin: 0;
+        }
+
+        .image-gallery {
+            display: flex;
+            gap: 102px; /* Gap between images */
+            margin-top: 40px;
+            justify-content: center; /* Center images horizontally */
+        }
+
+        .image-gallery img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px; /* Curved corners */
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .services h1 {
+                font-size: 48px;
+            }
+
+            .card {
+                width: 100px; /* Adjust card width for smaller screens */
+                height: 150px; /* Adjust card height for smaller screens */
+            }
+
+            .card img {
+                width: 100px; /* Adjust image width for smaller screens */
+                height: 77px; /* Adjust image height for smaller screens */
+            }
+
+            .highlight-paragraph,
+            .additional-info h2,
+            .additional-info p {
+                font-size: 20px; /* Adjust font size for smaller screens */
+            }
+
+            .image-gallery {
+                flex-direction: column; /* Stack images vertically on small screens */
+                gap: 20px; /* Adjust gap for vertical stacking */
+            }
+
+            .image-gallery img {
+                width: 100%; /* Make images responsive */
+                height: auto;
+            }
+        }
+         .how-it-works {
+            text-align: center;
+            padding: 64px 20px;
+            background-color: #F9F9F9; /* Optional background color for better separation */
+        }
+
+        .how-it-works h2 {
+            color: #001D00;
+            font-size: 27px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .how-it-works p {
+            color: #2A642A;
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .images-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px; /* Gap between images */
+            padding: 20px;
+        }
+
+        .images-section .image-container {
+            position: relative;
+            width: 397px;
+            height: 650px;
+        }
+
+        .images-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .images-section .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 94.5%;
+            height: 30%;
+            background:  linear-gradient(to bottom, rgba(42, 100, 42, 0.8) 50%, transparent 100%);;
+            border-radius: 10px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .images-section .overlay h3 {
+            margin: 0;
+            font-size: 60px;
+        }
+
+        .images-section .overlay p {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .images-section {
+                flex-direction: column;
+                gap: 20px; /* Reduce gap between images for smaller screens */
+            }
+
+            .images-section .image-container {
+                width: 100%;
+                height: auto; /* Adjust height for smaller screens */
+            }
+        }
+
+
+
+
+footer {
+    background-color: #001D00;
+    color: #ffffff;
+    padding: 40px 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    margin-top: 30px; /* Moves the header down */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section img {
+    margin-right: 10px;
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+}
+
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    margin-top: 0px; /* Reset margin to ensure it aligns properly */
+    margin-left: 0px; /* Adjust as needed */
+}
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    position: relative; /* Ensure the container is relative for absolute positioning of button */
+    margin-top: 0;
+}
+
+.newsletter-input {
+    width: 150px; /* Adjust size as needed */
+    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #D9D9D9; /* Border color */
+    border-radius: 10px 0 0 10px; /* Round the left corners */
+    background: #001D00; /* Background color of the input box */
+    box-shadow: inset 0 0 0 2px #000; /* Inner stroke effect */
+    box-sizing: border-box;
+}
+
+.newsletter-btn {
+    position: absolute; /* Positioning absolute to overlap */
+    right: 10px; /* Aligns the button to the right edge of the container */
+    width: 100px; /* Adjust size as needed */
+    height: 50px;
+    background-color: #ffcccc; /* Pale pink color */
+    color: #000;
+    border: 2px solid #000; /* Border color */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer;
+    font-size: 14px;
+    top: 0; /* Aligns the button to the top of the input box */
+}
+
+.newsletter-btn:hover {
+    background-color: #ffb3b3; /* Slightly darker pale pink on hover */
+}
+
+/* Other existing styles */
+
+
+        .social-icons {
+            display: none; /* Hides the social icons section */
+        }
+
+        /* Footer Line */
+        .footer-line {
+            border: none;
+            border-top: 1px solid #ffffff; /* Line color */
+            margin: 20px 0; /* Spacing above and below the line */
+            width: 100%; /* Ensures the line is end-to-end */
+        }
+
+        /* Quick Links and Services Section */
+        .links-section {
+            display: flex;
+            gap: 100px;
+        }
+
+        .links-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links-column h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .links-column .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links-column .link-item::before {
+            content: '→'; /* Arrow symbol */
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .links-column h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.links-column.services h3 {
+    margin-top: -65px; /* Creates an 80px gap from the previous header */
+}
+
+
+        .footer-section {
+            margin-right: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-section {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .rights-text {
+                text-align: center;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+         .links-column .link-item a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+.social-icons {
+    display: flex;
+    gap: 08px;
+    margin-top: 30px; /* Adjust as needed to position correctly */
+    margin-left: 05px; /* Align with the newsletter box */
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+        /* Adjust the margin to move the newsletter section up */
+.footer-section {
+    margin-top: -30px; /* Move up by 30px (adjust as needed) */
+}
+
+/* Adjust the margin of the newsletter box and icons specifically */
+.newsletter-box {
+    margin-top: 0; /* Reset margin to ensure it aligns properly */
+}
+
+.social-icons {
+    margin-top: 30px; /* Adjust as needed to position correctly */
+}
+/* Ensure the footer has no padding or margins that would restrict the line's width */
+footer {
+    background-color: #001D00;
+    color: #ffffff;
+    padding: 40px 0; /* Adjusted padding */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensure the footer-content does not restrict the full-width line */
+.footer-content {
+    max-width: 100%; /* Allow full width */
+    padding: 0 60px; /* Ensure content is centered with space on the sides */
+    box-sizing: border-box;
+    position: relative; /* Position relative to position the line absolutely */
+}
+
+/* Horizontal Line in the Footer */
+.footer-line {
+    border: none; /* Remove default border */
+    height: 1px; /* Line thickness */
+    background-color: #00a652; /* Line color */
+    margin: 30px 0; /* Spacing above and below the line */
+    position: absolute; /* Position it absolutely to stretch across */
+    left: 0; /* Align to the left of the footer */
+    right: 0; /* Align to the right of the footer */
+    bottom: 0px; /* Align to the bottom of the footer */
+    width: 100vw; /* Ensure it spans the full viewport width */
+}
+.rights-icon {
+    width: 20px; /* Adjust the width to the desired size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="take-action.html" class="action-button">Take action</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="cards-container">
+            <div class="card card1">
+                <img src="s1.jpg" alt="Service 1">
+                <div class="card-content">
+                    <p>NABSIL Grain Bank provides top-tier storage facilities with controlled environments to protect your harvested crops and maintain their quality until they go to market.</p>
+                     <br>
+                                     <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+
+                    <h2>Secured Grain Storage Solutions</h2>
+                </div>
+            </div>
+            <div class="card card2">
+                <img src="hs4.jpg" alt="Service 2">
+                <div class="card-content">
+                    <p>Unlock the financial value of your stored grain assets through NABSIL's grain collateralization program, which provides certified documentation of your grain holdings to secure loans and lines of credit from lenders.</p>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+
+                    <h2>Grain as Collateral</h2>
+                </div>
+            </div>
+            <div class="card card3">
+                <img src="s2.jpg" alt="Service 3">
+                <div class="card-content">
+                    <p>Our digital platform simplifies the process of selling and transferring ownership of stored grains, enabling you to market and execute sales at your preferred timing and pricing.</p>
+                    <br>
+                                     <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+
+                    <h2>Integrated Grain Transactions</h2>
+                </div>
+            </div>
+            <div class="card card4">
+                <img src="s3.jpg" alt="Service 4"> <!-- Replace with the actual image path -->
+                <div class="card-content">
+                    <p>NABSIL provides commercial grain buyers and food processors with a trusted supply of graded grains like maize, sorghum, and teff, offering complete tracking and reliable, transparent market pricing.</p>
+                    <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+
+                    <h2>Trusted Supplier for Buyers</h2>
+                </div>
+            </div>
+        </div>
+        <p class="highlight-paragraph">NABSIL Grain Bank offers<br> comprehensive solutions for the African<br> grain industry. We are committed to<br> empowering farmers, mitigating post<br>-harvest losses, and ensuring reliable grain<br> supply.</p>
+        <div class="additional-info">
+            <h2>Sustainable<br> Development Goals</h2>
+            <p>We are committed to creating a better future by <br>balancing economic growth, social well-being, <br>and environmental protection.</p>
+        </div>
+        <br>
+        <div class="image-gallery">
+            <img src="sdg1.jpg" alt="Gallery Image 1">
+            <img src="sdg2.jpg" alt="Gallery Image 2">
+            <img src="sdg3.jpg" alt="Gallery Image 3">
+        </div>
+    </section>
+ <section class="how-it-works">
+        <h2>How It Works</h2>
+        <p>Step by step process</p>
+    </section>
+
+    <section class="images-section">
+        <div class="image-container">
+            <img src="how3.jpg" alt="Storage">
+            <div class="overlay">
+                <h3>Storage</h3>
+                <p>Farmers bring their harvest to our facilities, where it is dried and stored in climate-controlled silos.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="how1.jpg" alt="Certificate">
+            <div class="overlay">
+                <h3>Certificate</h3>
+                <p>Each farmer receives a digital certificate representing their stored grain.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="how2.jpg" alt="Trade">
+            <div class="overlay">
+                <h3>Trade</h3>
+                <p>Farmers can sell their grain directly through our digital platform or use the certificates as loan collateral.</p>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><img src="p.png" alt="Phone Icon" style="width: 16px; height: 16px;"> +1-234-567-890</p>
+            <p><img src="e.png" alt="Email Icon" style="width: 16px; height: 16px;"> contact@nabsilgrainbank.com</p>
+            <p><img src="l.png" alt="Location Icon" style="width: 16px; height: 16px;"> 123 Grain St, City, Country</p>
+        </div>
+
+        <div class="links-section">
+            <!-- Quick Links Column -->
+            <div class="links-column">
+                <h3>Quick Links</h3>
+                <div class="link-item"><a href="#">About Us</a></div>
+                <div class="link-item"><a href="#">Service</a></div>
+                <div class="link-item"><a href="#">Term and Condition</a></div>
+            </div>
+
+            <!-- Services Column -->
+            <div class="links-column services">
+                <h3>Services</h3>
+                <div class="link-item"><a href="#">Tread</a></div>
+                <div class="link-item"><a href="#">Market</a></div>
+                <div class="link-item"><a href="#">Register</a></div>
+            </div>
+
+            <!-- Newsletter Box -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <div class="newsletter-box">
+                    <input type="email" class="newsletter-input" placeholder="Your Email">
+                    <button class="newsletter-btn">Sign up</button>
+                </div>
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="#"><img src="x.png" alt="Facebook" style="width: 16px; height: 16px;"></a>
+                    <a href="#"><img src="li.png" alt="Twitter" style="width: 16px; height: 16px;"></a>
+                    <a href="#"><img src="ing.png" alt="Instagram" style="width: 16px; height: 16px;"></a>
+                </div>
+            </div>
+        </div>
+        <hr class="footer-line">
+<div class="rights-section">
+    <img src="c.png" alt="Icon" class="rights-icon">
+    <span class="rights-text">All Rights Reserved NABSIL</span>
+</div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Nabsil Grain Bank</title>
+    <!-- Include Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6LoPfnjZjE1o8r6KQcrTiWVjjBO8ttKFrqG9j1lF/qYZh9uv6Yx8DxjQZ6hr4Vw" crossorigin="anonymous" />
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 50px;
+            height: 79px;
+            background-image: url('icon2.png'); /* replace with your logo image path */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .action-button {
+            background-color: #2A642A;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px 40px;
+        }
+
+        .left-side {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .right-side {
+            flex: 1;
+            margin-top: 100px;
+            margin-left: 65px;
+        }
+
+        .recent-articles {
+            color: #001d00;
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .image-item {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .image-item img {
+            width: 500px;
+            height: 260px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .image-item h3 {
+            font-weight: 600;
+            margin: 0;
+            color: #001d00;
+        }
+
+        .image-item p {
+            margin: 5px 0 0;
+            font-weight: 100;
+            color: #333;
+        }
+
+        .line {
+            height: 2px;
+            background-color: #000;
+            margin: 10px 0;
+            width: 100%;
+        }
+.slider-container {
+    position: relative;
+    width: 430px;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 2150px; /* 5 images * 430px */
+}
+
+.slider-images img {
+    width: 430px;
+    height: 970px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slider-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.slider-dots button {
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background-color: #2A642A;
+}
+
+
+
+
+/* New Styles for Rights Section */
+.rights-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    position: relative;
+    bottom: -15px; /* Adjust if necessary */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.rights-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.rights-text {
+    color: #ffffff; /* Text color */
+    font-size: 14px; /* Font size */
+}
+.image-item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image-item:hover {
+    transform: translateY(-10px); /* Moves the entire item up on hover */
+}
+
+.image-item div {
+    transition: transform 0.3s ease; /* Smooth transition for text inside the image-item */
+}
+
+.image-item:hover div {
+    transform: translateY(-5px); /* Moves the text inside the item up slightly on hover */
+}
+
+
+
+footer {
+    background-color: #001D00;
+    color: #ffffff;
+    padding: 40px 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    margin-top: 30px; /* Moves the header down */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section img {
+    margin-right: 10px;
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+}
+
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    margin-top: 0px; /* Reset margin to ensure it aligns properly */
+    margin-left: 0px; /* Adjust as needed */
+}
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    position: relative; /* Ensure the container is relative for absolute positioning of button */
+    margin-top: 0;
+}
+
+.newsletter-input {
+    width: 150px; /* Adjust size as needed */
+    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #D9D9D9; /* Border color */
+    border-radius: 10px 0 0 10px; /* Round the left corners */
+    background: #001D00; /* Background color of the input box */
+    box-shadow: inset 0 0 0 2px #000; /* Inner stroke effect */
+    box-sizing: border-box;
+}
+
+.newsletter-btn {
+    position: absolute; /* Positioning absolute to overlap */
+    right: 10px; /* Aligns the button to the right edge of the container */
+    width: 100px; /* Adjust size as needed */
+    height: 50px;
+    background-color: #ffcccc; /* Pale pink color */
+    color: #000;
+    border: 2px solid #000; /* Border color */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer;
+    font-size: 14px;
+    top: 0; /* Aligns the button to the top of the input box */
+}
+
+.newsletter-btn:hover {
+    background-color: #ffb3b3; /* Slightly darker pale pink on hover */
+}
+
+/* Other existing styles */
+
+
+        .social-icons {
+            display: none; /* Hides the social icons section */
+        }
+
+        /* Footer Line */
+        .footer-line {
+            border: none;
+            border-top: 1px solid #ffffff; /* Line color */
+            margin: 20px 0; /* Spacing above and below the line */
+            width: 100%; /* Ensures the line is end-to-end */
+        }
+
+        /* Quick Links and Services Section */
+        .links-section {
+            display: flex;
+            gap: 100px;
+        }
+
+        .links-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links-column h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .links-column .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links-column .link-item::before {
+            content: '→'; /* Arrow symbol */
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .links-column h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.links-column.services h3 {
+    margin-top: 0px; /* Creates an 80px gap from the previous header */
+}
+
+
+        .footer-section {
+            margin-right: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-section {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .rights-text {
+                text-align: center;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+         .links-column .link-item a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+.social-icons {
+    display: flex;
+    gap: 08px;
+    margin-top: 30px; /* Adjust as needed to position correctly */
+    margin-left: 05px; /* Align with the newsletter box */
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+        /* Adjust the margin to move the newsletter section up */
+.footer-section {
+    margin-top: -30px; /* Move up by 30px (adjust as needed) */
+}
+
+/* Adjust the margin of the newsletter box and icons specifically */
+.newsletter-box {
+    margin-top: 0; /* Reset margin to ensure it aligns properly */
+}
+
+.social-icons {
+    margin-top: 30px; /* Adjust as needed to position correctly */
+}
+/* Ensure the footer has no padding or margins that would restrict the line's width */
+footer {
+    background-color: #001D00;
+    color: #ffffff;
+    padding: 40px 0; /* Adjusted padding */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensure the footer-content does not restrict the full-width line */
+.footer-content {
+    max-width: 100%; /* Allow full width */
+    padding: 0 60px; /* Ensure content is centered with space on the sides */
+    box-sizing: border-box;
+    position: relative; /* Position relative to position the line absolutely */
+}
+
+/* Horizontal Line in the Footer */
+.footer-line {
+    border: none; /* Remove default border */
+    height: 1px; /* Line thickness */
+    background-color: #00a652; /* Line color */
+    margin: 30px 0; /* Spacing above and below the line */
+    position: absolute; /* Position it absolutely to stretch across */
+    left: 0; /* Align to the left of the footer */
+    right: 0; /* Align to the right of the footer */
+    bottom: 0px; /* Align to the bottom of the footer */
+    width: 100vw; /* Ensure it spans the full viewport width */
+}
+.rights-icon {
+    width: 20px; /* Adjust the width to the desired size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+ <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="take-action.html" class="action-button">Take action</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="left-side">
+            <div class="recent-articles">Recent Articles</div>
+
+            <div class="image-container">
+                <!-- Image Item 1 -->
+                <div class="line"></div>
+
+                <div class="image-item">
+                    <img src="b1.jpg" alt="Article Image 1">
+                    <div>
+                        <h3>Preserving Our Harvest:</h3>
+                        <p>Learn about innovative and eco-friendly methods for<br> storing grains. Discover how proper storage protects our food supply,<br> reduces waste, and contributes to a sustainable food system.</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+
+                <!-- Image Item 2 -->
+                <div class="image-item">
+                    <img src="b2.jpg" alt="Article Image 2">
+                    <div>
+                        <h3>The Future of Grain Banking:</h3>
+                        <p>Explore the latest advancements in grain banking technology.<br> Discover how digital solutions are reshaping the industry and<br> enhancing efficiency and accessibility for farmers and consumers.</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+
+                <!-- Image Item 3 -->
+                <div class="image-item">
+                    <img src="b3.jpg" alt="Article Image 3">
+                    <div>
+                        <h3>Innovations in Grain Processing:</h3>
+                        <p>Dive into cutting-edge technologies transforming grain processing.<br> Learn about new techniques that enhance quality, efficiency, and<br> sustainability in our food production systems.</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="image-container">
+
+</div>
+
+            </div>
+        </div>
+        <div class="right-side">
+    <div class="slider-container">
+        <div class="slider-images">
+            <img src="ww.jpg" alt="Slider Image 1">
+            <img src="ww2.jpg" alt="Slider Image 2">
+            <img src="ww3.jpg" alt="Slider Image 3">
+            <img src="s1.jpg" alt="Slider Image 4">
+            <img src="s2.jpg" alt="Slider Image 5">
+        </div>
+        <div class="slider-dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+ <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><img src="p.png" alt="Phone Icon" style="width: 16px; height: 16px;"> +1-234-567-890</p>
+            <p><img src="e.png" alt="Email Icon" style="width: 16px; height: 16px;"> contact@nabsilgrainbank.com</p>
+            <p><img src="l.png" alt="Location Icon" style="width: 16px; height: 16px;"> 123 Grain St, City, Country</p>
+        </div>
+
+        <div class="links-section">
+            <!-- Quick Links Column -->
+            <div class="links-column">
+                <h3>Quick Links</h3>
+                <div class="link-item"><a href="#">About Us</a></div>
+                <div class="link-item"><a href="#">Service</a></div>
+                <div class="link-item"><a href="#">Term and Condition</a></div>
+            </div>
+
+            <!-- Services Column -->
+            <div class="links-column services">
+                <h3>Services</h3>
+                <div class="link-item"><a href="#">Tread</a></div>
+                <div class="link-item"><a href="#">Market</a></div>
+                <div class="link-item"><a href="#">Register</a></div>
+            </div>
+
+            <!-- Newsletter Box -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <div class="newsletter-box">
+                    <input type="email" class="newsletter-input" placeholder="Your Email">
+                    <button class="newsletter-btn">Sign up</button>
+                </div>
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="#"><img src="x.png" alt="Facebook" style="width: 16px; height: 16px;"></a>
+                    <a href="#"><img src="in.png" alt="Twitter" style="width: 16px; height: 16px;"></a>
+                    <a href="#"><img src="ing.png" alt="Instagram" style="width: 16px; height: 16px;"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add the horizontal line here -->
+        <hr class="footer-line">
+        <!-- Add this new section for the rights reserved text and icon -->
+<div class="rights-section">
+    <img src="c.png" alt="Icon" class="rights-icon"> <!-- Replace with your icon image path -->
+    <span class="rights-text">All Rights Reserved NABSIL</span>
+</div>
+
+    </div>
+</footer>
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.slider-images img');
+    const dots = document.querySelectorAll('.slider-dots button');
+    const totalImages = images.length;
+
+    function showSlide(index) {
+        // Calculate the offset to slide the images
+        const offset = -index * 430; // 430 is the width of each image
+        document.querySelector('.slider-images').style.transform = `translateX(${offset}px)`;
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showSlide(currentIndex);
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        showSlide(currentIndex);
+    }
+
+    // Add click event listeners to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Set up automatic slide change every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initial display
+    showSlide(currentIndex);
+
+</script>
+</body>
+</html>

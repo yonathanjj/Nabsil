@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take-action - Nabsil Grain Bank</title>
+    <style>
+        body {
+            background-color: #EBEBFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 50px;
+            height: 79px;
+            background-image: url('icon2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .action-button {
+            background-color: #2A642A;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .image-container {
+            position: relative;
+            width: 1180px;
+            height: 525px;
+            margin: 20px auto; /* Center the image horizontally */
+            background-image: url('tr.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px; /* Add 10px curve to the image */
+            overflow: hidden; /* Ensure the rounded corners are visible */
+        }
+
+        .card {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 281px;
+            height: 100px;
+            background-color: #EBEBFF;
+            border-top-right-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .card h2 {
+            font-size: 64px;
+            color: #001D00;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .content {
+            max-width: 1180px; /* Same width as the image */
+            margin: 30px auto; /* Center the content */
+            text-align: left;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
+
+        .boxes-container {
+            display: flex;
+            justify-content: flex-start; /* Align the boxes to the left */
+            gap: 10px; /* Reduce the gap between boxes */
+            margin-left: 0; /* Align boxes with the left edge of the image */
+        }
+
+        .box {
+            width: 180px;
+            height: 50px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .box:hover {
+            background-color: #001D00; /* Turn the box green */
+            color: white; /* Change text color to white */
+            transform: translateY(-10px); /* Float the box upwards */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Market Section Styles */
+        .market-section {
+            margin-top: 50px; /* Add some space between the content above and this section */
+        }
+
+        .market-header {
+            font-size: 64px;
+            color: #001D00;
+            margin-left: 0; /* Align header with the left edge of the image */
+        }
+
+        .market-images-container {
+            display: flex;
+            justify-content: flex-start; /* Align images to the left */
+            gap: 280px; /* Adjusted gap between images */
+            margin-left: 25px; /* Move the images slightly to the right */
+            margin-top: 50px;
+        }
+
+        .market-image {
+            position: relative;
+            width: 330px; /* Reduced image size */
+            height: 330px; /* Reduced image size */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px; /* Add 10px curve to the images */
+            margin-bottom: 80px; /* Space between the image and button */
+        }
+
+         .overlay {
+            position: absolute;
+            left: 250px; /* Align overlay to the left edge of the image */
+            right: -200px; /*align overlay to the left edge of the image*/
+            top: 50%;
+            transform: translateY(-50%);
+            height: 200px;
+            background-color: rgba(42, 100, 42, 0.7); /* Semi-transparent green */
+            border-radius: 10px; /* Add 10px curve to the overlay */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .overlay h3 {
+            font-size: 24px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .overlay p {
+    color: white; /* Set paragraph color to white */
+    font-size: 16px;
+    margin: 0;
+}
+
+
+        .purchase-request {
+            width: 250px;
+            height: 40px;
+            border: 2px solid #000000; /* Stroke edge */
+            color: #000000; /* Text color */
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: transparent; /* No background color */
+            margin-top: 350px; /* Add space above the button */
+            margin-left: 0px;
+            margin-right: auto;
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Animation on hover */
+        }
+
+        .purchase-request:hover {
+            background-color: #001D00; /* Button background turns green on hover */
+            color: white; /* Text color turns white on hover */
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between; /* Space between images */
+    gap: 70px; /* Adjust the gap between the images if needed */
+    margin: 30px auto; /* Center the gallery horizontally and add some margin */
+    max-width: 1040px; /* Ensure the gallery width fits within the page */
+    flex-wrap: nowrap; /* Prevent wrapping to ensure images stay in one line */
+}
+
+.image-item {
+    position: relative;
+    width: 400px; /* Ensure width is correct */
+    height: 700px; /* Ensure height is correct */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.gallery-overlay {
+    position: absolute;
+    width: 360px; /* Set the width of the overlay */
+    height: 500px; /* Set the height of the overlay */
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between content and button */
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+    text-align: left; /* Align text to the left */
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Adds a border to the overlay */
+}
+
+.overlay-header {
+    font-size: 32px;
+    color: #2A642A;
+    margin-bottom: 20px; /* Space between header and lines */
+}
+
+.overlay-list {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px; /* Space between list and button */
+    line-height: 1.5; /* Space between lines */
+}
+
+.overlay-list div {
+    position: relative;
+    padding-bottom: 10px; /* Space for the line */
+}
+
+.overlay-list div::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #333; /* Line color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.get-started-button {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.get-started-button:hover {
+    background-color: #001d00;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.register-header {
+    text-align: center; /* Center the header text */
+    margin: 30px auto; /* Center the header horizontally and add margin */
+}
+
+.register-header h1 {
+    font-size: 64px; /* Set font size to 64px */
+    color: #001D00; /* Set font color to #001D00 */
+    margin: 0; /* Remove default margin */
+}
+
+.contact-section {
+    text-align: center; /* Center-align all content */
+    margin: 60px auto; /* Add margin for spacing */
+}
+
+.contact-header {
+    font-size: 96px; /* Large font size for the header */
+    font-weight: 600; /* Semi-bold */
+    color: #001D00; /* Dark green color */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.contact-paragraph {
+    font-size: 22px; /* Font size for the paragraph */
+    color: #333; /* Dark gray color for the text */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.contact-button {
+    background-color: #001D00; /* Dark green background */
+    color: white; /* White text */
+    font-size: 18px; /* Font size for the button */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Curved corners */
+    padding: 15px 30px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    text-align: center; /* Center text inside the button */
+}
+
+.contact-button:hover {
+    background-color: #000000; /* Slightly lighter green on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+
+
+footer {
+    background-color: #001D00;
+    color: #ffffff;
+    padding: 40px 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    margin-top: 30px; /* Moves the header down */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section img {
+    margin-right: 10px;
+    width: 16px; /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed */
+}
+
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    margin-top: 0px; /* Reset margin to ensure it aligns properly */
+    margin-left: 0px; /* Adjust as needed */
+}
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    position: relative; /* Ensure the container is relative for absolute positioning of button */
+    margin-top: 0;
+}
+
+.newsletter-input {
+    width: 150px; /* Adjust size as needed */
+    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #D9D9D9; /* Border color */
+    border-radius: 10px 0 0 10px; /* Round the left corners */
+    background: #001D00; /* Background color of the input box */
+    box-shadow: inset 0 0 0 2px #000; /* Inner stroke effect */
+    box-sizing: border-box;
+}
+
+.newsletter-btn {
+    position: absolute; /* Positioning absolute to overlap */
+    right: 10px; /* Aligns the button to the right edge of the container */
+    width: 100px; /* Adjust size as needed */
+    height: 50px;
+    background-color: #ffcccc; /* Pale pink color */
+    color: #000;
+    border: 2px solid #000; /* Border color */
+    border-radius: 20px; /* Round the corners */
+    cursor: pointer;
+    font-size: 14px;
+    top: 0; /* Aligns the button to the top of the input box */
+}
+
+.newsletter-btn:hover {
+    background-color: #ffb3b3; /* Slightly darker pale pink on hover */
+}
+
+/* Other existing styles */
+
+
+        .social-icons {
+            display: none; /* Hides the social icons section */
+        }
+
+        /* Footer Line */
+        .footer-line {
+            border: none;
+            border-top: 1px solid #ffffff; /* Line color */
+            margin: 20px 0; /* Spacing above and below the line */
+            width: 100%; /* Ensures the line is end-to-end */
+        }
+
+        /* Quick Links and Services Section */
+        .links-section {
+            display: flex;
+            gap: 100px;
+        }
+
+        .links-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links-column h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .links-column .link-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links-column .link-item::before {
+            content: '→'; /* Arrow symbol */
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .links-column h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.links-column.services h3 {
+    margin-top: 0px; /* Creates an 80px gap from the previous header */
+}
+
+
+        .footer-section {
+            margin-right: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-section {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .rights-text {
+                text-align: center;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+         .links-column .link-item a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+.social-icons {
+    display: flex;
+    gap: 08px;
+    margin-top: 30px; /* Adjust as needed to position correctly */
+    margin-left: 05px; /* Align with the newsletter box */
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+        /* Adjust the margin to move the newsletter section up */
+.footer-section {
+    margin-top: -30px; /* Move up by 30px (adjust as needed) */
+}
+
+/* Adjust the margin of the newsletter box and icons specifically */
+.newsletter-box {
+    margin-top: 0; /* Reset margin to ensure it aligns properly */
+}
+
+.social-icons {
+    margin-top: 30px; /* Adjust as needed to position correctly */
+}
+/* Ensure the footer has no padding or margins that would restrict the line's width */
+footer {
+    background-color: #001D00;
+    color: #ffffff;
+    padding: 40px 0; /* Adjusted padding */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensure the footer-content does not restrict the full-width line */
+.footer-content {
+    max-width: 100%; /* Allow full width */
+    padding: 0 60px; /* Ensure content is centered with space on the sides */
+    box-sizing: border-box;
+    position: relative; /* Position relative to position the line absolutely */
+}
+
+/* Horizontal Line in the Footer */
+.footer-line {
+    border: none; /* Remove default border */
+    height: 1px; /* Line thickness */
+    background-color: #00a652; /* Line color */
+    margin: 30px 0; /* Spacing above and below the line */
+    position: absolute; /* Position it absolutely to stretch across */
+    left: 0; /* Align to the left of the footer */
+    right: 0; /* Align to the right of the footer */
+    bottom: 0px; /* Align to the bottom of the footer */
+    width: 100vw; /* Ensure it spans the full viewport width */
+}
+.rights-icon {
+    width: 20px; /* Adjust the width to the desired size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+     <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="take-action.html" class="action-button">Take action</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="image-container">
+        <div class="card">
+            <h2>Trade</h2>
+        </div>
+    </div>
+
+    <div class="content">
+        <p>Connect with our sales team at NABSIL. We take pride in     <br>
+being easy to do business with, and our team is ready to    <br>
+ provide tailored assistance for you.</p>
+
+        <div class="boxes-container">
+            <div class="box">Buy</div>
+            <div class="box">Sell</div>
+            <div class="box">Transfer</div>
+            <div class="box">Collateralize</div>
+        </div>
+
+        <!-- Market Section -->
+        <div class="market-section">
+            <h2 class="market-header">Market</h2>
+            <div class="market-images-container">
+                <!-- First Image and Overlay -->
+                <div class="market-image" style="background-image: url('m1.jpg');">
+                    <div class="overlay">
+                        <h3>Sorghum</h3>
+                        <p>A drought-resistant grain, nourishing humans and livestock.</p>
+                    </div>
+                    <div class="purchase-request">Purchase Request</div> <!-- Moved outside the market-image div -->
+                </div>
+                <!-- Second Image and Overlay -->
+                <div class="market-image" style="background-image: url('m2.jpg');">
+                    <div class="overlay">
+                        <h3>Bean</h3>
+                        <p>Nutrient-packed protein powerhouses, essential for balanced diets and global food security.</p>
+                    </div>
+                    <div class="purchase-request">Purchase Request</div> <!-- Moved outside the market-image div -->
+                </div>
+            </div>
+            <!-- Purchase Request Box Under Images -->
+
+            <div class="market-images-container">
+                <!-- Third Image and Overlay -->
+                <div class="market-image" style="background-image: url('m3.jpg');">
+                    <div class="overlay">
+                        <h3>Maize</h3>
+                        <p>A versatile crop used for human consumption, animal feed, and bio fuel production.</p>
+                    </div>
+                    <div class="purchase-request">Purchase Request</div> <!-- Moved outside the market-image div -->
+                </div>
+                <!-- Fourth Image and Overlay -->
+                <div class="market-image" style="background-image: url('m4.jpg');">
+                    <div class="overlay">
+                        <h3>Sesame seed</h3>
+                        <p>Nutrient-rich, ancient superfood. Flavorful and versatile culinary treasure.</p>
+                    </div>
+                    <div class="purchase-request">Purchase Request</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="register-header">
+    <h1>Register</h1>
+</div>
+<br>
+<div class="image-gallery">
+    <!-- First Image with specific overlay positioning -->
+    <div class="image-item" style="background-image: url('far.jpg');">
+        <div class="gallery-overlay" style="bottom: -25%; right: -10%; transform: translate(0%, 0%);">
+            <h3 class="overlay-header">Register as Farmer</h3>
+            <div class="overlay-list">
+                <div>Improved Income</div>
+                <div>Risk Mitigation</div>
+                <div>Access to Finance</div>
+                <div>Capacity Building</div>
+                <div>Guaranteed Market Access</div>
+                <div>Community Development</div>
+            </div>
+            <div class="get-started-button">Get Started</div>
+        </div>
+    </div>
+
+    <!-- Second Image with specific overlay positioning -->
+    <div class="image-item" style="background-image: url('ref.jpg');">
+        <div class="gallery-overlay" style="bottom: -25%; left: -10%; transform: translate(0%, 0%);">
+            <h3 class="overlay-header">Register as an Off-Taker</h3>
+            <div class="overlay-list">
+                <div>Traceability</div>
+                <div>Reliable Grain Supply</div>
+                <div>Price Stability</div>
+                <div>Risk Management</div>
+                <div>Strategic Partnerships</div>
+                <div>Efficient Operations</div>
+            </div>
+            <div class="get-started-button">Get Started</div>
+        </div>
+    </div>
+</div>
+    <br>
+        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<div class="contact-section">
+    <h1 class="contact-header">Let's Chat</h1>
+    <p class="contact-paragraph">If you would like to know more about NABSIL, <br>our brand or products, drop us a line<br> and a representative will get in touch.</p>
+    <button class="contact-button">Contact Us</button>
+</div>
+
+</body>
+</html>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><img src="p.png" alt="Phone Icon" style="width: 16px; height: 16px;"> +1-234-567-890</p>
+            <p><img src="e.png" alt="Email Icon" style="width: 16px; height: 16px;"> contact@nabsilgrainbank.com</p>
+            <p><img src="l.png" alt="Location Icon" style="width: 16px; height: 16px;"> 123 Grain St, City, Country</p>
+        </div>
+
+        <div class="links-section">
+            <!-- Quick Links Column -->
+            <div class="links-column">
+                <h3>Quick Links</h3>
+                <div class="link-item"><a href="#">About Us</a></div>
+                <div class="link-item"><a href="#">Service</a></div>
+                <div class="link-item"><a href="#">Term and Condition</a></div>
+            </div>
+
+            <!-- Services Column -->
+            <div class="links-column services">
+                <h3>Services</h3>
+                <div class="link-item"><a href="#">Tread</a></div>
+                <div class="link-item"><a href="#">Market</a></div>
+                <div class="link-item"><a href="#">Register</a></div>
+            </div>
+
+            <!-- Newsletter Box -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <div class="newsletter-box">
+                    <input type="email" class="newsletter-input" placeholder="Your Email">
+                    <button class="newsletter-btn">Sign up</button>
+                </div>
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="#"><img src="x.png" alt="Facebook" style="width: 16px; height: 16px;"></a>
+                    <a href="#"><img src="in.png" alt="Twitter" style="width: 16px; height: 16px;"></a>
+                    <a href="#"><img src="ing.png" alt="Instagram" style="width: 16px; height: 16px;"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add the horizontal line here -->
+        <hr class="footer-line">
+        <!-- Add this new section for the rights reserved text and icon -->
+<div class="rights-section">
+    <img src="c.png" alt="Icon" class="rights-icon"> <!-- Replace with your icon image path -->
+    <span class="rights-text">All Rights Reserved NABSIL</span>
+</div>
+
+    </div>
+</footer>

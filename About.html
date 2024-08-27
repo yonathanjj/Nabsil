@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nabsil Grain Bank</title>
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 50px;
+            height: 79px;
+            background-image: url('icon2.png'); /* replace with your logo image path */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .action-button {
+            background-color: #2A642A;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .about {
+            padding: 64px;
+            text-align: left;
+        }
+.about h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: -10px; /* Adjust the value as needed */
+    width: 100%;
+}
+
+
+        .about h2 {
+            font-size: 64px;
+            font-weight: 600;
+            color: #2A642A;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 80px 100px;
+        }
+
+        .section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            gap: 20px; /* Add space between sections */
+            width: 48%; /* Make each section occupy 48% of the container's width */
+        }
+
+        .section-header {
+            font-size: 40px;
+            font-weight: 600; /* Semi-bold */
+            color: black;
+            margin-right: 20px; /* Space between header and card */
+        }
+
+      .section-card {
+    width: 300px; /* Set a uniform width for all cards */
+    height: 150px; /* Adjust height automatically based on content */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    background-color: #FFFFFF;
+    overflow: hidden; /* Prevents scrollbars */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+
+.section-card:hover {
+    transform: translateY(-10px); /* Make the card "hover" */
+    box-shadow: 1px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+        .vision-header, .mission-header, .values-header {
+            color: black;
+        }
+.section-card {
+    width: 300px; /* Set a uniform width for all cards */
+}
+
+.card-vision {
+    color: #2A642A;
+    /* Remove specific width if previously set */
+}
+
+.card-mission {
+    color: #2A6A2A;
+}
+
+.card-values {
+    color: #2A6A2A;
+    width: 300px; /* Ensure it matches the width of other cards */
+}
+
+        /* Specific style for Values section */
+        .values-section {
+            justify-content: flex-end;
+            margin-top: 40px; /* Further lowering the entire Values section */
+        }
+
+        .values-header {
+            order: 2; /* Keep header to the right of the card */
+            margin-left: 20px; /* Space between card and header */
+            margin-right: 0; /* Remove default right margin */
+            margin-top: 40px; /* Further lower the Values header */
+        }
+
+        .card-values {
+            order: 1; /* Ensure card is on the left */
+            margin-top: 40px; /* Further lower the Values card */
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                align-self: flex-end;
+            }
+
+            .about h1 {
+                font-size: 48px;
+            }
+
+            .about h2 {
+                font-size: 48px;
+            }
+
+            .section-container {
+                margin: 40px 20px;
+            }
+
+            .section {
+                flex-direction: column;
+                width: 100%; /* Full width for smaller screens */
+            }
+
+            .section-header {
+                font-size: 32px;
+                margin-right: 0; /* Remove margin for smaller screens */
+            }
+
+            .section-card {
+                width: calc(100% - 40px);
+                margin-bottom: 40px; /* Space between cards in column layout */
+            }
+        }
+   .team-section {
+    padding: 100px 100px 0; /* Adjust padding as needed */
+}
+
+.team-card-container {
+    display: flex;
+    gap: 50px; /* Space between cards */
+    overflow-x: visible;
+    margin-bottom: 40px; /* Space between cards and header */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+}
+
+/* Hover effect for team cards */
+.team-card {
+    width: 395px; /* Width of each card */
+    height: 557px; /* Height of each card */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+}
+
+.team-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+/* Container for icons */
+.icon-container {
+    display: flex;
+    justify-content: flex-start; /* Center the icons horizontally */
+    margin-top: 10px; /* Space between text and icons */
+    gap: 5px; /* Adjust space between icons */
+}
+
+/* Styling for icons */
+.icon {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.icon-facebook {
+    background-image: url('iconfb.jpg');
+}
+
+.icon-twitter {
+    background-image: url('logoig.jpg');
+}
+
+.icon-linkedin {
+    background-image: url('logox.jpg');
+}
+
+.icon-instagram {
+    background-image: url('logoli.jpg');
+}
+
+
+.team-card-image {
+    width: 100%;
+    height: 70%; /* Adjust height to fit the card */
+                border-radius: 10px;
+    object-fit: cover; /* Cover the image within the card */
+}
+
+.team-card-info {
+    padding: 15px;
+    text-align: left; /* Ensure text alignment is left */
+}
+
+.team-member-name {
+    font-size: 27px;
+    font-weight: bold;
+    color: #001D00;
+    margin-top: 0;
+    margin-bottom: -20px;
+    text-align: left; /* Align name to the left */
+}
+
+.team-member-position {
+    font-size: 15px;
+    font-weight: 300;
+    color: #2A642A;
+    text-align: left; /* Align position text to the left */
+}
+
+.team-header {
+    font-size: 64px;
+    font-weight: 600; /* Semi-bold */
+    color: black;
+    margin-top: 40px; /* Space above the header */
+    text-align: center; /* Center align the header */
+}
+
+@media (max-width: 768px) {
+    .team-card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adjust gap between cards for smaller screens */
+    }
+
+    .team-card {
+        width: 100%; /* Adjust card width for smaller screens */
+    }
+}
+
+
+.partners-container {
+    width: 100%; /* Adjust as needed */
+    overflow: hidden; /* Hide the overflow to make the loop effect */
+    white-space: nowrap; /* Prevent the images from wrapping to the next line */
+    position: relative;
+}
+
+.partners-slider {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+.partners-slider img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Keyframes for Sliding Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Slide to the left by 50% */
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .partners-card {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Header for Partners Section */
+.partners-header {
+    font-size: 64px; /* Adjusted size */
+    font-weight: bold; /* Ensure bold text */
+    color: black; /* Text color */
+    text-align: left; /* Align text to the left */
+    margin-left: 30px; /* Space from the left edge */
+}
+.footer {
+    width: 100vw; /* Set width to 100% of the viewport width */
+    height: 300px; /* Define the height of the footer */
+background: linear-gradient(to top, #001d00 40%, #808080 80%, #ffffff);
+    color: white; /* Set the text color */
+    padding: 20px; /* Add padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative; /* Ensure the position is relative */
+    left: -100px; /* Align to the left edge */
+    margin: 0; /* Remove any default margin */
+}
+
+
+.footer p {
+    margin: 0; /* Remove default margins for paragraph text */
+    text-align: left; /* Align text to the left */
+    font-size: 18px; /* Set the font size */
+    line-height: 1.5; /* Set the line height for readability */
+}
+.footer h2 {
+    text-align: left; /* Aligns the "Contact Us" header to the left */
+    margin-left: 0; /* Removes any left margin if present */
+    padding-left: 0; /* Removes any left padding if present */
+}
+.contact-header {
+    position: relative;
+    /* Add your existing styles here */
+}
+
+
+.quick-links {
+    position: absolute;
+    right: 500px;
+    top: -310px;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.quick-links h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff; /* Update to desired color */
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffffff; /* Update to desired color */
+}
+
+.arrow {
+    margin-right: 10px;
+}
+/* New styles for Services */
+.services {
+    float: right;
+    width: 45%;
+    margin-left: 60%; /* Adjust this value to move the section further to the right */
+    margin-top: -480px; /* Adjust this value to move the section down */
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff; /* Color of services header */
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #ffffff; /* Color of services text */
+}
+
+.services .arrow {
+    margin-right: 10px;
+}
+
+/* Ensure proper spacing and alignment */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container > div {
+    width: 45%;
+}
+/* Newsletter section styling */
+.newsletter-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container */
+    margin: 20px;
+}
+
+.newsletter-header {
+    margin-right: -20px;
+    margin-top: -300px; /* Keep this as is */
+    position: relative;
+    left: 50px; /* Add or adjust left to move the header to the right */
+    color: #ffffff; /* Set text color to white */
+}
+
+
+/* Styling for the email box and sign-up button */
+.email-box-container {
+    position: relative;
+    margin-top: -240px; /* Add margin-top to move the input box down */
+    left: -50px; /* Move the container to the left */
+}
+.email-box {
+    width: 130px;
+    height: 57px;
+    border: 2px solid #ffffff; /* Stroke border */
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #333;
+    background-color: transparent; /* Make background transparent to show only the edge */
+}
+
+.sign-up-box {
+    position: absolute;
+    right: -80px;
+    height: 57px;
+    width: 100px;
+    background-color: #E5D0CC;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.sign-up-box:hover {
+    background-color: #c0c0c0;
+}
+/* Icons container styling */
+.icons-container {
+    display: flex;
+    flex-direction: row; /* Arrange icons horizontally */
+    gap: 20px; /* 10px gap between icons */
+    margin-top: -160px; /* Adjust margin-top to move icons down */
+    position: relative;
+    left: -170px; /* Adjust left to move icons to the left */
+}
+
+.icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+}
+/* Horizontal Line in the Footer */
+.footer-line {
+    border: none; /* Remove default border */
+    height: 1px; /* Line thickness */
+    background-color: #00a652; /* Line color */
+    margin: 30px 0; /* Spacing above and below the line */
+    position: absolute; /* Position it absolutely to stretch across */
+    left: -120px; /* Align to the left of the footer */
+    right: 0; /* Align to the right of the footer */
+    bottom: 130px; /* Align to the bottom of the footer */
+    width: 100vw; /* Ensure it spans the full viewport width */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    position: absolute; /* Position it absolutely within the footer */
+    left: -100px; /* Align to the left of the footer */
+    bottom: 130px; /* Adjust spacing from the bottom of the footer */
+    width: 100%; /* Ensure it spans the full width */
+    padding: 0 20px; /* Add padding to ensure content is not touching edges */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Footer Icon */
+.footer-icon {
+    width: 20px; /* Adjust the icon size as needed */
+    height: 20px; /* Maintain aspect ratio or adjust as needed */
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+/* Footer Text */
+.footer-text {
+    color: #ffffff; /* Text color to match the line color */
+    font-size: 14px; /* Font size for the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabsil Grain Bank</title>
+    <style>
+        /* Include the updated CSS here */
+    </style>
+</head>
+<body>
+     <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="take-action.html" class="action-button">Take action</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>About us</h1>
+        <h2>NABSIL Grain Bank is an integrated agricultural solutions provider working to transform and uplift the grain ecosystem across Africa.</h2>
+    </section>
+
+    <div class="section-container">
+        <div class="section">
+            <div class="section-header vision-header">Vision</div>
+            <div class="section-card card-vision">
+                <p>To be the leading agricultural value chain innovator in Africa, ensuring food security and economic empowerment for all stakeholders.</p>
+            </div>
+        </div>
+
+        <div class="section values-section">
+            <div class="section-card card-values">
+                <p>NABSIL Grain Bank is committed to placing farmers at the heart of our operations, delivering convenient, transparent, and secure services with efficiency and integrity.</p>
+            </div>
+            <div class="section-header values-header">Values</div>
+        </div>
+
+        <div class="section">
+            <div class="section-header mission-header">Mission</div>
+            <div class="section-card card-mission">
+                <p>To eliminate post-harvest losses, provide financial access, and create a grain trading platform through advanced storage solutions and a digital trading platform.</p>
+            </div>
+        </div>
+    </div>
+
+  <section class="team-section">
+    <h2 class="team-header">Our Team</h2>
+    <div class="team-card-container">
+        <div class="team-card">
+            <img src="team1.jpg" alt="Team Member" class="team-card-image"> <!-- Replace with actual image path -->
+            <div class="team-card-info">
+                <p class="team-member-name">Nathnael Dereje</p>
+                <p class="team-member-position">Chief Executive Officer | CEO</p>
+                <div class="icon-container">
+                    <div class="icon icon-facebook"></div>
+                    <div class="icon icon-twitter"></div>
+                    <div class="icon icon-linkedin"></div>
+                    <div class="icon icon-instagram"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for other team members -->
+        <div class="team-card">
+            <img src="team2.jpg" alt="Team Member" class="team-card-image">
+            <div class="team-card-info">
+                <p class="team-member-name">Siltanu Kifle</p>
+                <p class="team-member-position">Chief Technology Officer | CTO</p>
+                <div class="icon-container">
+                    <div class="icon icon-facebook"></div>
+                    <div class="icon icon-twitter"></div>
+                    <div class="icon icon-linkedin"></div>
+                    <div class="icon icon-instagram"></div>
+                </div>
+            </div>
+        </div>
+        <div class="team-card">
+            <img src="team3.jpg" alt="Team Member" class="team-card-image">
+            <div class="team-card-info">
+                <p class="team-member-name">Bonaventure Mihigo</p>
+                <p class="team-member-position">Chief Operation Officer | COO</p>
+                <div class="icon-container">
+                    <div class="icon icon-facebook"></div>
+                    <div class="icon icon-twitter"></div>
+                    <div class="icon icon-linkedin"></div>
+                    <div class="icon icon-instagram"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more team cards as needed -->
+    </div>
+<section class="partners-section dotted-gradient-background">
+    <h2 class="partners-header">Our Partners</h2>
+    <div class="partners-card-container">
+        <div class="partners-card">
+         <div class="partners-container">
+    <div class="partners-slider">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 2">
+        <img src="logo1.jpg" alt="Partner 1">
+        <img src="logo2.jpg" alt="Partner 1">
+
+        <!-- Repeat logos as needed -->
+    </div>
+</div>
+ <footer class="footer">
+         <h2>Contact Us</h2>
+
+            <p><img src="p.png" alt="Phone Icon" style="width: 16px; height: 16px;"> +1-234-567-890</p>
+            <p><img src="e.png" alt="Email Icon" style="width: 16px; height: 16px;"> contact@nabsilgrainbank.com</p>
+            <p><img src="l.png" alt="Location Icon" style="width: 16px; height: 16px;"> 123 Grain St, City, Country</p>
+        </div>
+
+</div>
+
+<header class="contact-header">
+    <!-- Existing header content -->
+    <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><span class="arrow">→</span> About Us</li>
+            <li><span class="arrow">→</span> Our Services</li>
+            <li><span class="arrow">→</span> Terms & Condition</li>
+        </ul>
+    </div>
+    <!-- New section for Services -->
+<div class="services">
+    <h2>Services</h2>
+    <ul>
+        <li><span class="arrow">→</span>Trade</li>
+        <li><span class="arrow">→</span>Market</li>
+        <li><span class="arrow">→</span>Register</li>
+    </ul>
+</div>
+
+    <div class="newsletter-container">
+        <h2 class="newsletter-header">Newsletter</h2>
+        <div class="email-box-container">
+            <input type="text" class="email-box" placeholder="Your email">
+            <button class="sign-up-box">Sign Up</button>
+        </div>
+         <div class="icons-container">
+        <img src="x.png" alt="Icon 1" class="icon">
+        <img src="in.png" alt="Icon 2" class="icon">
+        <img src="ing.png" alt="Icon 3" class="icon">
+    </div>
+</div>
+<footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <img src="c.png" class="footer-icon" alt="Icon">
+        <span class="footer-text">All Rights Reserved NABSIL</span>
+    </div>
+</footer>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
