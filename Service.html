@@ -211,78 +211,78 @@
 }
 
          .how-it-works {
-            text-align: center;
-            padding: 64px 20px;
-            background-color: #F9F9F9; /* Optional background color for better separation */
-        }
+    text-align: center;
+    padding: 64px 20px;
+    background-color: #F9F9F9; /* Optional background color for better separation */
+}
 
-        .how-it-works h2 {
-            color: #001D00;
-            font-size: 27px;
-            margin: 0;
-            margin-bottom: 10px;
-        }
+.how-it-works h2 {
+    color: #001D00;
+    font-size: 27px;
+    margin: 0;
+    margin-bottom: 10px;
+}
 
-        .how-it-works p {
-            color: #2A642A;
-            font-size: 22px;
-            margin: 0;
-        }
+.how-it-works p {
+    color: #2A642A;
+    font-size: 22px;
+    margin: 0;
+}
 
-        .images-section {
-            display: flex;
-            justify-content: space-between;
-            gap: 50px; /* Gap between images */
-            padding: 20px;
-        }
+.images-section {
+    display: flex;
+    justify-content: center; /* Center the images */
+    gap: 80px; /* Reduce gap between images */
+    padding: 20px;
+}
 
-        .images-section .image-container {
-            position: relative;
-            width: 397px;
-            height: 650px;
-        }
+.images-section .image-container {
+    position: relative;
+    width: 397px;
+    height: 650px;
+}
 
-        .images-section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+.images-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-        .images-section .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 94.5%;
-            height: 30%;
-            background:  linear-gradient(to bottom, rgba(42, 100, 42, 0.8) 50%, transparent 100%);;
-            border-radius: 10px;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 10px;
-        }
+.images-section .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensure overlay covers full width of the image */
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(42, 100, 42, 0.8) 50%, transparent 100%);
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}
 
-        .images-section .overlay h3 {
-            margin: 0;
-            font-size: 60px;
-        }
+.images-section .overlay h3 {
+    margin: 0;
+    font-size: 60px;
+}
 
-        .images-section .overlay p {
-            font-size: 22px;
-            margin-top: 10px;
-        }
+.images-section .overlay p {
+    font-size: 22px;
+    margin-top: 10px;
+}
 
-        @media (max-width: 768px) {
-            .images-section {
-                flex-direction: column;
-                gap: 20px; /* Reduce gap between images for smaller screens */
-            }
+@media (max-width: 768px) {
+    .images-section {
+        flex-direction: column;
+        gap: 20px; /* Reduce gap between images for smaller screens */
+    }
 
-            .images-section .image-container {
-                width: 100%;
-                height: auto; /* Adjust height for smaller screens */
-            }
-        }
+    .images-section .image-container {
+        width: 100%;
+        height: auto; /* Adjust height for smaller screens */
+    }
+}
 
 
 
