@@ -194,7 +194,7 @@
                 margin-bottom: 40px; /* Space between cards in column layout */
             }
         }
-   .team-section {
+ .team-section {
     padding: 100px 100px 0; /* Adjust padding as needed */
 }
 
@@ -204,8 +204,8 @@
     overflow-x: visible;
     margin-bottom: 40px; /* Space between cards and header */
     flex-wrap: nowrap; /* Prevent wrapping */
-}
-
+    justify-content: center; /* Center the cards */
+    margin: 0 auto; /* Center the container itself */
 }
 
 /* Hover effect for team cards */
@@ -215,33 +215,30 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
-}
-
 }
 
 .team-card:hover {
     transform: scale(1.05); /* Zoom effect on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
+
 /* Container for icons */
 .icon-container {
     display: flex;
-    justify-content: flex-start; /* Center the icons horizontally */
+    justify-content: flex-start; /* Align icons to the left */
     margin-top: 10px; /* Space between text and icons */
     gap: 5px; /* Adjust space between icons */
 }
 
 /* Styling for icons */
 .icon {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 .icon-facebook {
     background-image: url('iconfb.jpg');
@@ -259,11 +256,10 @@
     background-image: url('logoli.jpg');
 }
 
-
 .team-card-image {
     width: 100%;
     height: 70%; /* Adjust height to fit the card */
-                border-radius: 10px;
+    border-radius: 10px;
     object-fit: cover; /* Cover the image within the card */
 }
 
@@ -307,6 +303,7 @@
         width: 100%; /* Adjust card width for smaller screens */
     }
 }
+
 
 
 .partners-container {
