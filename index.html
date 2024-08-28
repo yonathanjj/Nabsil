@@ -32,12 +32,12 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-
+ /* Base styles for larger screens */
 nav {
     position: absolute;
-    top: 60px;  /* Fixed top position */
-    left: 680px; /* Fixed left position */
-    transform: translateX(0%); /* No centering shift needed */
+    top: 10vh;  /* Use viewport height units for a relative top position */
+    left: 75%;  /* Center the nav horizontally */
+    transform: translateX(-50%); /* Ensure the nav is centered */
 }
 
 nav ul {
@@ -46,20 +46,31 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Wrap items if needed on small screens */
+    flex-wrap: nowrap; /* Prevents wrapping on larger screens */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    white-space: nowrap; /* Prevent text wrapping within links */
+    white-space: nowrap; /* Prevents text wrapping within links */
 }
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     nav {
-        top: 5vh;  /* Adjust the top position for smaller screens */
-        left: 50vw; /* Keep it centered */
+        top: 5vh;  /* Adjust top position for smaller screens */
+        left: 50%;  /* Keep it centered horizontally */
+        transform: translateX(-50%); /* Center the nav */
     }
+
+    nav ul {
+        flex-direction: column; /* Stack the items vertically on smaller screens */
+        align-items: center;  /* Center align the items */
+        gap: 10px;  /* Reduce the gap between items */
+    }
+}
+
 }
 
 
