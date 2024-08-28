@@ -249,17 +249,19 @@ nav ul li a {
 
         }
 .about-image {
-    width: 950px;
-    height: 570px;
+    width: 100%; /* Make the width responsive */
+    max-width: 950px; /* Set a maximum width */
+    height: auto; /* Make the height auto to maintain aspect ratio */
     border-radius: 10px;
     background-image: url('abouth.jpg');
     background-size: cover;
     background-position: left;
-    position: relative; /* Set relative positioning */
-    top: 0; /* Use top, right, bottom, and left for adjustments */
+    position: relative; /* Keep relative positioning */
+    top: 0;
     left: 0;
-    transition: transform 0.6s ease, box-shadow 0.6s ease; /* Smooth transition for transform and shadow */
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
+
 
 .about-image:hover {
     /* Remove the hover effects */
