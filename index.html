@@ -33,11 +33,11 @@
             background-repeat: no-repeat;
         }
 
- nav {
+nav {
     position: absolute;
-    top: 60px;  /* This is your fixed top position */
-    left: 680px; /* This is your fixed left position */
-    transform: translateX(40%); /* No centering shift needed */
+    top: 60px;  /* Fixed top position */
+    left: 680px; /* Fixed left position */
+    transform: translateX(0%); /* No centering shift needed */
 }
 
 nav ul {
@@ -46,14 +46,14 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Ensures that the items wrap if the screen is too narrow */
+    flex-wrap: wrap; /* Wrap items if needed on small screens */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    white-space: nowrap; /* Prevents text wrapping within links */
+    white-space: nowrap; /* Prevent text wrapping within links */
 }
 
 
