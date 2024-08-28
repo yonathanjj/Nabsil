@@ -63,6 +63,19 @@ nav ul li a {
         left: 50%;  /* Keep it centered horizontally */
         transform: translateX(-50%); /* Center the nav */
     }
+/* Example media query for devices with a max-width of 768px */
+@media only screen and (max-width: 768px) {
+    .your-class {
+        /* Adjust styles here */
+    }
+}
+
+/* Example media query for devices with a min-width of 769px */
+@media only screen and (min-width: 769px) {
+    .your-class {
+        /* Adjust styles here */
+    }
+}
 
     nav ul {
         flex-direction: column; /* Stack the items vertically on smaller screens */
@@ -614,7 +627,18 @@ background: linear-gradient(to top, #001d00 40%, #808080 80%, #ffffff);
 Footer {
     overflow: hidden; /* Prevent child elements from causing horizontal overflow */
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.item {
+    flex: 1 1 200px; /* Adjust as needed */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 
