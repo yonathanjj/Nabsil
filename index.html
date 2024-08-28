@@ -33,25 +33,28 @@
             background-repeat: no-repeat;
         }
 
-         nav {
-    position: absolute; /* Allows you to manually place the nav bar */
-    top: 60px; /* Adjust the vertical position */
-    left: 680px; /* Adjust the horizontal position */
+   nav {
+    position: absolute;
+    top: 60px;
+    left: 680px; /* This position will remain fixed across all screen sizes */
 }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures that the items wrap if the screen is too narrow */
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text wrapping within links */
+}
+
 @media (max-width: 1200px) {
     nav {
         left: 500px; /* Adjust for smaller screens */
