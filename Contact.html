@@ -247,6 +247,166 @@ nav ul li a {
 }
 
 
+#footer {
+    background-color: #001d00;
+    color: #fff;
+    height: 320px;
+    width: 100vw; /* Use viewport width to span the entire width of the viewport */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    left: 50%; /* Adjust the left position */
+    transform: translateX(-50%); /* Center the footer horizontally */
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-section {
+    width: 23%;
+}
+
+.footer-section h2 {
+    margin-bottom: 20px;
+        margin-left: 180px;
+
+}
+
+.contact-info, .quick-links, .service-links {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
+    margin-left: 200px;
+}
+
+/* Quick Links */
+.quick-links {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px; /* Space between items */
+}
+
+.link-arrow {
+    margin-right: 10px; /* Space between arrow and text */
+    font-size: 18px; /* Adjust size as needed */
+    position: relative; /* Allows positioning adjustments */
+    left: 175px; /* Moves the arrow to the right */
+}
+
+
+/* Service Links */
+.service-links {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px; /* Space between items */
+}
+
+.service-arrow {
+    margin-right: 10px; /* Space between arrow and text */
+    font-size: 18px; /* Adjust size as needed */
+    position: relative; /* Allows adjustment using 'left' */
+    left: 175px; /* Adjust this value to move the arrow to the right */
+}
+
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px; /* Space between items */
+}
+
+.contact-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    position: absolute; /* Position icon absolutely within the container */
+    left: 175px; /* Move icon to the left of its default position */
+    /* Optional: adjust vertical alignment if needed */
+}
+.contact-text {
+    margin-left: 10px; /* Space between text and other elements */
+}
+
+
+.newsletter-header {
+    margin-left: -80px;
+}
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 180px;
+
+}
+
+.newsletter-input {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #D9D9D9;
+    border-radius: 10px 0 0 10px;
+    background: #001D00;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #000;
+    box-sizing: border-box;
+    margin-left: 50px;
+
+}
+
+.newsletter-btn {
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background-color: #ffcccc;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    top: 0;
+}
+
+.newsletter-btn:hover {
+    background-color: #ffb3b3;
+}
+
+hr {
+    margin: 10px 0; /* Increase margin-top to push it lower */
+    border: none;
+    height: 1px;
+    background: #fff;
+}
+
+.footer-bottom {
+    text-align: relative;
+    margin: 20px 5 10;
+    margin-left: 200px;
+
+}
 
     </style>
 </head>
@@ -331,5 +491,78 @@ nav ul li a {
             </details>
         </section>
     </div>
+<footer id="footer">
+    <div class="footer-content">
+        <!-- Contact Us Section -->
+  <!-- Quick Link Section -->
+        <!-- Contact Us Section -->
+<div class="footer-section contact-info">
+    <h2>Contact Us</h2>
+    <div class="contact-item">
+        <img src="path/to/icon1.png" alt="Icon 1" class="contact-icon">
+        <p class="contact-text">536 street, Kigali, Rwanda</p>
+    </div>
+    <div class="contact-item">
+        <img src="path/to/icon2.png" alt="Icon 2" class="contact-icon">
+        <p class="contact-text">+0954 55 1425</p>
+    </div>
+    <div class="contact-item">
+        <img src="path/to/icon3.png" alt="Icon 3" class="contact-icon">
+        <p class="contact-text">info@nabsil.com</p>
+    </div>
+</div>
+
+<div class="footer-section">
+    <h2>Quick Link</h2>
+    <div class="quick-links">
+        <div class="link-item">
+            <div class="link-arrow">→</div>
+            <p class="link-text">About Us</p>
+        </div>
+        <div class="link-item">
+            <div class="link-arrow">→</div>
+            <p class="link-text">Our Services</p>
+        </div>
+        <div class="link-item">
+            <div class="link-arrow">→</div>
+            <p class="link-text">Terms & Conditions</p>
+        </div>
+    </div>
+</div>
+
+<!-- Service Section -->
+<div class="footer-section">
+    <h2>Service</h2>
+    <div class="service-links">
+        <div class="service-item">
+            <div class="service-arrow">→</div>
+            <p class="service-text">Tread</p>
+        </div>
+        <div class="service-item">
+            <div class="service-arrow">→</div>
+            <p class="service-text">Market</p>
+        </div>
+        <div class="service-item">
+            <div class="service-arrow">→</div>
+            <p class="service-text">Register</p>
+        </div>
+    </div>
+</div>
+
+        <!-- Newsletter Section -->
+        <div class="footer-section">
+            <h2>Newsletter</h2>
+            <div class="newsletter-box">
+                <input type="text" class="newsletter-input" placeholder="Your email">
+                <button class="newsletter-btn">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Line and Copyright -->
+    <hr>
+    <p class="footer-bottom">© All Rights Reserved NABSIL.</p>
+</footer>
+
 </body>
 </html>
