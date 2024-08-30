@@ -12,63 +12,79 @@
             padding: 0;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+              /* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%; /* Adjust padding as needed */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
 
-        .logo {
-            width: 50px;
-            height: 79px;
-            background-image: url('icon2.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+/* Logo styles */
+.logo {
+    width: 50px;
+    height: 79px;
+    background-image: url('icon2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 50px; /* Adds more spacing between the logo and the links */
+}
 
-         nav {
-    position: absolute; /* Allows you to manually place the nav bar */
-    top: 60px; /* Adjust the vertical position */
-    left: 680px; /* Adjust the horizontal position */
+/* Navigation styles */
+nav {
+    margin-left: auto; /* Aligns the nav to the right */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centers the navigation links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #001d00;
+    font-weight: bold;
+}
+
+/* Action button styles */
+.action-button {
+    background-color: #2A642A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+  .image-container {
+    position: relative;
+    width: 1180px;
+    height: 580px;
+    margin-top: 180px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    padding-left: 150px; /* Add extra space to the left side */
+    padding-right: 150px; /* Add extra space to the right side */
+    background-image: url('tr.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Add 10px curve to the image */
+    overflow: hidden; /* Ensure the rounded corners are visible */
 }
 
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
 
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
 
-        .action-button {
-            background-color: #2A642A;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
-        .image-container {
-            position: relative;
-            width: 1180px;
-            height: 525px;
-            margin: 20px auto; /* Center the image horizontally */
-            background-image: url('tr.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px; /* Add 10px curve to the image */
-            overflow: hidden; /* Ensure the rounded corners are visible */
-        }
 
         .card {
             position: absolute;
@@ -97,17 +113,17 @@
         }
 
         .content p {
-            font-size: 18px;
+            font-size: 25px;
             color: #333333;
             margin-bottom: 20px;
-            margin-left: 0;
+            margin-left: -150px;
         }
 
         .boxes-container {
             display: flex;
             justify-content: flex-start; /* Align the boxes to the left */
-            gap: 10px; /* Reduce the gap between boxes */
-            margin-left: 0; /* Align boxes with the left edge of the image */
+            gap: 30px; /* Reduce the gap between boxes */
+            margin-left: -150px; /* Align boxes with the left edge of the image */
         }
 
         .box {
@@ -139,26 +155,35 @@
         .market-header {
             font-size: 64px;
             color: #001D00;
-            margin-left: 0; /* Align header with the left edge of the image */
+            margin-left: -150px; /* Align header with the left edge of the image */
         }
 
-        .market-images-container {
-            display: flex;
-            justify-content: flex-start; /* Align images to the left */
-            gap: 280px; /* Adjusted gap between images */
-            margin-left: 25px; /* Move the images slightly to the right */
-            margin-top: 50px;
-        }
+      .market-images-container {
+    display: flex;
+    justify-content: flex-start; /* Align images to the left */
+    gap: 620px; /* Adjusted gap between images */
+    margin-left: -350px; /* Move the images slightly to the right */
+    margin-top: 50px;
+}
 
-        .market-image {
-            position: relative;
-            width: 330px; /* Reduced image size */
-            height: 330px; /* Reduced image size */
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px; /* Add 10px curve to the images */
-            margin-bottom: 80px; /* Space between the image and button */
-        }
+.market-image {
+    position: relative;
+    width: 330px; /* Reduced image size */
+    height: 330px; /* Reduced image size */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Add 10px curve to the images */
+    margin-bottom: 80px; /* Space between the image and button */
+}
+
+.market-images-container > .market-image:first-child {
+    margin-left: 200px; /* Adjust as needed */
+}
+
+.market-images-container > .market-image:last-child {
+    margin-right: -200px; /* Adjust as needed */
+}
+
 
          .overlay {
             position: absolute;
@@ -358,227 +383,6 @@
 
 
 
-footer {
-    background-color: #001D00;
-    color: #ffffff;
-    padding: 40px 60px;
-    font-family: 'Inter', sans-serif;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin-right: 20px;
-}
-
-.footer-section h3 {
-    margin-top: 30px; /* Moves the header down */
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.footer-section p {
-    font-size: 14px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.footer-section img {
-    margin-right: 10px;
-    width: 16px; /* Adjust size as needed */
-    height: 16px; /* Adjust size as needed */
-}
-
-
-.newsletter-box {
-    display: flex;
-    align-items: center;
-    margin-top: 0px; /* Reset margin to ensure it aligns properly */
-    margin-left: 0px; /* Adjust as needed */
-}
-.newsletter-box {
-    display: flex;
-    align-items: center;
-    position: relative; /* Ensure the container is relative for absolute positioning of button */
-    margin-top: 0;
-}
-
-.newsletter-input {
-    width: 150px; /* Adjust size as needed */
-    height: 50px;
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #D9D9D9; /* Border color */
-    border-radius: 10px 0 0 10px; /* Round the left corners */
-    background: #001D00; /* Background color of the input box */
-    box-shadow: inset 0 0 0 2px #000; /* Inner stroke effect */
-    box-sizing: border-box;
-}
-
-.newsletter-btn {
-    position: absolute; /* Positioning absolute to overlap */
-    right: 10px; /* Aligns the button to the right edge of the container */
-    width: 100px; /* Adjust size as needed */
-    height: 50px;
-    background-color: #ffcccc; /* Pale pink color */
-    color: #000;
-    border: 2px solid #000; /* Border color */
-    border-radius: 20px; /* Round the corners */
-    cursor: pointer;
-    font-size: 14px;
-    top: 0; /* Aligns the button to the top of the input box */
-}
-
-.newsletter-btn:hover {
-    background-color: #ffb3b3; /* Slightly darker pale pink on hover */
-}
-
-/* Other existing styles */
-
-
-        .social-icons {
-            display: none; /* Hides the social icons section */
-        }
-
-        /* Footer Line */
-        .footer-line {
-            border: none;
-            border-top: 1px solid #ffffff; /* Line color */
-            margin: 20px 0; /* Spacing above and below the line */
-            width: 100%; /* Ensures the line is end-to-end */
-        }
-
-        /* Quick Links and Services Section */
-        .links-section {
-            display: flex;
-            gap: 100px;
-        }
-
-        .links-column {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .links-column h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .links-column .link-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .links-column .link-item::before {
-            content: '→'; /* Arrow symbol */
-            font-size: 18px;
-            color: #ffffff;
-        }
-        .links-column h3 {
-    margin: 0;
-    font-size: 18px;
-}
-
-.links-column.services h3 {
-    margin-top: 0px; /* Creates an 80px gap from the previous header */
-}
-
-
-        .footer-section {
-            margin-right: 20px;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .footer-section {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-
-            .rights-text {
-                text-align: center;
-                width: 100%;
-                margin-top: 20px;
-            }
-        }
-         .links-column .link-item a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-
-.social-icons {
-    display: flex;
-    gap: 08px;
-    margin-top: 30px; /* Adjust as needed to position correctly */
-    margin-left: 05px; /* Align with the newsletter box */
-}
-
-.social-icons a {
-    color: #ffffff;
-    font-size: 20px;
-    text-decoration: none;
-}
-        /* Adjust the margin to move the newsletter section up */
-.footer-section {
-    margin-top: -30px; /* Move up by 30px (adjust as needed) */
-}
-
-/* Adjust the margin of the newsletter box and icons specifically */
-.newsletter-box {
-    margin-top: 0; /* Reset margin to ensure it aligns properly */
-}
-
-.social-icons {
-    margin-top: 30px; /* Adjust as needed to position correctly */
-}
-/* Ensure the footer has no padding or margins that would restrict the line's width */
-footer {
-    background-color: #001D00;
-    color: #ffffff;
-    padding: 40px 0; /* Adjusted padding */
-    font-family: 'Inter', sans-serif;
-}
-
-/* Ensure the footer-content does not restrict the full-width line */
-.footer-content {
-    max-width: 100%; /* Allow full width */
-    padding: 0 60px; /* Ensure content is centered with space on the sides */
-    box-sizing: border-box;
-    position: relative; /* Position relative to position the line absolutely */
-}
-
-/* Horizontal Line in the Footer */
-.footer-line {
-    border: none; /* Remove default border */
-    height: 1px; /* Line thickness */
-    background-color: #00a652; /* Line color */
-    margin: 30px 0; /* Spacing above and below the line */
-    position: absolute; /* Position it absolutely to stretch across */
-    left: 0; /* Align to the left of the footer */
-    right: 0; /* Align to the right of the footer */
-    bottom: 0px; /* Align to the bottom of the footer */
-    width: 100vw; /* Ensure it spans the full viewport width */
-}
-.rights-icon {
-    width: 20px; /* Adjust the width to the desired size */
-    height: auto; /* Maintain aspect ratio */
-}
 
     </style>
 </head>
@@ -716,55 +520,4 @@ being easy to do business with, and our team is ready to    <br>
 
 </body>
 </html>
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p><img src="p.png" alt="Phone Icon" style="width: 16px; height: 16px;"> +1-234-567-890</p>
-            <p><img src="e.png" alt="Email Icon" style="width: 16px; height: 16px;"> contact@nabsilgrainbank.com</p>
-            <p><img src="l.png" alt="Location Icon" style="width: 16px; height: 16px;"> 123 Grain St, City, Country</p>
-        </div>
 
-        <div class="links-section">
-            <!-- Quick Links Column -->
-            <div class="links-column">
-                <h3>Quick Links</h3>
-                <div class="link-item"><a href="#">About Us</a></div>
-                <div class="link-item"><a href="#">Service</a></div>
-                <div class="link-item"><a href="#">Term and Condition</a></div>
-            </div>
-
-            <!-- Services Column -->
-            <div class="links-column services">
-                <h3>Services</h3>
-                <div class="link-item"><a href="#">Tread</a></div>
-                <div class="link-item"><a href="#">Market</a></div>
-                <div class="link-item"><a href="#">Register</a></div>
-            </div>
-
-            <!-- Newsletter Box -->
-            <div class="footer-section">
-                <h3>Newsletter</h3>
-                <div class="newsletter-box">
-                    <input type="email" class="newsletter-input" placeholder="Your Email">
-                    <button class="newsletter-btn">Sign up</button>
-                </div>
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="#"><img src="x.png" alt="Facebook" style="width: 16px; height: 16px;"></a>
-                    <a href="#"><img src="in.png" alt="Twitter" style="width: 16px; height: 16px;"></a>
-                    <a href="#"><img src="ing.png" alt="Instagram" style="width: 16px; height: 16px;"></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Add the horizontal line here -->
-        <hr class="footer-line">
-        <!-- Add this new section for the rights reserved text and icon -->
-<div class="rights-section">
-    <img src="c.png" alt="Icon" class="rights-icon"> <!-- Replace with your icon image path -->
-    <span class="rights-text">All Rights Reserved NABSIL</span>
-</div>
-
-    </div>
-</footer>
