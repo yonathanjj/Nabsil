@@ -420,8 +420,7 @@
 
 
 #footer {
-    background: linear-gradient(to bottom, #ffffff 0%, #001d00 70%);
-    color: #fff;
+background: linear-gradient(to bottom, #ffffff 0%, #001d00 60%);    color: #fff;
     height: 320px;
     width: 100vw; /* Use viewport width to span the entire width of the viewport */
     position: relative;
@@ -430,6 +429,9 @@
     left: 50%; /* Adjust the left position */
     transform: translateX(-50%); /* Center the footer horizontally */
     margin-top: 1500px; /* Add space above the footer */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, transparent 5%),
+                      linear-gradient(to bottom, #ffffff 0%, #001d00 60%);
+    background-size: 10px 10px, cover;
 }
 
 
