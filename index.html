@@ -357,7 +357,38 @@
 .promise-text p {
     margin: 0; /* Remove default margins */
 }
+.service-header {
+    position: absolute;
+    top: 2350px; /* Maintain the current distance from the top */
+    left: 1430px; /* Adjust this value to move the header to the left */
+    color: #2A642A;
+    font-size: 36px;
+    text-align: center;
+}
+.image-slider {
+    position: absolute;
+    top: 2480px; /* Adjust this to place the slider under the header */
+    left: 240px;
+    right: 200px;
+    height: 800px; /* Set the desired height for the slider */
+    overflow: hidden; /* Ensure images do not overflow outside the slider */
+}
 
+.image-slider img {
+    height: 100%; /* Make sure images take up the full height of the slider */
+    width: auto; /* Maintain the aspect ratio of the images */
+    display: block;
+    margin: 0 auto;
+}
+
+.image-slider img {
+    display: none; /* Hide all images by default */
+    width: 100%; /* Ensure each image takes up the full width of the slider */
+}
+
+.image-slider img:first-child {
+    display: block; /* Show the first image initially */
+}
 
 
     </style>
@@ -455,7 +486,15 @@
         <p>Quality assurance</p>
         <hr>
     </div>
-    
+    </div>
+<h1 class="service-header">Service</h1>
+</div>
+<div class="image-slider">
+    <img src="p.jpg" alt="Image 1">
+    <img src="s2.jpg" alt="Image 2">
+    <img src="s3.jpg" alt="Image 3">
+    <img src="m4.jpg" alt="Image 4">
+</div>
 
     <script>
 
@@ -496,7 +535,24 @@
             }
             showSlides(slideIndex);
         }, 8000); /* Set time interval for each slide */
-        
+        const slider = document.querySelector('.image-slider');
+const images = slider.querySelectorAll('img');
+let currentIndex = 0;
+
+function showImage(index) {
+    images.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+}
+
+showImage(currentIndex); // Show the first image initially
+setInterval(nextImage, 3000); // Change image every 3 seconds
+
     </script>
 </body>
 </html>
