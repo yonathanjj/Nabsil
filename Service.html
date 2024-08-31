@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service - Nabsil Grain Bank</title>
     <style>
-        body {
-            background-color: #EBEBFF;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+         body {
+    background-color: #EBEBFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-       /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Adjusts spacing between logo and links */
     align-items: center;
-    padding: 20px 10%; /* Adjust padding as needed */
+    padding: 20px 5%; /* Adjusts padding on the sides to move content */
     width: 100%;
     position: absolute;
     top: 0;
@@ -26,7 +25,6 @@ header {
     z-index: 1000;
 }
 
-/* Logo styles */
 .logo {
     width: 50px;
     height: 79px;
@@ -36,9 +34,9 @@ header {
     margin-right: 50px; /* Adds more spacing between the logo and the links */
 }
 
-/* Navigation styles */
 nav {
-    margin-left: auto; /* Aligns the nav to the right */
+    margin-left: auto;
+    margin-right: 3%; /* Adjusts spacing to move links more to the right */
 }
 
 nav ul {
@@ -48,15 +46,15 @@ nav ul {
     display: flex;
     gap: 20px;
     justify-content: center; /* Centers the navigation links */
+        margin-right: -50px; /* Adds more spacing between the logo and the links */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #001d00;
+    color: #000000;
     font-weight: bold;
 }
 
-/* Action button styles */
 .action-button {
     background-color: #2A642A;
     color: white;
@@ -67,18 +65,18 @@ nav ul li a {
 }
 
         .services {
-    padding: 64px 64px 64px 20px; /* Adjust padding to align header properly */
+    padding: 64px 64px 64px 20px;
     display: flex;
     flex-direction: column;
 }
 
 .services h1 {
     color: #001D00;
-    font-size: 64px;
+    font-size: 96px;
     font-weight: 600; /* Semi-bold */
-    margin: 40px 0 40px 0; /* Bottom margin for spacing */
+    margin: 80px 0 40px 0; /* Bottom margin for spacing */
     text-align: left; /* Ensure header is aligned to the left */
-    margin-left: 150px; /* Add left margin to move the header to the right */
+    margin-left: 80px; /* Add left margin to move the header to the right */
 }
 
 
@@ -92,7 +90,8 @@ nav ul li a {
 }
 
 .card {
-    width: 300px;
+    width: 380px;
+    height: 700px; /* Adjust height as needed */
     border-radius: 10px;
     overflow: hidden;
     background-color: #00A652; /* Default background color */
@@ -102,7 +101,10 @@ nav ul li a {
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     margin-left: 0px; /* Overlap cards slightly */
+    margin-right: 0px; /* Overlap cards slightly */
 }
+
 
 .card:hover {
     transform: translateY(-10px);
@@ -111,7 +113,7 @@ nav ul li a {
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 350px;
     border-radius: 10px;
     object-fit: cover;
     margin-bottom: 20px;
@@ -129,7 +131,7 @@ nav ul li a {
 
 .card-content p {
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 25px;
     line-height: 1.5;
 }
 
@@ -139,11 +141,11 @@ nav ul li a {
 .card4 { background-color: #000000; }
 
 .highlight-paragraph {
-    font-size: 24px;
+    font-size: 40px;
     color: #2A642A;
     text-align: left;
-    margin: 40px 20px;
-    margin-left: 165px; /* Move the text to the right by 40px */
+    margin: 20px 20px;
+    margin-left: 90px; /* Move the text to the right by 40px */
     line-height: 1.6;
 }
 
@@ -156,27 +158,30 @@ nav ul li a {
 
 .additional-info h2 {
     color: #001D00;
-    font-size: 32px;
+    font-size: 64px;
     margin-bottom: 10px;
+    margin-right: -90px; /* Move the text to the right by 40px */
 }
 
 .additional-info p {
     color: #2A642A;
-    font-size: 24px;
+    font-size: 40px;
     line-height: 1.5;
+    margin-right: -90px; /* Move the text to the right by 40px */
 }
 
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 60px;
     justify-content: center;
     margin: 40px 20px;
+    padding-left: 70px; /* Add padding to move the gallery to the right */
 }
 
 .image-gallery img {
-    width: 280px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -200,7 +205,7 @@ nav ul li a {
     .highlight-paragraph,
     .additional-info h2,
     .additional-info p {
-        font-size: 20px;
+        font-size: 40px;
         text-align: center;
         margin: 20px 10px;
     }
@@ -234,28 +239,28 @@ nav ul li a {
 
 .how-it-works h2 {
     color: #001D00;
-    font-size: 27px;
+    font-size: 80px;
     margin: 0;
     margin-bottom: 10px;
 }
 
 .how-it-works p {
     color: #2A642A;
-    font-size: 22px;
+    font-size: 55px;
     margin: 0;
 }
 
 .images-section {
     display: flex;
     justify-content: center; /* Center the images */
-    gap: 80px; /* Reduce gap between images */
+    gap: 80px;
     padding: 20px;
 }
 
 .images-section .image-container {
     position: relative;
-    width: 397px;
-    height: 650px;
+    width: 490px; /* Adjusted width */
+    height: 750px; /* Adjusted height */
 }
 
 .images-section img {
@@ -263,12 +268,14 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    padding-left: 10px; /* Add padding to move the gallery to the right */
 }
+
 
 .images-section .overlay {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -20;
     width: 95%; /* Ensure overlay covers full width of the image */
     height: 30%;
     background: linear-gradient(to bottom, rgba(42, 100, 42, 0.8) 50%, transparent 100%);
@@ -299,7 +306,6 @@ nav ul li a {
         height: auto; /* Adjust height for smaller screens */
     }
 }
-
 #footer {
 background: linear-gradient(to bottom, #EBEBFF 0%, #001d00 60%);    color: #fff;
     height: 320px;
@@ -608,15 +614,15 @@ hr {
 <div class="footer-section contact-info">
     <h2>Contact Us</h2>
     <div class="contact-item">
-        <img src="l.png" alt="Icon 1" class="contact-icon">
+        <img src="path/to/icon1.png" alt="Icon 1" class="contact-icon">
         <p class="contact-text">536 street, Kigali, Rwanda</p>
     </div>
     <div class="contact-item">
-        <img src="p.png" alt="Icon 2" class="contact-icon">
+        <img src="path/to/icon2.png" alt="Icon 2" class="contact-icon">
         <p class="contact-text">+0954 55 1425</p>
     </div>
     <div class="contact-item">
-        <img src="e.png" alt="Icon 3" class="contact-icon">
+        <img src="path/to/icon3.png" alt="Icon 3" class="contact-icon">
         <p class="contact-text">info@nabsil.com</p>
     </div>
 </div>
@@ -659,7 +665,7 @@ hr {
 </div>
 
         <!-- Newsletter Section -->
-      <div class="footer-section">
+        <div class="footer-section">
             <h2>Newsletter</h2>
             <div class="newsletter-box">
                 <input type="text" class="newsletter-input" placeholder="Your email">
@@ -672,7 +678,6 @@ hr {
         <img src="x.png" alt="Icon 3" class="newsletter-icon">
     </div>
     </div>
-
 
     <!-- Bottom Line and Copyright -->
     <hr>
