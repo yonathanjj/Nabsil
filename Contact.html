@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Nabsil Grain Bank</title>
     <style>
-        body {
-            background-color: #EBEBFF; /* Same background as the previous page */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+         body {
+    background-color: #EBEBFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-               /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Adjusts spacing between logo and links */
     align-items: center;
-    padding: 20px 10%; /* Adjust padding as needed */
+    padding: 20px 5%; /* Adjusts padding on the sides to move content */
     width: 100%;
     position: absolute;
     top: 0;
@@ -26,7 +25,6 @@ header {
     z-index: 1000;
 }
 
-/* Logo styles */
 .logo {
     width: 50px;
     height: 79px;
@@ -36,9 +34,9 @@ header {
     margin-right: 50px; /* Adds more spacing between the logo and the links */
 }
 
-/* Navigation styles */
 nav {
-    margin-left: auto; /* Aligns the nav to the right */
+    margin-left: auto;
+    margin-right: 3%; /* Adjusts spacing to move links more to the right */
 }
 
 nav ul {
@@ -48,15 +46,15 @@ nav ul {
     display: flex;
     gap: 20px;
     justify-content: center; /* Centers the navigation links */
+        margin-right: -50px; /* Adds more spacing between the logo and the links */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #001d00;
+    color: #000000;
     font-weight: bold;
 }
 
-/* Action button styles */
 .action-button {
     background-color: #2A642A;
     color: white;
@@ -66,35 +64,38 @@ nav ul li a {
     text-decoration: none;
 }
 
+
         .contact-content {
             padding: 50px;
             padding-top: 0;
         }
 
    .contact-header {
-    font-size: 64px;
+    font-size: 96px;
     color: #001D00;
     margin: 170px 0 10px; /* Keep existing margin values */
-    margin-left: 130px; /* Add margin-left to move the header to the right */
+    margin-left: 50px;
     text-align: left;
 }
 
 
         .contact-description {
-    font-size: 32px;
+    font-size: 45px;
     color: #001D00;
-    max-width: 800px;
+    max-width: 1300px;
     line-height: 1.5;
     margin-bottom: 50px;
-    margin-left: 130px; /* Add margin-left to move the description to the right */
+    margin-left: 50px;
     text-align: left;
 }
 
         .contact-form {
-    margin: 0 130px 50px; /* Add horizontal margin to move the form inwards from both sides */
+    margin: 0 50px 50px; /* Add horizontal margin to move the form inwards from both sides */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+        background-color: transparent; /* Ensures no background color */
+
 }
 
 
@@ -119,6 +120,8 @@ nav ul li a {
             color: #000;
             outline: none;
             margin-bottom: 15px;
+                background-color: transparent; /* Ensures no background color */
+
         }
 
         .contact-form .input-line::placeholder {
@@ -138,9 +141,9 @@ nav ul li a {
     margin-right: -50px; /* Adjust this value to reduce width on the right side */
     resize: vertical;
     height: 150px;
+    background-color: transparent; /* Ensures no background color */
+
 }
-
-
 
 
      .submit-button {
@@ -164,8 +167,8 @@ nav ul li a {
 
         .faqs {
     margin-bottom: 50px;
-    max-width: 1000px;
-    margin-left: auto;
+    max-width: 1400px;
+    margin-left: 300px;
     margin-right: auto;
 }
 
@@ -570,6 +573,5 @@ hr {
     <hr>
     <p class="footer-bottom">© All Rights Reserved NABSIL.</p>
 </footer>
-
 </body>
 </html>
