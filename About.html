@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Nabsil Grain Bank</title>
     <style>
-        body {
-            background-color: #EBEBFF;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+           body {
+    background-color: #EBEBFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-
-     /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Adjusts spacing between logo and links */
     align-items: center;
-    padding: 20px 10%; /* Adjust padding as needed */
+    padding: 20px 5%; /* Adjusts padding on the sides to move content */
     width: 100%;
     position: absolute;
     top: 0;
@@ -27,7 +25,6 @@ header {
     z-index: 1000;
 }
 
-/* Logo styles */
 .logo {
     width: 50px;
     height: 79px;
@@ -37,9 +34,9 @@ header {
     margin-right: 50px; /* Adds more spacing between the logo and the links */
 }
 
-/* Navigation styles */
 nav {
-    margin-left: auto; /* Aligns the nav to the right */
+    margin-left: auto;
+    margin-right: 3%; /* Adjusts spacing to move links more to the right */
 }
 
 nav ul {
@@ -49,15 +46,15 @@ nav ul {
     display: flex;
     gap: 20px;
     justify-content: center; /* Centers the navigation links */
+        margin-right: -50px; /* Adds more spacing between the logo and the links */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #001d00;
+    color: #000000;
     font-weight: bold;
 }
 
-/* Action button styles */
 .action-button {
     background-color: #2A642A;
     color: white;
@@ -67,15 +64,17 @@ nav ul li a {
     text-decoration: none;
 }
 
+
+
 /* About section styles */
 .about {
-    padding: 64px 64px 64px 190px; /* Adjust padding with 200px on the left */
+    padding: 64px 64px 64px 100px; /* Adjust padding with 200px on the left */
     text-align: right; /* Keeps the text aligned to the right within the container */
 }
 
 /* Main heading styles */
 .about h1 {
-    font-size: 64px;
+    font-size: 96px;
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 100px; /* Adjust the value as needed */
@@ -89,7 +88,7 @@ nav ul li a {
     font-weight: 600;
     color: #2A642A;
     text-align: center; /* Aligns text to the left within the container */
-    margin-top: 20px;
+    margin-top: 40px;
     width: auto; /* Adjust width as needed */
 }
 
@@ -99,7 +98,7 @@ nav ul li a {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 80px 100px;
-    gap: 5px; /* Reduced gap between sections */
+    gap: 1px;
 }
 
 .section {
@@ -107,26 +106,26 @@ nav ul li a {
     align-items: flex-start;
     margin-bottom: 40px;
     gap: 100px; /* Reduce the gap between sections */
-    width: 48%; /* Make each section occupy 48% of the container's width */
+    width: 48%;
 }
 
 .section-header {
-    font-size: 42px; /* Slightly larger */
+    font-size: 50px; /* Slightly larger */
     font-weight: 600; /* Semi-bold */
     color: black;
-    margin-right: 55px; /* Space between header and card */
+    margin-right: 55px;
      margin-right: 115px;
 }
-/* Adjusting Vision and Mission headers to the right */
 .vision-header, .mission-header {
     text-align: right;
-    margin-right: 0; /* Remove any additional right margin if needed */
-    margin-left: auto; /* Automatically adjust the left margin to push the header to the right */
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 140px;
 }
 
 .section-card {
-    width: 400px; /* Increase the width of the cards */
-    height: 200px; /* Increase the height of the cards */
+    width: 500px; /* Increase the width of the cards */
+    height: 400px; /* Increase the height of the cards */
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -134,7 +133,7 @@ nav ul li a {
     background-color: #EBEBFF;
     overflow: hidden; /* Prevents scrollbars */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
-    font-size: 18px; /* Increase font size inside the cards */
+    font-size: 12px; /* Increase font size inside the cards */
 }
 
 .section-card {
@@ -143,12 +142,11 @@ nav ul li a {
     flex-direction: column;
     justify-content: flex-start; /* Ensure content starts at the top */
 }
-
 .section-card p {
-    font-size: 23px; /* Increase the font size for paragraphs */
+    font-size: 35px; /* Increase the font size for paragraphs */
     line-height: 1.6; /* Adjust line height for better readability */
-    color: #333; /* Optional: Change text color for better visibility */
-}
+    color: #2A642A;
+    }
 
 .section-card:hover {
     transform: translateY(-10px); /* Make the card "hover" */
@@ -173,14 +171,15 @@ nav ul li a {
 
 .values-section {
     justify-content: flex-end;
-    margin-top: 40px; /* Further lowering the entire Values section */
+    margin-top: 130px;
+        margin-left: -40px;
 }
 
 .values-header {
-    order: 2; /* Keep header to the right of the card */
+    order: 2;
     margin-left: 5px; /* Space between card and header */
-    margin-right: 70px; /* Remove default right margin */
-    margin-top: 40px; /* Further lower the Values header */
+    margin-right: -20px; /* Remove default right margin */
+    margin-top: 300px;
 }
 
 .card-values {
@@ -223,7 +222,7 @@ nav ul li a {
     .section-card {
         width: calc(100% - 40px);
         margin-bottom: 40px; /* Space between cards in column layout */
-        font-size: 16px; /* Adjusted font size for smaller screens */
+        font-size: 16px;
     }
 }
 
@@ -233,7 +232,7 @@ nav ul li a {
 
 .team-card-container {
     display: flex;
-    gap: 50px; /* Space between cards */
+    gap: 80px; /* Space between cards */
     overflow-x: visible;
     margin-bottom: 40px; /* Space between cards and header */
     flex-wrap: nowrap; /* Prevent wrapping */
@@ -243,8 +242,8 @@ nav ul li a {
 
 /* Hover effect for team cards */
 .team-card {
-    width: 395px; /* Width of each card */
-    height: 557px; /* Height of each card */
+    width: 500px; /* Width of each card */
+    height:650px; /* Height of each card */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -256,38 +255,7 @@ nav ul li a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-/* Container for icons */
-.icon-container {
-    display: flex;
-    justify-content: flex-start; /* Align icons to the left */
-    margin-top: 10px; /* Space between text and icons */
-    gap: 5px; /* Adjust space between icons */
-}
 
-/* Styling for icons */
-.icon {
-    width: 400px;
-    height: 400px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.icon-facebook {
-    background-image: url('iconfb.jpg');
-}
-
-.icon-twitter {
-    background-image: url('logoig.jpg');
-}
-
-.icon-linkedin {
-    background-image: url('logox.jpg');
-}
-
-.icon-instagram {
-    background-image: url('logoli.jpg');
-}
 
 .team-card-image {
     width: 100%;
@@ -302,23 +270,49 @@ nav ul li a {
 }
 
 .team-member-name {
-    font-size: 27px;
+    font-size: 35px;
     font-weight: bold;
     color: #001D00;
     margin-top: 0;
-    margin-bottom: -20px;
+    margin-bottom: -15px;
     text-align: left; /* Align name to the left */
 }
 
 .team-member-position {
-    font-size: 15px;
+    font-size: 23px;
     font-weight: 300;
     color: #2A642A;
     text-align: left; /* Align position text to the left */
 }
 
+.social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-top: 10px; /* Space above the icons */
+}
+
+.social-icon {
+    width: 30px; /* Size of the icons */
+    height: 30px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.instagram-icon {
+    background-image: url('insta.png'); /* Instagram icon */
+}
+
+.facebook-icon {
+    background-image: url('link.png'); /* Facebook icon */
+}
+
+.twitter-icon {
+    background-image: url('elon.png'); /* Twitter icon */
+}
+
 .team-header {
-    font-size: 64px;
+    font-size: 96px;
     font-weight: 600; /* Semi-bold */
     color: black;
     margin-top: 40px; /* Space above the header */
@@ -339,11 +333,17 @@ nav ul li a {
 
 
 .partners-container {
-    width: 90%; /* Reduce the width to make it smaller on both sides (adjust as needed) */
+    width: 100%;
+        height: 130px; /* Set the desired height */
     overflow: hidden; /* Hide the overflow to maintain the loop effect */
     white-space: nowrap; /* Prevent the images from wrapping to the next line */
     position: relative;
-    margin: 0 auto; /* Center the container on the screen */
+    margin: 0 auto;
+    background-color: white; /* Set the background color to white */
+    border-radius: 10px; /* Add a curve with border-radius */
+
+
+
 }
 
 
@@ -391,11 +391,11 @@ nav ul li a {
 
 /* Header for Partners Section */
 .partners-header {
-    font-size: 64px; /* Adjusted size */
+    font-size: 96px; /* Adjusted size */
     font-weight: bold; /* Ensure bold text */
-    color: black; /* Text color */
-    text-align: left; /* Align text to the left */
-    margin-left: 70px; /* Space from the left edge */
+    color: black;
+    text-align: left;
+    margin-left: 1px;
 }
 
 #footer {
@@ -408,6 +408,7 @@ nav ul li a {
     box-sizing: border-box;
     left: 50%; /* Adjust the left position */
     transform: translateX(-50%); /* Center the footer horizontally */
+    margin-top: 50px; /* Add space above the footer */
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, transparent 5%),
                       linear-gradient(to bottom, #EBEBFF 0%, #001d00 60%);
     background-size: 10px 10px, cover;
@@ -634,12 +635,12 @@ hr {
             <div class="team-card-info">
                 <p class="team-member-name">Nathnael Dereje</p>
                 <p class="team-member-position">Chief Executive Officer | CEO</p>
-                <div class="icon-container">
-                    <div class="icon icon-facebook"></div>
-                    <div class="icon icon-twitter"></div>
-                    <div class="icon icon-linkedin"></div>
-                    <div class="icon icon-instagram"></div>
-                </div>
+                 <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram-icon"></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook-icon"></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon twitter-icon"></a>
+        </div>
+
             </div>
         </div>
         <!-- Repeat for other team members -->
@@ -648,12 +649,12 @@ hr {
             <div class="team-card-info">
                 <p class="team-member-name">Siltanu Kifle</p>
                 <p class="team-member-position">Chief Technology Officer | CTO</p>
-                <div class="icon-container">
-                    <div class="icon icon-facebook"></div>
-                    <div class="icon icon-twitter"></div>
-                    <div class="icon icon-linkedin"></div>
-                    <div class="icon icon-instagram"></div>
-                </div>
+                 <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram-icon"></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook-icon"></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon twitter-icon"></a>
+        </div>
+
             </div>
         </div>
         <div class="team-card">
@@ -661,12 +662,11 @@ hr {
             <div class="team-card-info">
                 <p class="team-member-name">Bonaventure Mihigo</p>
                 <p class="team-member-position">Chief Operation Officer | COO</p>
-                <div class="icon-container">
-                    <div class="icon icon-facebook"></div>
-                    <div class="icon icon-twitter"></div>
-                    <div class="icon icon-linkedin"></div>
-                    <div class="icon icon-instagram"></div>
-                </div>
+                 <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram-icon"></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook-icon"></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon twitter-icon"></a>
+        </div>
             </div>
         </div>
         <!-- Add more team cards as needed -->
@@ -695,7 +695,11 @@ hr {
         <img src="logo2.jpg" alt="Partner 2">
         <img src="logo1.jpg" alt="Partner 1">
         <img src="logo2.jpg" alt="Partner 1">
-
+<br>
+        <br>
+<br>
+<br>
+<br>
         <!-- Repeat logos as needed -->
     </div>
 </div><!-- footer.html -->
@@ -707,15 +711,15 @@ hr {
 <div class="footer-section contact-info">
     <h2>Contact Us</h2>
     <div class="contact-item">
-        <img src="l.png" alt="Icon 1" class="contact-icon">
+        <img src="path/to/icon1.png" alt="Icon 1" class="contact-icon">
         <p class="contact-text">536 street, Kigali, Rwanda</p>
     </div>
     <div class="contact-item">
-        <img src="p.png" alt="Icon 2" class="contact-icon">
+        <img src="path/to/icon2.png" alt="Icon 2" class="contact-icon">
         <p class="contact-text">+0954 55 1425</p>
     </div>
     <div class="contact-item">
-        <img src="e.png" alt="Icon 3" class="contact-icon">
+        <img src="path/to/icon3.png" alt="Icon 3" class="contact-icon">
         <p class="contact-text">info@nabsil.com</p>
     </div>
 </div>
@@ -757,21 +761,20 @@ hr {
     </div>
 </div>
 
-      <div class="footer-section">
+        <!-- Newsletter Section -->
+        <div class="footer-section">
             <h2>Newsletter</h2>
             <div class="newsletter-box">
                 <input type="text" class="newsletter-input" placeholder="Your email">
                 <button class="newsletter-btn">Subscribe</button>
             </div>
         </div>
-         <div class="newsletter-icons">
+              <div class="newsletter-icons">
         <img src="in.png" alt="Icon 1" class="newsletter-icon">
         <img src="ing.png" alt="Icon 2" class="newsletter-icon">
         <img src="x.png" alt="Icon 3" class="newsletter-icon">
     </div>
     </div>
-
-
 
     <!-- Bottom Line and Copyright -->
     <hr>
