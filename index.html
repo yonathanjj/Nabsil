@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home - Nabsil Grain Bank</title>
-        <link href="https://fonts.googleapis.com/css2?family=Season:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap" rel="stylesheet">
     <style>
           body {
+    font-family: 'Alegreya', serif;
     background-color: #EBEBFF;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -275,7 +276,8 @@ nav ul li a {
 
 
 
-  .text-and-lines {
+  /* Keep the existing styles for larger screens */
+.text-and-lines {
     position: absolute;
     right: 100px;
     top: 2150px;
@@ -286,7 +288,7 @@ nav ul li a {
 }
 
 .text-item {
-    margin-bottom: 40px; /* Increased margin to add more space between text items */
+    margin-bottom: 40px;
     text-align: left;
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -309,33 +311,114 @@ nav ul li a {
 
 .promise-header {
     position: absolute;
-    left: 100px; /* Gap from the left side of the screen */
-    top: calc(50% + 1650px); /* Moved down by increasing the pixel value */
-    background-color: #EBEBFF; /* Slight background color for overlap effect */
-    padding: 10px 20px; /* Add some padding around the text */
+    left: 100px;
+    top: calc(50% + 1650px);
+    background-color: #EBEBFF;
+    padding: 10px 20px;
 }
-
 
 .promise-header h2 {
     margin: 0;
-    color: #001d00; /* Text color */
-    font-size: 96px; /* Font size */
+    color: #001d00;
+    font-size: 96px;
 }
+
 .promise-text {
     position: relative;
-    left: 100px; /* Align with the promise header */
-    top: 280px; /* Space between the header and the text */
-    width: 700px; /* Adjust width as needed */
-    color: #001d00; /* Dark color for the text */
-    font-size: 47px; /* Match the font size with the text-and-lines section */
-    line-height: 1.5; /* Line height for readability */
-    text-align: left; /* Center align text */
-    font-weight: normal; /* Normal font weight for the paragraph */
+    left: 100px;
+    top: 280px;
+    width: 700px;
+    color: #001d00;
+    font-size: 47px;
+    line-height: 1.5;
+    text-align: left;
+    font-weight: normal;
 }
 
 .promise-text p {
     margin: 0;
 }
+/* Media queries for responsiveness */
+@media (max-width: 1000px) {
+    .text-and-lines {
+        right: 50px;
+        top: 1800px;
+        width: 500px;
+        font-size: 45px;
+    }
+
+    .promise-header {
+        left: 50px;
+        top: calc(50% + 1500px);
+        padding: 8px 15px;
+    }
+
+    .promise-header h2 {
+        font-size: 80px;
+    }
+
+    .promise-text {
+        left: 50px;
+        top: 220px;
+        width: 500px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-and-lines {
+        right: 20px;
+        top: 1400px;
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .promise-header {
+        left: 20px;
+        top: calc(50% + 1200px);
+        padding: 5px 10px;
+    }
+
+    .promise-header h2 {
+        font-size: 60px;
+    }
+
+    .promise-text {
+        left: 20px;
+        top: 160px;
+        width: 100%;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-and-lines {
+        right: 10px;
+        top: 1000px;
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .promise-header {
+        left: 10px;
+        top: calc(50% + 1000px);
+        padding: 5px 8px;
+    }
+
+    .promise-header h2 {
+        font-size: 50px;
+    }
+
+    .promise-text {
+        left: 10px;
+        top: 100px;
+        width: 100%;
+        font-size: 24px;
+    }
+}
+
+
+
 .service-header {
     position: absolute;
     top: 3200px; /* Maintain the current distance from the top */
@@ -592,8 +675,8 @@ background: linear-gradient(to bottom, #EBEBFF 0%, #001d00 60%);    color: #fff;
 .newsletter-icon {
     width: 50px; /* Adjust icon size as needed */
     height: 50px; /* Adjust icon size as needed */
-    margin-right: 250px; /* Space between icons */
-        margin-left: -400px; /* Adjust value as needed to move icons left */
+    margin-right: 500px; /* Space between icons */
+        margin-left: -500px; /* Adjust value as needed to move icons left */
 
 }
 
@@ -618,7 +701,33 @@ hr {
 
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 10px 2%;
+    }
 
+    .slide-content {
+        padding: 10px;
+    }
+
+    .about-section h1 {
+        font-size: 6vw;
+    }
+
+    .about-content {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content {
+        font-size: 4vw;
+    }
+
+    .about-section h1 {
+        font-size: 8vw;
+    }
+}
 
     </style>
 </head>
@@ -926,8 +1035,6 @@ let currentIndex = 0;
         }
     });
 });
-
-
 </script>
 </body>
 </html>
