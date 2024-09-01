@@ -369,7 +369,33 @@ nav ul li a {
 .image-slider img:first-child {
     display: block; /* Show the first image initially */
 }
+.slider-icons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
 
+.slider-icons .prev-icon,
+.slider-icons .next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.slider-icons .prev-icon {
+    margin-left: 10px;
+}
+
+.slider-icons .next-icon {
+    margin-right: 10px;
+}
 .overlay {
     position: absolute;
     bottom:-3150px;
@@ -381,7 +407,6 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 4px solid rgba(0, 0, 0, 0.8); /* Dark stroke around the overlay */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -701,6 +726,10 @@ financial opportunities for farmers</p>
 <h1 class="service-header">Service</h1>
 </div>
 <div class="image-slider">
+     <div class="slider-icons">
+        <span class="prev-icon">&#9664;</span> <!-- Left Arrow -->
+        <span class="next-icon">&#9654;</span> <!-- Right Arrow -->
+    </div>
     <img src="ko.jpg" alt="Secured Grain Storage Solutions">
     <img src="s2.jpg" alt="Grain as Collateral">
     <img src="ko2.jpg" alt="Integrated Grain Transactions">
@@ -836,42 +865,14 @@ financial opportunities for farmers</p>
 const images = slider.querySelectorAll('img');
 let currentIndex = 0;
 
-function showImage(index) {
-    images.forEach((img, i) => {
-        img.style.display = i === index ? 'block' : 'none';
-    });
-}
 
-function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-}
 
-showImage(currentIndex); // Show the first image initially
-setInterval(nextImage, 3000); // Change image every 3 seconds
 
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.image-slider img');
-    const overlayText = document.querySelector('.overlay-text');
-    const texts = [
-
-    ];
-
-    let currentIndex = 0;
-
-    function showNextImage() {
-        images[currentIndex].style.display = 'none'; // Hide current image
-        currentIndex = (currentIndex + 1) % images.length; // Move to next image
-        images[currentIndex].style.display = 'block'; // Show next image
-        overlayText.textContent = texts[currentIndex]; // Update overlay text
-    }
-
-    setInterval(showNextImage, 3000); // Change image every 3 seconds
-});
-
-        document.addEventListener("DOMContentLoaded", function() {
+       document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll(".image-slider img");
     const overlayText = document.querySelector(".overlay-text");
+    const prevIcon = document.querySelector('.prev-icon');
+    const nextIcon = document.querySelector('.next-icon');
     let currentIndex = 0;
 
     const texts = [
@@ -881,15 +882,51 @@ document.addEventListener('DOMContentLoaded', function() {
         "Trusted Supplier for Buyers"
     ];
 
-    function showNextImage() {
-        images[currentIndex].style.display = 'none'; // Hide current image
-        currentIndex = (currentIndex + 1) % images.length; // Move to next image
-        images[currentIndex].style.display = 'block'; // Show next image
-        overlayText.textContent = texts[currentIndex]; // Update overlay text
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.style.display = i === index ? 'block' : 'none';
+        });
+        overlayText.textContent = texts[index];
     }
 
-    setInterval(showNextImage, 3000); // Change image every 3 seconds
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Move to next image
+        showImage(currentIndex);
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1; // Move to previous image
+        showImage(currentIndex);
+    }
+
+    // Initial display
+    showImage(currentIndex);
+
+    // Icon click events
+    prevIcon.addEventListener('click', () => {
+        showPrevImage();
+    });
+
+    nextIcon.addEventListener('click', () => {
+        showNextImage();
+    });
+
+    // For touch/swipe functionality
+    let startX;
+    document.querySelector('.image-slider').addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    document.querySelector('.image-slider').addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX > endX + 50) { // Swipe left
+            showNextImage();
+        } else if (startX < endX - 50) { // Swipe right
+            showPrevImage();
+        }
+    });
 });
+
 
 </script>
 </body>
