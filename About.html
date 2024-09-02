@@ -789,6 +789,145 @@ hr {
     }
 }
 
+    @media (max-width: 768px) {
+    #footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-section h2 {
+        text-align: center;
+    }
+
+    .newsletter-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .newsletter-icons {
+        justify-content: center;
+    }
+}
+
+/* Larger Screen Adjustments */
+@media (min-width: 1024px) {
+    .footer-section {
+        max-width: 22%;
+    }
+}
+
+@media (min-width: 1366px) {
+    .footer-section {
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .footer-section {
+        max-width: 18%;
+    }
+
+    .newsletter-box {
+        justify-content: flex-start;
+        margin-left: 20%;
+    }
+
+    .newsletter-icons {
+        justify-content: flex-start;
+        margin-left: 5%;
+    }
+}
+
+        @media (min-width: 1366px) {
+    .footer-section {
+        width: 30%;
+        text-align: left;
+    }
+
+    .contact-info, .quick-links, .service-links {
+        margin: 0;
+    }
+
+    .newsletter-box {
+        justify-content: flex-start; /* Align the input and button to the left */
+        margin-left: 10%; /* Adjust margin to keep it balanced */
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Add some space between the input and button */
+    }
+
+    .newsletter-input {
+        width: 250px; /* Increase width of input field */
+        height: 40px; /* Reduce height slightly */
+        padding: 8px;
+        font-size: 14px; /* Adjust font size */
+        border-radius: 5px 0 0 5px; /* Softer corners */
+    }
+
+    .newsletter-btn {
+        width: 120px; /* Adjust button width */
+        height: 40px; /* Match input height */
+        font-size: 14px;
+        border-radius: 0 5px 5px 0; /* Softer corners */
+    }
+
+    .newsletter-icons {
+        justify-content: flex-start;
+        margin-left: 10%;
+    }
+
+    .footer-bottom {
+        text-align: left;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer-section {
+        width: 25%;
+    }
+
+    .newsletter-box {
+        margin-left: 8%; /* Fine-tune the margin for balance */
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between input and button */
+    }
+
+    .newsletter-input {
+        width: 280px; /* Further increase input width */
+        height: 45px; /* Adjust height for proportion */
+        padding: 10px;
+        font-size: 16px; /* Increase font size slightly */
+        border-radius: 5px 0 0 5px; /* Softer corners */
+    }
+
+    .newsletter-btn {
+        width: 130px; /* Adjust button width */
+        height: 45px; /* Match input height */
+        font-size: 16px;
+        border-radius: 0 5px 5px 0; /* Softer corners */
+    }
+
+    .newsletter-icons {
+        margin-left: 8%;
+    }
+
+    .footer-bottom {
+        margin-left: 8%;
+    }
+}
     </style>
 </head>
 <body>
