@@ -194,6 +194,107 @@ nav ul li a {
     width: 100%;
     margin-left: 80px;
 }
+/* Responsive styles for 1600px */
+@media (max-width: 1600px) {
+    .content {
+        padding: 20px 30px;
+    }
+
+    .left-side {
+        padding-right: 15px;
+    }
+
+    .right-side {
+        margin-top: 80px;
+        margin-left: 50px;
+    }
+
+    .recent-articles {
+        font-size: 90px;
+        margin-left: 50px;
+    }
+
+    .image-item img {
+        width: 450px;
+        height: 230px;
+    }
+
+    .image-item {
+        margin-left: 60px;
+    }
+
+    .line {
+        margin-left: 60px;
+    }
+}
+
+/* Responsive styles for 1440px */
+@media (max-width: 1440px) {
+    .content {
+        padding: 20px 20px;
+    }
+
+    .left-side {
+        padding-right: 10px;
+    }
+
+    .right-side {
+        margin-top: 60px;
+        margin-left: 40px;
+    }
+
+    .recent-articles {
+        font-size: 80px;
+        margin-left: 40px;
+    }
+
+    .image-item img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .image-item {
+        margin-left: 40px;
+    }
+
+    .line {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .content {
+        padding: 20px 20px;
+    }
+
+    .left-side {
+        padding-right: 10px;
+    }
+
+    .right-side {
+        margin-top: 130px;
+        margin-left: 40px;
+    }
+
+    .recent-articles {
+        font-size: 80px;
+        margin-left: 40px;
+    }
+
+    .image-item img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .image-item {
+        margin-left: 40px;
+    }
+
+    .line {
+        margin-left: 40px;
+    }
+}
+
 
 .slider-container {
     position: relative;
@@ -240,73 +341,60 @@ nav ul li a {
     background-color: #2A642A;
 }
 
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column; /* Stack the content vertically */
-        align-items: center; /* Center-align the content */
-        padding: 10px;
-    }
-
-    .left-side,
-    .right-side {
-        max-width: 100%; /* Ensure both sides take full width on mobile */
-        margin: 0;
-        padding: 0;
-        text-align: center; /* Center-align text on mobile */
-    }
-
-    .recent-articles {
-        font-size: 60px; /* Adjust font size for mobile */
-        margin: 20px 0;
-        text-align: center; /* Center-align heading */
-    }
-
-    .image-container {
-        margin: 0;
-        gap: 10px; /* Adjust gap for smaller screens */
-        align-items: center; /* Center the images */
-    }
-
-    .image-item {
-        margin: 0;
-        justify-content: center; /* Center the image and text content */
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .line {
-        margin: 10px auto; /* Center-align the line */
-        width: 80%;
-    }
-
+/* Responsive styles for 1600px */
+@media (max-width: 1600px) {
     .slider-container {
-        margin: 20px auto; /* Center the slider on mobile */
-        width: 100%;
+        width: 400px; /* Adjust width */
+        height: 900px; /* Adjust height */
+        margin-left: 300px; /* Adjust margin-left */
     }
 
     .slider-images {
-        width: 100%; /* Make the slider images responsive */
-        flex-direction: column; /* Stack images vertically on mobile */
-        height: auto;
+        width: 2000px; /* Adjust width for 5 images */
     }
 
     .slider-images img {
-        width: 100%;
-        height: auto;
-    }
-
-    .slider-dots {
-        position: relative; /* Adjust dot positioning */
-        bottom: 0;
-        margin-top: 10px;
+        width: 400px; /* Adjust width of each image */
+        height: 850px; /* Adjust height of each image */
     }
 }
+
+/* Responsive styles for 1440px */
+@media (max-width: 1440px) {
+    .slider-container {
+        width: 350px; /* Adjust width */
+        height: 800px; /* Adjust height */
+        margin-left: 250px; /* Adjust margin-left */
+    }
+
+    .slider-images {
+        width: 1750px; /* Adjust width for 5 images */
+    }
+
+    .slider-images img {
+        width: 350px; /* Adjust width of each image */
+        height: 750px; /* Adjust height of each image */
+    }
+}
+
+/* Responsive styles for 1366px */
+@media (max-width: 1366px) {
+    .slider-container {
+        width: 300px; /* Adjust width */
+        height: 700px; /* Adjust height */
+        margin-left: 200px; /* Adjust margin-left */
+    }
+
+    .slider-images {
+        width: 1500px; /* Adjust width for 5 images */
+    }
+
+    .slider-images img {
+        width: 300px; /* Adjust width of each image */
+        height: 650px; /* Adjust height of each image */
+    }
+}
+
 
 
 /* New Styles for Rights Section */
