@@ -271,7 +271,7 @@ nav ul li a {
 .about-section {
     background-color: #EBEBFF;
     padding: 50px 20px;
-    text-align: right; /* Align the header content to the right */
+    text-align: right;
     margin-top: 50px;
 }
 
@@ -280,18 +280,17 @@ nav ul li a {
     color: #001d00;
     margin: 0;
     margin-right: 200px;
-        margin-top: 50px;
+    margin-top: 50px;
     display: inline-block;
-        transform: translateY(-100px); /* Move header up */
-
+    transform: translateY(-100px);
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align content to the left */
-    margin-top: -10px; /* Space between the header and content */
-    position: relative; /* Ensure child elements position correctly */
+    justify-content: flex-start;
+    margin-top: -10px;
+    position: relative;
     margin-left: 190px;
 }
 
@@ -302,7 +301,7 @@ nav ul li a {
     background-image: url('abouth.jpg');
     background-size: cover;
     background-position: center;
-    margin-left: -100px; /* Move image to the left */
+    margin-left: -100px;
     position: relative;
 }
 
@@ -310,16 +309,16 @@ nav ul li a {
     width: 800px;
     height: 620px;
     border-radius: 10px;
-    background-color: rgba(0, 29, 0, 0.9); /* 90% transparent overlay */
+    background-color: rgba(0, 29, 0, 0.9);
     position: absolute;
-    right: 30px; /* Adjust right position */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center it */
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    transition: transform 0.4s ease, background-color 0.4s ease; /* Smooth transition for transform and color */
+    transition: transform 0.4s ease, background-color 0.4s ease;
 }
 
 .about-overlay p {
@@ -328,17 +327,16 @@ nav ul li a {
     font-weight: normal;
     margin: 0;
     text-align: left;
-    padding-left: 20px; /* Adjust the padding as needed */
-        padding-right: 20px; /* Adjust the padding as needed */
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .about-overlay:hover {
-    transform: translateY(-50%) scale(1.05); /* Slightly enlarge the overlay */
-    background-color: rgba(42, 100, 42, 1); /* Change the background color on hover */
+    transform: translateY(-50%) scale(1.05);
+    background-color: rgba(42, 100, 42, 1);
 }
 
-  .read-more-button {
+.read-more-button {
     position: absolute;
     bottom: -30px;
     right: 20px;
@@ -349,86 +347,270 @@ nav ul li a {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    z-index: 1000; /* Ensure it overlays the image and overlay */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-@media (max-width: 1500px) {
+/* Responsive Adjustments */
+
+/* For 3840px screens */
+@media (max-width: 3840px) {
     .about-section h1 {
-        font-size: 80px; /* Reduce font size */
-        margin-right: 150px; /* Adjust margin */
-        transform: translateY(-50px); /* Adjust header position */
+        font-size: 90px;
+        margin-right: 180px;
+        transform: translateY(-90px);
     }
 
     .about-image {
-        width: 1000px; /* Reduce image width */
-        height: 670px; /* Adjust image height proportionally */
-        margin-left: -50px; /* Adjust position */
+        width: 1150px;
+        height: 760px;
+        margin-left: -90px;
     }
 
     .about-overlay {
-        width: 600px; /* Reduce overlay width */
-        height: 500px; /* Adjust overlay height proportionally */
-        right: 20px; /* Adjust right position */
+        width: 770px;
+        height: 600px;
+        right: 25px;
     }
 
     .about-overlay p {
-        font-size: 28px; /* Adjust font size */
-        padding-left: 15px; /* Adjust padding */
-        padding-right: 15px; /* Adjust padding */
+        font-size: 30px;
     }
 
     .read-more-button {
-        bottom: -20px; /* Adjust button position */
-        right: 15px; /* Adjust button position */
-        padding: 12px 25px; /* Adjust padding */
+        bottom: -25px;
+        right: 18px;
+        padding: 14px 28px;
+    }
+}
+
+/* For 2560px screens */
+@media (max-width: 2560px) {
+    .about-section h1 {
+        font-size: 85px;
+        margin-right: 170px;
+        transform: translateY(-80px);
+    }
+
+    .about-image {
+        width: 1100px;
+        height: 720px;
+        margin-left: -80px;
+    }
+
+    .about-overlay {
+        width: 740px;
+        height: 580px;
+        right: 20px;
+    }
+
+    .about-overlay p {
+        font-size: 28px;
+    }
+
+    .read-more-button {
+        bottom: -20px;
+        right: 16px;
+        padding: 13px 26px;
+    }
+}
+
+/* For 1920px screens */
+@media (max-width: 1920px) {
+    .about-section h1 {
+        font-size: 80px;
+        margin-right: 160px;
+        transform: translateY(-70px);
+    }
+
+    .about-image {
+        width: 1000px;
+        height: 670px;
+        margin-left: -70px;
+    }
+
+    .about-overlay {
+        width: 700px;
+        height: 550px;
+        right: 15px;
+    }
+
+    .about-overlay p {
+        font-size: 26px;
+    }
+
+    .read-more-button {
+        bottom: -15px;
+        right: 14px;
+        padding: 12px 24px;
+    }
+}
+
+/* For 1600px screens */
+@media (max-width: 1600px) {
+    .about-section h1 {
+        font-size: 75px;
+        margin-right: 150px;
+        transform: translateY(-60px);
+    }
+
+    .about-image {
+        width: 900px;
+        height: 600px;
+        margin-left: -60px;
+    }
+
+    .about-overlay {
+        width: 650px;
+        height: 500px;
+        right: 10px;
+    }
+
+    .about-overlay p {
+        font-size: 24px;
+    }
+
+    .read-more-button {
+        bottom: -10px;
+        right: 12px;
+        padding: 11px 22px;
+    }
+}
+
+/* For 1440px screens */
+@media (max-width: 1440px) {
+    .about-section h1 {
+        font-size: 70px;
+        margin-right: 140px;
+        transform: translateY(-50px);
+    }
+
+    .about-image {
+        width: 850px;
+        height: 570px;
+        margin-left: -50px;
+    }
+
+    .about-overlay {
+        width: 600px;
+        height: 470px;
+        right: 8px;
+    }
+
+    .about-overlay p {
+        font-size: 22px;
+    }
+
+    .read-more-button {
+        bottom: -8px;
+        right: 10px;
+        padding: 10px 20px;
+    }
+}
+
+/* For 1366px screens */
+@media (max-width: 1366px) {
+    .about-section h1 {
+        font-size: 65px;
+        margin-right: 130px;
+        transform: translateY(-40px);
+    }
+
+    .about-image {
+        width: 800px;
+        height: 540px;
+        margin-left: -40px;
+    }
+
+    .about-overlay {
+        width: 550px;
+        height: 440px;
+        right: 5px;
+    }
+
+    .about-overlay p {
+        font-size: 20px;
+    }
+
+    .read-more-button {
+        bottom: -5px;
+        right: 8px;
+        padding: 9px 18px;
+    }
+}
+
+/* Existing media queries for smaller devices */
+
+@media (max-width: 1500px) {
+    .about-section h1 {
+        font-size: 60px;
+        margin-right: 120px;
+        transform: translateY(-30px);
+    }
+
+    .about-image {
+        width: 750px;
+        height: 510px;
+        margin-left: -30px;
+    }
+
+    .about-overlay {
+        width: 500px;
+        height: 410px;
+        right: 0;
+    }
+
+    .about-overlay p {
+        font-size: 18px;
+    }
+
+    .read-more-button {
+        bottom: 0;
+        right: 6px;
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 768px) {
     .about-section {
-        padding: 20px 10px; /* Adjust padding */
-        text-align: center; /* Center text on smaller screens */
+        padding: 20px 10px;
+        text-align: center;
     }
 
     .about-section h1 {
-        font-size: 60px; /* Further reduce font size */
-        margin-right: 0; /* Remove right margin */
-        transform: translateY(0); /* Reset translation */
+        font-size: 50px;
+        margin-right: 0;
+        transform: translateY(0);
     }
 
     .about-content {
-        margin-left: 0; /* Remove left margin */
+        margin-left: 0;
     }
 
     .about-image {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
-        margin-left: 0; /* Reset margin */
+        width: 100%;
+        height: auto;
+        margin-left: 0;
     }
 
     .about-overlay {
-        width: 90%; /* Make overlay responsive */
-        height: auto; /* Maintain aspect ratio */
-        right: 0; /* Center overlay */
+        width: 90%;
+        height: auto;
+        right: 0;
     }
 
     .about-overlay p {
-        font-size: 24px; /* Adjust font size */
-        padding-left: 10px; /* Adjust padding */
-        padding-right: 10px; /* Adjust padding */
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .read-more-button {
-        bottom: 10px; /* Adjust button position */
-        right: 10px; /* Adjust button position */
-        padding: 10px 20px; /* Adjust padding */
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 20px;
     }
 }
-
-
-
-
 
 
 
@@ -468,7 +650,7 @@ nav ul li a {
 .promise-header {
     position: absolute;
     left: 100px;
-    top: calc(50% + 1650px);
+    top: calc(50% + 1680px);
     background-color: #EBEBFF;
     padding: 10px 20px;
 }
@@ -482,7 +664,7 @@ nav ul li a {
 .promise-text {
     position: relative;
     left: 100px;
-    top: 280px;
+    top: 470px;
     width: 700px;
     color: #001d00;
     font-size: 47px;
@@ -494,109 +676,65 @@ nav ul li a {
 .promise-text p {
     margin: 0;
 }
-@media (max-width: 1500px) {
+
+@media (max-width: 1600px) {
     .text-and-lines {
-        right: 75px;
-        top: 2000px;
-        width: 600px;
-        font-size: 50px;
+        font-size: 45px; /* Adjust as needed */
     }
 
     .promise-header {
-        left: 75px;
-        top: calc(50% + 1450px); /* Move header up by reducing the top value */
-        padding: 9px 18px;
+        top: calc(50% + 1600px); /* Keep header in place */
     }
 
     .promise-header h2 {
-        font-size: 85px;
+        font-size: 75px; /* Adjust as needed */
     }
 
     .promise-text {
-        left: 75px;
-        top: 250px;
-        width: 600px;
-        font-size: 40px;
+        font-size: 38px; /* Adjust as needed */
+        min-height: 50vh; /* Adjust to make the paragraph longer vertically */
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1440px) {
     .text-and-lines {
-        right: 50px;
-        top: 1800px;
-        width: 500px;
-        font-size: 45px;
+        font-size: 40px; /* Adjust as needed */
     }
 
     .promise-header {
-        left: 50px;
-        top: calc(50% + 1400px); /* Adjust top for smaller screens */
-        padding: 8px 15px;
+        top: calc(50% + 1550px); /* Keep header in place */
     }
 
     .promise-header h2 {
-        font-size: 80px;
+        font-size: 65px; /* Adjust as needed */
     }
 
     .promise-text {
-        left: 50px;
-        top: 220px;
-        width: 500px;
-        font-size: 35px;
+        font-size: 34px; /* Adjust as needed */
+        min-height: 55vh; /* Adjust to make the paragraph longer vertically */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1366px) {
     .text-and-lines {
-        right: 20px;
-        top: 1400px;
-        width: 100%;
-        font-size: 35px;
+        font-size: 35px; /* Adjust as needed */
     }
 
     .promise-header {
-        left: 20px;
-        top: calc(50% + 1300px); /* Adjust top for even smaller screens */
-        padding: 5px 10px;
+        top: calc(50% + 1500px); /* Keep header in place */
     }
 
     .promise-header h2 {
-        font-size: 60px;
+        font-size: 55px; /* Adjust as needed */
     }
 
     .promise-text {
-        left: 20px;
-        top: 160px;
-        width: 100%;
-        font-size: 30px;
+        font-size: 30px; /* Adjust as needed */
+        min-height: 20vh; /* Adjust to make the paragraph longer vertically */
     }
 }
 
-@media (max-width: 480px) {
-    .text-and-lines {
-        right: 10px;
-        top: 1000px;
-        width: 100%;
-        font-size: 25px;
-    }
 
-    .promise-header {
-        left: 10px;
-        top: calc(50% + 1000px); /* Adjust top for very small screens */
-        padding: 5px 8px;
-    }
-
-    .promise-header h2 {
-        font-size: 50px;
-    }
-
-    .promise-text {
-        left: 10px;
-        top: 100px;
-        width: 100%;
-        font-size: 24px;
-    }
-}
 
 .service-header {
     position: absolute;
@@ -695,8 +833,111 @@ nav ul li a {
     transition: background-color 0.3s ease; /* Smooth transition for background color */
 
 }
+/* Responsive styles */
+@media (max-width: 1920px) {
+    .service-header {
+        font-size: 32px; /* Adjust as needed */
+        left: 1300px; /* Adjust as needed */
+    }
 
+    .image-slider {
+        height: 800px; /* Adjust height as needed */
+    }
 
+    .overlay {
+        width: 450px; /* Adjust size as needed */
+        height: 180px; /* Adjust size as needed */
+    }
+
+    .overlay-text {
+        font-size: 45px; /* Adjust size as needed */
+    }
+
+    .learn-more-button {
+        right: 1150px; /* Adjust as needed */
+    }
+}
+
+@media (max-width: 1600px) {
+    .service-header {
+        font-size: 28px; /* Adjust as needed */
+        left: 1200px; /* Adjust as needed */
+    }
+
+    .image-slider {
+        height: 700px; /* Adjust height as needed */
+    }
+
+    .overlay {
+        width: 400px; /* Adjust size as needed */
+        height: 160px; /* Adjust size as needed */
+                        bottom: -3000px; /* Adjust as needed */
+
+    }
+
+    .overlay-text {
+        font-size: 40px; /* Adjust size as needed */
+
+    }
+
+    .learn-more-button {
+        right: 1050px; /* Adjust as needed */
+                                bottom: -3010px; /* Adjust as needed */
+
+    }
+}
+
+@media (max-width: 1440px) {
+    .service-header {
+        font-size: 24px; /* Adjust as needed */
+        left: 1000px; /* Adjust as needed */
+    }
+
+    .image-slider {
+        height: 600px; /* Adjust height as needed */
+    }
+
+    .overlay {
+        width: 350px; /* Adjust size as needed */
+        height: 140px; /* Adjust size as needed */
+                bottom: -2900px; /* Adjust as needed */
+
+    }
+
+    .overlay-text {
+        font-size: 35px; /* Adjust size as needed */
+    }
+
+    .learn-more-button {
+        right: 950px; /* Adjust as needed */
+                        bottom: -2910px; /* Adjust as needed */
+
+    }
+}
+
+@media (max-width: 1366px) {
+    .service-header {
+        font-size: 20px; /* Adjust as needed */
+        left: 800px; /* Adjust as needed */
+    }
+
+    .image-slider {
+        height: 500px; /* Adjust height as needed */
+    }
+
+    .overlay {
+        width: 300px; /* Adjust size as needed */
+        height: 120px; /* Adjust size as needed */
+    }
+
+    .overlay-text {
+        font-size: 30px; /* Adjust size as needed */
+    }
+
+    .learn-more-button {
+        right: 850px; /* Adjust as needed */
+    }
+}
 
 
 #footer {
