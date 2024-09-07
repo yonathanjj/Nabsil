@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap">
     <style>
-         body {
+               body {
     background-color: #EBEBFF;
-    font-family: 'Josefin Sans', sans-serif; /* Default font for the body */
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* Adjusts spacing between logo and links */
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjusts padding on the sides to move content */
+    padding: 20px 5%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -33,12 +33,12 @@ header {
     background-image: url('icon2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 50px; /* Adds more spacing between the logo and the links */
+    margin-right: 50px;
 }
 
 nav {
     margin-left: auto;
-    margin-right: 3%; /* Adjusts spacing to move links more to the right */
+    margin-right: 3%;
 }
 
 nav ul {
@@ -47,8 +47,8 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
-    justify-content: center; /* Centers the navigation links */
-        margin-right: -50px; /* Adds more spacing between the logo and the links */
+    justify-content: center;
+        margin-right: -50px;
 }
 
 nav ul li a {
@@ -65,6 +65,17 @@ nav ul li a {
     font-weight: bold;
     text-decoration: none;
 }
+
+nav ul li a.active {
+    color: #2A642A; /* Change text color */
+    background-color: #ffffff; /* Background color for active link */
+    border-radius: 5px; /* Optional rounded corners */
+    font-weight: 700; /* Make the text bolder */
+    padding: 10px 15px; /* Optional padding for better spacing */
+    text-decoration: underline; /* Optional underline to show it's active */
+}
+
+
 /* Hamburger Menu Styles */
 .hamburger-menu {
     display: none; /* Hidden by default */
@@ -234,54 +245,113 @@ nav ul li a {
     margin-right: -90px; /* Move the text to the right by 40px */
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .services h1 {
-        font-size: 48px; /* Smaller font size for headers on mobile */
-        margin: 40px 0; /* Increased margin to lower the header */
-        padding: 0 10px; /* Padding for small screens */
-        text-align: center; /* Center-align the header text */
+        font-size: 24px; /* Smaller header for mobile */
+        text-align: center; /* Center the header */
+        margin: 20px 0; /* Add vertical spacing */
     }
 
-    .cards-container {
-        gap: 15px; /* Smaller gap between cards on mobile */
-        padding: 0 10px; /* Padding for cards container */
-    }
-
-    .card {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height for better responsiveness */
-        max-width: 350px; /* Max width for cards */
-        margin: 0 auto; /* Center cards */
+.card {
+        width: 280px; /* Make the card narrower */
+        height: 400px; /* Reduce card height */
+        padding: 15px; /* Adjust padding */
     }
 
     .card img {
-        height: 200px; /* Adjusted height for images */
+        height: 100px; /* Reduce image height */
     }
 
+    .card-content h2 {
+        font-size: 16px; /* Make heading smaller */
+        margin-bottom: 5px; /* Reduce spacing */
+    }
+
+    .card-content p {
+        font-size: 10px; /* Make paragraph text smaller */
+        line-height: 1.3; /* Adjust line spacing for compactness */
+    }
     .highlight-paragraph {
-        font-size: 20px; /* Smaller text on mobile */
-        margin: 20px 10px; /* Adjusted margins */
-        text-align: center; /* Center-align text */
-        line-height: 1.4; /* Improved line height */
+        font-size: 14px; /* Much smaller text size */
+        text-align: center; /* Center the text */
+        margin: 10px auto; /* Ensure horizontal centering */
+        line-height: 1.4;
+        padding: 0 10px; /* Add some padding to avoid text touching edges */
     }
 
     .additional-info {
-        font-size: 18px; /* Smaller font size for additional info */
-        margin: 20px 10px; /* Adjusted margins for spacing */
-        text-align: center; /* Center-align text */
-        line-height: 1.4; /* Improved line height */
+        text-align: center; /* Center the additional info */
+        margin: 10px auto; /* Center horizontally */
     }
 
     .additional-info h2 {
-        font-size: 36px; /* Smaller font size for additional info header */
-        margin-bottom: 15px; /* Space below header */
+        font-size: 20px; /* Smaller heading for mobile */
+        margin: 0; /* Remove extra margins */
     }
 
     .additional-info p {
-        font-size: 20px; /* Adjust font size for better readability */
+        font-size: 10px; /* Much smaller text for paragraph */
+        margin: 5px auto; /* Center horizontally */
+        line-height: 1.4; /* Slightly tighter line spacing */
+        padding: 0 10px; /* Add padding to avoid touching edges */
+        text-align: center; /* Center the paragraph */
     }
 }
+
+@media (max-width: 768px) {
+    .services h1 {
+        font-size: 28px;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+ .card {
+        width: 320px;
+        height: 500px;
+        padding: 20px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card-content h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .card-content p {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .highlight-paragraph {
+        font-size: 12px; /* Medium text size */
+        text-align: center; /* Center text */
+        margin: 10px auto;
+        padding: 0 15px;
+    }
+
+    .additional-info {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .additional-info h2 {
+        font-size: 24px; /* Smaller heading for tablets */
+        margin: 10px 0;
+    }
+
+    .additional-info p {
+        font-size: 10px; /* Smaller paragraph for tablets */
+        margin: 10px auto;
+        line-height: 1.5;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+
 
 
 .image-gallery {
@@ -415,40 +485,32 @@ nav ul li a {
     font-size: 22px;
     margin-top: 10px;
 }
-
 @media (max-width: 768px) {
-    .how-it-works h2 {
-        font-size: 48px; /* Smaller font size for headers on mobile */
-        margin-bottom: 10px;
-    }
-
-    .how-it-works p {
-        font-size: 32px; /* Smaller font size for paragraph on mobile */
-    }
-
     .images-section {
-        gap: 20px; /* Smaller gap between images */
-        padding: 10px;
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Reduce gap between images */
     }
 
     .images-section .image-container {
-        width: 100%; /* Full width for smaller screens */
-        height: auto; /* Auto height for better responsiveness */
-    }
-
-    .images-section img {
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
     }
 
     .images-section .overlay {
-        font-size: 18px; /* Smaller font size for overlay text */
-        padding: 5px;
+        height: 25%; /* Adjust overlay height for mobile */
+        font-size: 18px; /* Adjust font size for mobile */
+        padding: 8px; /* Adjust padding */
     }
 
     .images-section .overlay h3 {
-        font-size: 40px; /* Smaller font size for overlay header */
+        font-size: 40px; /* Adjust heading size for mobile */
+    }
+
+    .images-section .overlay p {
+        font-size: 18px; /* Adjust paragraph size for mobile */
     }
 }
+
 
 #footer {
     background-color: #001d00; /* Solid color */
@@ -462,10 +524,6 @@ nav ul li a {
     transform: translateX(-50%); /* Center the footer horizontally */
     margin-top: 50px; /* Add space above the footer */
 }
-
-
-
-
 
 .footer-content {
     display: flex;
@@ -637,140 +695,129 @@ hr {
 
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
     #footer {
-        height: auto; /* Allow the height to adjust based on content */
-        padding: 20px 10px; /* Reduce padding for smaller screens */
-        text-align: center; /* Center align all text */
+        padding: 20px;
+        text-align: center; /* Center text and content in footer */
+        background-color: #001d00; /* Ensure background color is applied */
     }
 
     .footer-content {
+        display: flex;
         flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center the sections */
+        align-items: center; /* Center sections horizontally */
+        gap: 20px; /* Space between sections */
     }
 
     .footer-section {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 20px; /* Space between sections */
+        width: 100%; /* Full width for sections */
+        max-width: 100%; /* Ensure it fits on mobile */
     }
 
     .footer-section h2 {
-        margin-left: 0; /* Reset the left margin */
-        margin-bottom: 10px; /* Adjust spacing */
-        text-align: center; /* Center the heading */
+        font-size: 24px; /* Adjust heading size for mobile */
+        margin-bottom: 10px;
     }
 
-    /* Centering smaller texts like Contact Us */
-    .contact-info,
-    .quick-links,
-    .service-links {
-        justify-content: center; /* Center align flex items */
-        align-items: center; /* Center align flex items vertically */
+    .contact-info, .quick-links, .service-links {
+        display: flex;
         flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        width: 100%;
+        gap: 10px; /* Space between items */
     }
 
-    .contact-info .contact-text,
-    .quick-links .link-text,
-    .service-links .service-text {
-        margin-left: 0; /* Remove left margin */
-        text-align: left; /* Left-align the text */
-        margin-bottom: 10px; /* Add space between items */
-        width: 100%; /* Ensure full width to properly align text */
+    .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
+        margin: 5px 0; /* Space between items */
+        text-align: center; /* Center text within items */
     }
 
-    .link-arrow,
-    .service-arrow,
+    .link-item, .service-item {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin-bottom: 10px;
+        text-align: center; /* Center text */
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column; /* Stack contact items vertically */
+        align-items: center;
+        margin-bottom: 10px;
+        text-align: center; /* Center text */
+    }
+
     .contact-icon {
-        left: 0; /* Reset left positioning */
-        margin-right: 10px; /* Add margin to separate icon from text */
-        position: relative; /* Position relative for better control */
-        display: inline-block; /* Make sure the icons align with text */
+        margin-bottom: 5px; /* Space below icons */
     }
 
     .newsletter-header {
-        margin-left: 0; /* Center the header */
-        margin-bottom: 20px; /* Add space below */
-        text-align: center; /* Center the newsletter heading */
+        margin-bottom: 10px;
+        font-size: 18px; /* Adjust header size */
     }
 
     .newsletter-box {
+        display: flex;
         flex-direction: column; /* Stack input and button vertically */
-        align-items: center; /* Center align */
-        margin-right: 0; /* Reset margin */
-        text-align: center; /* Center the entire newsletter box */
+        align-items: center; /* Center items horizontally */
+        gap: 10px; /* Space between input and button */
     }
 
     .newsletter-input {
-        width: 90%; /* Full width input with a bit of margin */
-        max-width: 300px; /* Set a max width for the input */
-        margin-left: 0; /* Reset margin */
-        margin-bottom: 10px; /* Add space below input */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
+        width: 80%; /* Adjust width for responsiveness */
+        max-width: 300px; /* Limit width */
+        height: 40px; /* Adjust height */
+        padding: 10px;
+        font-size: 14px;
+        border: 2px solid #fff;
+        border-radius: 10px 0 0 10px;
+        background: transparent;
+        color: #fff;
+        box-shadow: inset 0 0 0 2px #000;
     }
 
     .newsletter-btn {
-        width: 90%; /* Full width button with a bit of margin */
-        max-width: 300px; /* Set a max width for the button */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-        position: static; /* Reset positioning */
-        margin-top: 10px; /* Add space above */
+        width: 80%; /* Adjust width for responsiveness */
+        max-width: 150px; /* Limit width */
+        height: 40px; /* Adjust height */
+        background-color: #ffcccc;
+        color: #000;
+        border: 2px solid #000;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
     }
 
     .newsletter-icons {
+        display: flex;
         justify-content: center; /* Center icons horizontally */
-        margin-top: 20px; /* Adjust spacing */
+        gap: 10px; /* Space between icons */
+        margin-top: 20px;
     }
 
     .newsletter-icon {
-        width: 30px; /* Adjust icon size */
-        height: 30px; /* Adjust icon size */
-        margin-right: 15px; /* Adjust spacing between icons */
-        margin-left: 0; /* Reset margin */
-    }
-
-    .newsletter-icon:last-child {
-        margin-right: 0; /* Remove margin for the last icon */
+        width: 24px; /* Adjust icon size */
+        height: 24px;
     }
 
     .footer-bottom {
-        margin-left: 0; /* Center the footer bottom text */
-        margin-top: 20px; /* Add space above */
-        text-align: center; /* Center align the footer bottom */
+        font-size: 12px; /* Adjust font size for mobile */
+        margin-top: 20px;
+    }
+
+    hr {
+        margin: 10px 0;
+        border: none;
+        height: 1px;
+        background: #fff;
     }
 }
 
-    @media (max-width: 768px) {
-    #footer {
-        padding: 20px 10px;
-        text-align: center;
-    }
 
-    .footer-section {
-        width: 100%;
-        max-width: 100%;
-    }
 
-    .footer-section h2 {
-        text-align: center;
-    }
-
-    .newsletter-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .newsletter-input,
-    .newsletter-btn {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-
-    .newsletter-icons {
-        justify-content: center;
-    }
-}
 
 /* Larger Screen Adjustments */
 @media (min-width: 1024px) {
@@ -1084,13 +1131,22 @@ hr {
     <p class="footer-bottom">© All Rights Reserved NABSIL.</p>
 </footer>
 <script>
- document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+
+             const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav ul');
     const content = document.getElementById('content');
 
-    navLinks.classList.toggle('show'); // Toggle the dropdown menu
-    content.classList.toggle('dim'); // Dim or undim the content
-});
+    // Add event listener to the hamburger menu
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        content.classList.toggle('dim');
+    });
 </script>
 </body>
 </html>
