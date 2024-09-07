@@ -9,16 +9,16 @@
     <style>
          body {
     background-color: #EBEBFF;
-    font-family: 'Josefin Sans', sans-serif; /* Default font for the body */
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* Adjusts spacing between logo and links */
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjusts padding on the sides to move content */
+    padding: 20px 5%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -33,12 +33,12 @@ header {
     background-image: url('icon2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 50px; /* Adds more spacing between the logo and the links */
+    margin-right: 50px;
 }
 
 nav {
     margin-left: auto;
-    margin-right: 3%; /* Adjusts spacing to move links more to the right */
+    margin-right: 3%;
 }
 
 nav ul {
@@ -47,8 +47,8 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
-    justify-content: center; /* Centers the navigation links */
-    margin-right: -50px; /* Adds more spacing between the logo and the links */
+    justify-content: center;
+        margin-right: -50px;
 }
 
 nav ul li a {
@@ -66,8 +66,16 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a.active {
+    color: #2A642A; /* Change text color */
+    background-color: #ffffff; /* Background color for active link */
+    border-radius: 5px; /* Optional rounded corners */
+    font-weight: 700; /* Make the text bolder */
+    padding: 10px 15px; /* Optional padding for better spacing */
+    text-decoration: underline; /* Optional underline to show it's active */
+}
 
-/* Hamburger Menu Styles */
+
 .hamburger-menu {
     display: none; /* Hidden by default */
     flex-direction: column;
@@ -212,38 +220,91 @@ nav ul li a {
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-
-/* Media Query for Mobile Screens */
+ /* Mobile Styles */
 @media (max-width: 768px) {
     .image-container {
-        width: 100%;
-        padding: 0 20px; /* Adjust padding to ensure image is centered */
-        background-size: contain; /* Ensure the image fits within the container */
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        margin-top: 100px; /* Adjust top margin */
+        margin-bottom: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding-top: 56.25%;
+        background-repeat: no-repeat;
     }
 
     .card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: #EBEBFF;
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 10px;
-        margin: 10px auto;
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: -10px;
     }
 
     .card h2 {
-        font-size: 24px; /* Further reduce font size for smaller screens */
+        font-size: 36px; /* Smaller font size for mobile */
+        color: #001D00;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .content {
+        max-width: 100%; /* Full width on mobile */
+        margin: 20px auto; /* Adjust margin for mobile */
+        text-align: center; /* Center text for mobile */
+        padding-left: 10px; /* Add padding for mobile */
+        padding-right: 10px; /* Add padding for mobile */
     }
 
     .content p {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 20px; /* Smaller font size for mobile */
+        color: #333333;
+        margin-bottom: 20px;
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
     }
 
     .boxes-container {
-        gap: 10px;
+        display: flex;
         flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center boxes horizontally */
+        gap: 20px; /* Adjust gap for mobile */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
     }
 
     .box {
-        max-width: 150px;
-        height: 35px;
+        width: 100%; /* Full width on mobile */
+        max-width: 300px; /* Limit maximum width */
+        height: 50px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px; /* Smaller font size for mobile */
+        font-weight: bold;
+        color: #333333;
+        border-radius: 10px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .box:hover {
+        background-color: #001D00; /* Turn the box green */
+        color: white; /* Change text color to white */
+        transform: translateY(-5px); /* Float the box upwards */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 }
+
+
 /* 1600px and larger */
 @media (min-width: 1600px) {
     .image-container {
@@ -492,7 +553,40 @@ nav ul li a {
     }
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .market-images-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Adjust gap for mobile */
+        margin: 20px auto; /* Adjust margin for mobile */
+        padding: 0 10px; /* Add horizontal padding */
+    }
 
+    .market-item {
+        width: 100%; /* Full width on mobile */
+        max-width: 300px; /* Limit maximum width for mobile */
+        margin-bottom: 20px; /* Space between items */
+    }
+
+    .overlay {
+        height: 80px; /* Adjust height for mobile */
+    }
+
+    .overlay h3 {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .overlay p {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .purchase-request {
+        width: 100%; /* Full width on mobile */
+        max-width: 250px; /* Limit maximum width for mobile */
+        font-size: 16px; /* Adjust font size for mobile */
+        margin: 10px auto; /* Center button and adjust margin */
+    }
+}
 
 
 
@@ -623,7 +717,7 @@ nav ul li a {
     background: #001d00; /* Green background color */
     color: #fff; /* White text color */
     font-size: 18px; /* Font size for the button */
-    border: none; 
+    border: none;
     border-radius: 10px; /* Curved corners */
     padding: 15px 30px; /* Padding inside the button */
     text-align: center; /* Center text inside the button */
@@ -1289,12 +1383,23 @@ being easy to do business with, and our team is ready to    <br>
     <hr>
     <p class="footer-bottom">© All Rights Reserved NABSIL.</p>
 </footer>
-<script>document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
+<script>
+     const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+
+             const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav ul');
     const content = document.getElementById('content');
 
-    navLinks.classList.toggle('show'); // Toggle the dropdown menu
-    content.classList.toggle('dim'); // Dim or undim the content
-});</script>
+    // Add event listener to the hamburger menu
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        content.classList.toggle('dim');
+    });
+</script>
 </body>
 </html>
