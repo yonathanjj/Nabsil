@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap">
     <style>
-         body {
+        body {
     background-color: #EBEBFF;
-    font-family: 'Josefin Sans', sans-serif; /* Default font for the body */
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* Adjusts spacing between logo and links */
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjusts padding on the sides to move content */
+    padding: 20px 5%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -33,12 +33,12 @@ header {
     background-image: url('icon2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 50px; /* Adds more spacing between the logo and the links */
+    margin-right: 50px;
 }
 
 nav {
     margin-left: auto;
-    margin-right: 3%; /* Adjusts spacing to move links more to the right */
+    margin-right: 3%;
 }
 
 nav ul {
@@ -47,8 +47,8 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
-    justify-content: center; /* Centers the navigation links */
-        margin-right: -50px; /* Adds more spacing between the logo and the links */
+    justify-content: center;
+        margin-right: -50px;
 }
 
 nav ul li a {
@@ -64,6 +64,15 @@ nav ul li a {
     border-radius: 10px;
     font-weight: bold;
     text-decoration: none;
+}
+
+nav ul li a.active {
+    color: #2A642A; /* Change text color */
+    background-color: #ffffff; /* Background color for active link */
+    border-radius: 5px; /* Optional rounded corners */
+    font-weight: 700; /* Make the text bolder */
+    padding: 10px 15px; /* Optional padding for better spacing */
+    text-decoration: underline; /* Optional underline to show it's active */
 }
 
 
@@ -272,6 +281,69 @@ nav ul li a {
 }
 
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 20px; /* Reduce padding for mobile view */
+        padding-top: 70px; /* Adjust top padding */
+    }
+
+    .contact-header {
+        font-size: 48px; /* Smaller font size for mobile */
+        margin: 50px 0 20px; /* Adjust margin */
+        margin-left: 0; /* Center align */
+        text-align: center; /* Center text */
+    }
+
+    .contact-description {
+        font-size: 18px; /* Smaller font size for mobile */
+        max-width: 100%; /* Ensure it fits within the screen */
+        margin-bottom: 30px; /* Adjust margin */
+        margin-left: 0; /* Center align */
+        text-align: center; /* Center text */
+    }
+
+    .contact-form {
+        margin: 0; /* Remove side margins */
+        padding: 0 10px; /* Add padding to avoid form touching edges */
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 15px; /* Adjust gap between form elements */
+    }
+
+    .form-group {
+        flex: 1 1 100%; /* Full width for each form group */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form label {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .contact-form .input-line {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px; /* Add padding for better touch interaction */
+    }
+
+    .contact-form .input-line::placeholder {
+        font-size: 12px; /* Smaller placeholder font size */
+    }
+
+    .contact-form .comment-box {
+        width: 100%; /* Full width on mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px; /* Adjust padding */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .submit-button {
+        width: 100%; /* Full width on mobile */
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 15px; /* Increase padding for easier clicking */
+        margin-top: 10px; /* Adjust margin */
+    }
+}
+
 
         .faqs {
     margin-bottom: 50px;
@@ -341,19 +413,41 @@ nav ul li a {
 
 
 
-/* Responsive Styles */
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .faqs {
+        margin-left: 20px; /* Reduced left margin */
+        margin-right: 20px; /* Added right margin */
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .faqs h2 {
+        font-size: 24px; /* Smaller font size for mobile */
+        margin-bottom: 20px; /* Adjusted margin */
+        margin-left: 0; /* Remove negative margin-left */
+        text-align: center; /* Center align the text */
+        position: relative;
+    }
+
+    .faqs h2::after {
+        width: 50%; /* Adjust width for mobile */
+        left: 50%; /* Center the line */
+        transform: translateX(-50%); /* Center the line */
+    }
+
     .faq-item {
-        flex-direction: column;
-        align-items: flex-start;
+        width: 100%; /* Full width on mobile */
+        margin-left: 0; /* Remove negative margin-left */
+        padding: 10px; /* Adjust padding */
     }
 
     .faq-item summary {
-        font-size: 20px;
+        font-size: 18px; /* Smaller font size for mobile */
     }
 
     .faq-item p {
-        padding-left: 0;
+        font-size: 16px; /* Smaller font size for mobile */
+        padding-left: 10px; /* Adjust padding */
     }
 }
 
@@ -955,18 +1049,25 @@ hr {
     <hr>
     <p class="footer-bottom">© All Rights Reserved NABSIL.</p>
 </footer>
-<script>document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
+<script>
+
+   const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+
+             const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav ul');
     const content = document.getElementById('content');
 
-    navLinks.classList.toggle('show'); // Toggle the dropdown menu
-    content.classList.toggle('dim'); // Dim or undim the content
-});document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    const content = document.getElementById('content');
+    // Add event listener to the hamburger menu
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        content.classList.toggle('dim');
+    });
 
-    navLinks.classList.toggle('show'); // Toggle the dropdown menu
-    content.classList.toggle('dim'); // Dim or undim the content
-});</script>
+</script>
 </body>
 </html>
