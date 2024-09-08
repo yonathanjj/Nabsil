@@ -639,141 +639,114 @@ hr {
 
 }
 
-@media (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
     #footer {
-        height: auto; /* Allow the height to adjust based on content */
-        padding: 20px 10px; /* Reduce padding for smaller screens */
-        text-align: center; /* Center align all text */
+        height: auto; /* Adjust height to fit content */
+        padding: 20px;
+        margin-top: 20px; /* Reduce margin to fit better on mobile */
     }
 
     .footer-content {
+        display: flex;
         flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center the sections */
+        align-items: center; /* Center horizontally */
     }
 
     .footer-section {
         width: 100%; /* Full width for each section */
         margin-bottom: 20px; /* Space between sections */
+        text-align: center; /* Center text within each section */
     }
 
     .footer-section h2 {
-        margin-left: 0; /* Reset the left margin */
-        margin-bottom: 10px; /* Adjust spacing */
-        text-align: center; /* Center the heading */
-    }
-
-    /* Centering smaller texts like Contact Us */
-    .contact-info,
-    .quick-links,
-    .service-links {
-        justify-content: center; /* Center align flex items */
-        align-items: center; /* Center align flex items vertically */
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    .contact-info .contact-text,
-    .quick-links .link-text,
-    .service-links .service-text {
+        margin: 10px 0; /* Adjust margins */
         margin-left: 0; /* Remove left margin */
-        text-align: left; /* Left-align the text */
-        margin-bottom: 10px; /* Add space between items */
-        width: 100%; /* Ensure full width to properly align text */
+        width: auto; /* Adjust width to fit content */
     }
 
-    .link-arrow,
-    .service-arrow,
+    .contact-info, .quick-links, .service-links {
+        width: auto; /* Adjust width to fit content */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
+        margin: 0; /* Remove margin */
+    }
+
+    .link-item, .service-item, .contact-item {
+        margin: 10px 0; /* Adjust margin */
+        display: flex;
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    /* Move only the arrows and center them */
+    .link-arrow, .service-arrow {
+        position: relative; /* Use relative positioning */
+        margin-right: 10px; /* Adjust spacing between arrow and text */
+        font-size: 18px; /* Adjust size for mobile */
+        left: 0; /* Center the arrows horizontally */
+    }
+
     .contact-icon {
-        left: 0; /* Reset left positioning */
-        margin-right: 10px; /* Add margin to separate icon from text */
-        position: relative; /* Position relative for better control */
-        display: inline-block; /* Make sure the icons align with text */
+        margin-left: -90px; /* Adjust this value to move the icon further left */
+        width: 20px; /* Adjust size for mobile */
+        height: 20px;
     }
 
     .newsletter-header {
-        margin-left: 0; /* Center the header */
-        margin-bottom: 20px; /* Add space below */
-        text-align: center; /* Center the newsletter heading */
+        margin: 0; /* Remove margin */
     }
 
-    .newsletter-box {
-        flex-direction: column; /* Stack input and button vertically */
-        align-items: center; /* Center align */
-        margin-right: 0; /* Reset margin */
-        text-align: center; /* Center the entire newsletter box */
-    }
+  .newsletter-box {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px; /* Add margin-top to move it down */
+}
 
-    .newsletter-input {
-        width: 90%; /* Full width input with a bit of margin */
-        max-width: 300px; /* Set a max width for the input */
-        margin-left: 0; /* Reset margin */
-        margin-bottom: 10px; /* Add space below input */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-    }
+.newsletter-input {
+    width: 100%; /* Full width for input */
+    max-width: 300px; /* Ensure it doesn't get too wide */
+    margin-bottom: 10px; /* Space between input and button */
+    text-align: left; /* Center text within input */
+}
 
-    .newsletter-btn {
-        width: 90%; /* Full width button with a bit of margin */
-        max-width: 300px; /* Set a max width for the button */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-        position: static; /* Reset positioning */
-        margin-top: 10px; /* Add space above */
-    }
+.newsletter-btn {
+    width: auto; /* Allow button to adjust width based on content */
+    max-width: 300px; /* Limit the maximum width */
+    height: 40px; /* Adjust height for a more compact button */
+    font-size: 14px; /* Adjust font size for readability */
+    padding: 0 60px; /* Adjust horizontal padding */
+    background-color: #ffcccc; /* Button background color */
+    color: #000; /* Button text color */
+    border: 2px solid #000; /* Button border color */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text within button */
+    margin-top: 5px; /* Reduce margin-top for better spacing */
+    align-self: right; /* Ensure button is centered in its flex container */
+}
 
     .newsletter-icons {
-        justify-content: center; /* Center icons horizontally */
-        margin-top: 20px; /* Adjust spacing */
+        margin-top: 30px; /* Adjust margin */
+        justify-content: center; /* Center icons */
     }
 
     .newsletter-icon {
-        width: 30px; /* Adjust icon size */
-        height: 30px; /* Adjust icon size */
-        margin-right: 15px; /* Adjust spacing between icons */
-        margin-left: 0; /* Reset margin */
-    }
-
-    .newsletter-icon:last-child {
-        margin-right: 0; /* Remove margin for the last icon */
+        margin: 0 10px; /* Adjust spacing between icons */
     }
 
     .footer-bottom {
-        margin-left: 0; /* Center the footer bottom text */
-        margin-top: 20px; /* Add space above */
-        text-align: center; /* Center align the footer bottom */
+        text-align: center; /* Center text */
+        margin: 10px 0; /* Adjust margin */
+        margin-left: 0; /* Remove left margin */
     }
 }
-
-    @media (max-width: 768px) {
-    #footer {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    .footer-section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .footer-section h2 {
-        text-align: center;
-    }
-
-    .newsletter-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .newsletter-input,
-    .newsletter-btn {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-
-    .newsletter-icons {
-        justify-content: center;
-    }
-}
-
 /* Larger Screen Adjustments */
 @media (min-width: 1024px) {
     .footer-section {
