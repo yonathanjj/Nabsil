@@ -245,109 +245,75 @@ nav ul li a.active {
     margin-right: -90px; /* Move the text to the right by 40px */
 }
 
-@media (max-width: 480px) {
-    .services h1 {
-        font-size: 24px; /* Smaller header for mobile */
-        text-align: center; /* Center the header */
-        margin: 20px 0; /* Add vertical spacing */
-    }
 
-.card {
-        width: 280px; /* Make the card narrower */
-        height: 400px; /* Reduce card height */
-        padding: 15px; /* Adjust padding */
-    }
-
-    .card img {
-        height: 100px; /* Reduce image height */
-    }
-
-    .card-content h2 {
-        font-size: 16px; /* Make heading smaller */
-        margin-bottom: 5px; /* Reduce spacing */
-    }
-
-    .card-content p {
-        font-size: 10px; /* Make paragraph text smaller */
-        line-height: 1.3; /* Adjust line spacing for compactness */
-    }
-    .highlight-paragraph {
-        font-size: 14px; /* Much smaller text size */
-        text-align: center; /* Center the text */
-        margin: 10px auto; /* Ensure horizontal centering */
-        line-height: 1.4;
-        padding: 0 10px; /* Add some padding to avoid text touching edges */
-    }
-
-    .additional-info {
-        text-align: center; /* Center the additional info */
-        margin: 10px auto; /* Center horizontally */
-    }
-
-    .additional-info h2 {
-        font-size: 20px; /* Smaller heading for mobile */
-        margin: 0; /* Remove extra margins */
-    }
-
-    .additional-info p {
-        font-size: 10px; /* Much smaller text for paragraph */
-        margin: 5px auto; /* Center horizontally */
-        line-height: 1.4; /* Slightly tighter line spacing */
-        padding: 0 10px; /* Add padding to avoid touching edges */
-        text-align: center; /* Center the paragraph */
-    }
-}
-
+/* General mobile view adjustments */
 @media (max-width: 768px) {
-    .services h1 {
-        font-size: 28px;
-        text-align: center;
-        margin: 50px 0;
+    /* Services section styles */
+    .services {
+        padding: 80px 50px; /* Add more padding to push content lower */
+        flex-direction: column; /* Stack elements vertically */
     }
 
- .card {
-        width: 320px;
-        height: 500px;
-        padding: 20px;
+    .services h1 {
+        font-size: 48px; /* Reduce font size */
+        margin: 40px 0 20px 0; /* Adjust margin for better spacing */
+        text-align: center; /* Center align for mobile */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center; /* Center align cards */
+        gap: 20px; /* Add spacing between cards */
+        padding: 0 10px; /* Reduce horizontal padding */
+        margin-bottom: 40px; /* Adjust bottom margin */
+        margin-left: -48px; /* Reduce bottom margin */
+    }
+
+    .card {
+        width: 90%; /* Reduce card width slightly for mobile */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 0; /* Remove horizontal overlap */
+        padding-top: 20px; /* Add padding to move content lower */
     }
 
     .card img {
-        height: 150px;
+        height: auto; /* Adjust height to fit content */
+        margin-bottom: 10px; /* Reduce bottom margin */
     }
 
     .card-content h2 {
-        font-size: 18px;
-        margin-bottom: 8px;
+        font-size: 22px; /* Further reduce heading size */
     }
 
     .card-content p {
-        font-size: 17px;
+        font-size: 14px; /* Further reduce paragraph font size */
+    }
+
+    /* Highlighted paragraph styles */
+    .highlight-paragraph {
+        font-size: 20px; /* Reduce font size further */
+        text-align: center; /* Center align for mobile */
+        margin: 20px 0; /* Remove side margins */
         line-height: 1.4;
     }
 
-    .highlight-paragraph {
-        font-size: 12px; /* Medium text size */
-        text-align: center; /* Center text */
-        margin: 10px auto;
-        padding: 0 15px;
-    }
-
+    /* Additional info styles */
     .additional-info {
-        text-align: center;
-        margin: 10px auto;
+        text-align: center; /* Center align for mobile */
+        margin: 20px 0; /* Remove side margins */
     }
 
     .additional-info h2 {
-        font-size: 24px; /* Smaller heading for tablets */
-        margin: 10px 0;
+        font-size: 17px; /* Further reduce heading size */
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
     }
 
     .additional-info p {
-        font-size: 10px; /* Smaller paragraph for tablets */
-        margin: 10px auto;
-        line-height: 1.5;
-        padding: 0 10px;
-        text-align: center;
+        font-size: 10px; /* Further reduce paragraph font size */
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
     }
 }
 
@@ -364,8 +330,8 @@ nav ul li a.active {
 }
 
 .image-gallery img {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -390,7 +356,7 @@ nav ul li a.active {
     .highlight-paragraph,
     .additional-info h2,
     .additional-info p {
-        font-size: 40px; /* Adjust font size */
+        font-size: 23px; /* Adjust font size */
         text-align: center; /* Center the text */
         margin: 20px 10px; /* Adjust margins */
     }
@@ -429,14 +395,14 @@ nav ul li a.active {
 
 .how-it-works h2 {
     color: #001D00;
-    font-size: 80px;
+    font-size: 50px;
     margin: 0;
     margin-bottom: 10px;
 }
 
 .how-it-works p {
     color: #2A642A;
-    font-size: 55px;
+    font-size: 35px;
     margin: 0;
 }
 
@@ -485,31 +451,86 @@ nav ul li a.active {
     font-size: 22px;
     margin-top: 10px;
 }
+
+/* Mobile view adjustments */
 @media (max-width: 768px) {
+    /* How it works section */
+    .how-it-works {
+        padding: 40px 20px; /* Reduce padding for mobile */
+        text-align: center; /* Keep centered text */
+    }
+
+    .how-it-works h2 {
+        font-size: 36px; /* Reduce font size */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .how-it-works p {
+        font-size: 18px; /* Reduce paragraph font size */
+        margin: 0 10px; /* Add side margin to avoid edge touching */
+    }
+
+    /* Image section adjustments */
     .images-section {
+        display: flex;
         flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center-align images */
         gap: 20px; /* Reduce gap between images */
+        padding: 20px; /* Keep padding consistent */
+        width: 100%; /* Full width for container */
+        box-sizing: border-box; /* Ensure padding is included in width */
+        overflow: hidden; /* Prevent overflow */
     }
 
     .images-section .image-container {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Adjust height automatically */
+        width: 100%; /* Full width for mobile */
+        max-width: 500px; /* Max width for larger screens */
+        height: 400px; /* Fixed height for consistency */
+        position: relative; /* Keep relative positioning */
+        overflow: hidden; /* Ensure no overflow */
+        box-sizing: border-box; /* Ensure padding and borders are included in width */
+    }
+
+    .images-section img {
+        width: 100%; /* Ensure image takes full container width */
+        height: 100%; /* Ensure image takes full container height */
+        object-fit: cover; /* Ensure image covers container */
+        border-radius: 10px; /* Maintain rounded corners */
     }
 
     .images-section .overlay {
-        height: 25%; /* Adjust overlay height for mobile */
-        font-size: 18px; /* Adjust font size for mobile */
-        padding: 8px; /* Adjust padding */
+        position: absolute;
+        bottom: 0;
+        left: 0; /* Align to the left edge */
+        width: 98%; /* Match the width of the image */
+        height: 30%; /* Adjust the overlay height */
+        background: linear-gradient(to bottom, rgba(42, 100, 42, 0.8) 50%, transparent 100%);
+        border-radius: 0 0 10px 10px; /* Match border-radius of image */
+        color: #FFFFFF;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box; /* Include padding in width */
+        overflow: hidden; /* Ensure overlay does not extend beyond image */
+            margin-left: 10px;
+            border-radius: 10px
     }
 
     .images-section .overlay h3 {
-        font-size: 40px; /* Adjust heading size for mobile */
+        font-size: 30px; /* Adjust heading size */
+        margin: 0;
     }
 
     .images-section .overlay p {
-        font-size: 18px; /* Adjust paragraph size for mobile */
+        font-size: 20px; /* Adjust paragraph size */
+        margin-top: 5px;
     }
 }
+
+
+
+
+
+
 
 
 #footer {
@@ -696,127 +717,114 @@ hr {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+              @media only screen and (max-width: 768px) {
     #footer {
+        height: auto; /* Adjust height to fit content */
         padding: 20px;
-        text-align: center; /* Center text and content in footer */
-        background-color: #001d00; /* Ensure background color is applied */
+        margin-top: 20px; /* Reduce margin to fit better on mobile */
     }
 
     .footer-content {
         display: flex;
         flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center sections horizontally */
-        gap: 20px; /* Space between sections */
+        align-items: center; /* Center horizontally */
     }
 
     .footer-section {
-        width: 100%; /* Full width for sections */
-        max-width: 100%; /* Ensure it fits on mobile */
+        width: 100%; /* Full width for each section */
+        margin-bottom: 20px; /* Space between sections */
+        text-align: center; /* Center text within each section */
     }
 
     .footer-section h2 {
-        font-size: 24px; /* Adjust heading size for mobile */
-        margin-bottom: 10px;
+        margin: 10px 0; /* Adjust margins */
+        margin-left: 0; /* Remove left margin */
+        width: auto; /* Adjust width to fit content */
     }
 
     .contact-info, .quick-links, .service-links {
-        display: flex;
+        width: auto; /* Adjust width to fit content */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        display: flex; /* Use flexbox for centering */
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
-        width: 100%;
-        gap: 10px; /* Space between items */
     }
 
     .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
-        margin: 5px 0; /* Space between items */
-        text-align: center; /* Center text within items */
+        margin: 0; /* Remove margin */
     }
 
-    .link-item, .service-item {
+    .link-item, .service-item, .contact-item {
+        margin: 10px 0; /* Adjust margin */
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
-        margin-bottom: 10px;
-        text-align: center; /* Center text */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
     }
 
-    .contact-item {
-        display: flex;
-        flex-direction: column; /* Stack contact items vertically */
-        align-items: center;
-        margin-bottom: 10px;
-        text-align: center; /* Center text */
+    /* Move only the arrows and center them */
+    .link-arrow, .service-arrow {
+        position: relative; /* Use relative positioning */
+        margin-right: 10px; /* Adjust spacing between arrow and text */
+        font-size: 18px; /* Adjust size for mobile */
+        left: 0; /* Center the arrows horizontally */
     }
 
     .contact-icon {
-        margin-bottom: 5px; /* Space below icons */
+        margin-left: -90px; /* Adjust this value to move the icon further left */
+        width: 20px; /* Adjust size for mobile */
+        height: 20px;
     }
 
     .newsletter-header {
-        margin-bottom: 10px;
-        font-size: 18px; /* Adjust header size */
+        margin: 0; /* Remove margin */
     }
 
-    .newsletter-box {
-        display: flex;
-        flex-direction: column; /* Stack input and button vertically */
-        align-items: center; /* Center items horizontally */
-        gap: 10px; /* Space between input and button */
-    }
+  .newsletter-box {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px; /* Add margin-top to move it down */
+}
 
-    .newsletter-input {
-        width: 80%; /* Adjust width for responsiveness */
-        max-width: 300px; /* Limit width */
-        height: 40px; /* Adjust height */
-        padding: 10px;
-        font-size: 14px;
-        border: 2px solid #fff;
-        border-radius: 10px 0 0 10px;
-        background: transparent;
-        color: #fff;
-        box-shadow: inset 0 0 0 2px #000;
-    }
+.newsletter-input {
+    width: 100%; /* Full width for input */
+    max-width: 300px; /* Ensure it doesn't get too wide */
+    margin-bottom: 10px; /* Space between input and button */
+    text-align: left; /* Center text within input */
+}
 
-    .newsletter-btn {
-        width: 80%; /* Adjust width for responsiveness */
-        max-width: 150px; /* Limit width */
-        height: 40px; /* Adjust height */
-        background-color: #ffcccc;
-        color: #000;
-        border: 2px solid #000;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 14px;
-        margin-top: 10px;
-    }
+.newsletter-btn {
+    width: auto; /* Allow button to adjust width based on content */
+    max-width: 300px; /* Limit the maximum width */
+    height: 40px; /* Adjust height for a more compact button */
+    font-size: 14px; /* Adjust font size for readability */
+    padding: 0 60px; /* Adjust horizontal padding */
+    background-color: #ffcccc; /* Button background color */
+    color: #000; /* Button text color */
+    border: 2px solid #000; /* Button border color */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text within button */
+    margin-top: 5px; /* Reduce margin-top for better spacing */
+    align-self: right; /* Ensure button is centered in its flex container */
+}
 
     .newsletter-icons {
-        display: flex;
-        justify-content: center; /* Center icons horizontally */
-        gap: 10px; /* Space between icons */
-        margin-top: 20px;
+        margin-top: 30px; /* Adjust margin */
+        justify-content: center; /* Center icons */
     }
 
     .newsletter-icon {
-        width: 24px; /* Adjust icon size */
-        height: 24px;
+        margin: 0 10px; /* Adjust spacing between icons */
     }
 
     .footer-bottom {
-        font-size: 12px; /* Adjust font size for mobile */
-        margin-top: 20px;
-    }
-
-    hr {
-        margin: 10px 0;
-        border: none;
-        height: 1px;
-        background: #fff;
+        text-align: center; /* Center text */
+        margin: 10px 0; /* Adjust margin */
+        margin-left: 0; /* Remove left margin */
     }
 }
-
-
 
 
 /* Larger Screen Adjustments */
