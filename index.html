@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap">
     <style>
           body {
-    font-family: 'Josefin Sans', sans-serif; /* Default font for the body */
     background-color: #EBEBFF;
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* Adjusts spacing between logo and links */
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjusts padding on the sides to move content */
+    padding: 20px 5%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -33,12 +33,12 @@ header {
     background-image: url('icon2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: 50px; /* Adds more spacing between the logo and the links */
+    margin-right: 50px;
 }
 
 nav {
     margin-left: auto;
-    margin-right: 3%; /* Adjusts spacing to move links more to the right */
+    margin-right: 3%;
 }
 
 nav ul {
@@ -47,13 +47,13 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px;
-    justify-content: center; /* Centers the navigation links */
-        margin-right: -50px; /* Adds more spacing between the logo and the links */
+    justify-content: center;
+        margin-right: -50px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -65,6 +65,16 @@ nav ul li a {
     font-weight: bold;
     text-decoration: none;
 }
+
+nav ul li a.active {
+    color: #2A642A; /* Change text color */
+    background-color: #ffffff; /* Background color for active link */
+    border-radius: 5px; /* Optional rounded corners */
+    font-weight: 700; /* Make the text bolder */
+    padding: 10px 15px; /* Optional padding for better spacing */
+    text-decoration: underline; /* Optional underline to show it's active */
+}
+
 
 /* Hamburger Menu Styles */
 .hamburger-menu {
@@ -264,6 +274,47 @@ nav ul li a {
     }
 }
 
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 60vh; /* Adjust height for mobile */
+    }
+
+    .slide-content {
+        padding: 20px;
+        box-sizing: border-box; /* Ensure padding is included in width/height */
+    }
+
+    .slide-content h1 {
+        font-size: 40px; /* Smaller font size for mobile */
+        margin-bottom: 20px; /* Adjust bottom margin */
+        transform: translateX(0); /* Remove horizontal movement */
+        margin-right: 0; /* Reset margin-right */
+        margin-left: 20px; /* Add margin-left to prevent edge clipping */
+    }
+
+    .slide-content p {
+        font-size: 24px; /* Smaller font size for mobile */
+        margin-bottom: 20px; /* Adjust gap below the paragraph */
+        transform: translateX(0); /* Remove horizontal movement */
+        margin-left: 20px; /* Add margin-left to prevent edge clipping */
+    }
+
+    .register-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        /* Centering the button horizontally */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dot-container {
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+                margin-right: 20px; /* Add margin-left to prevent edge clipping */
+
+    }
+}
 
 
 
@@ -350,7 +401,6 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-/* Responsive Adjustments */
 
 /* For 3840px screens */
 @media (max-width: 3840px) {
@@ -538,7 +588,6 @@ nav ul li a {
     }
 }
 
-/* Existing media queries for smaller devices */
 
 @media (max-width: 1500px) {
     .about-section h1 {
@@ -570,46 +619,57 @@ nav ul li a {
     }
 }
 
-@media (max-width: 768px) {
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
     .about-section {
-        padding: 20px 10px;
-        text-align: center;
+        text-align: center; /* Center text on mobile */
+        padding: 20px;
+        margin-top: 20px;
     }
 
     .about-section h1 {
-        font-size: 50px;
-        margin-right: 0;
-        transform: translateY(0);
+        font-size: 48px;
+        margin-right: 0; /* Remove margin-right for mobile */
+        margin-top: 20px;
+        transform: translateY(0); /* Reset vertical translation */
     }
 
     .about-content {
-        margin-left: 0;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        margin-left: 0; /* Remove left margin for mobile */
     }
 
     .about-image {
-        width: 100%;
+        width: 100%; /* Make image responsive */
         height: auto;
-        margin-left: 0;
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Space between image and overlay */
     }
 
     .about-overlay {
-        width: 90%;
-        height: auto;
-        right: 0;
+        width: 90%; /* Adjust width for mobile */
+        padding: 20px;
+        position: static; /* Remove absolute positioning */
+        top: auto; /* Remove top positioning */
+        right: auto; /* Remove right positioning */
+        margin-top: 250px; /* Space between image and overlay */
     }
 
     .about-overlay p {
-        font-size: 16px;
-        padding-left: 10px;
-        padding-right: 10px;
+        font-size: 18px; /* Adjust font size for readability */
+        padding: 10px;
+        text-align: center; /* Center-align text */
     }
 
     .read-more-button {
-        bottom: 10px;
-        right: 10px;
         padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 20px; /* Space between text and button */
     }
 }
+
 
 
 
@@ -755,6 +815,86 @@ nav ul li a {
 }
 
 
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .text-and-lines {
+        position: relative; /* Remove absolute positioning */
+        right: auto; /* Remove right positioning */
+        top: auto; /* Remove top positioning */
+        width: 90%; /* Adjust width for mobile */
+        color: #2A642A;
+        font-size: 24px; /* Reduce font size */
+        line-height: 1.4;
+        padding: 20px; /* Add padding for better spacing */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .text-item {
+        margin-bottom: 20px; /* Adjust margin for mobile */
+        text-align: center; /* Center text */
+        font-weight: normal; /* Adjust font weight */
+    }
+
+    .text-item p {
+        margin: 0;
+        font-size: 20px; /* Reduce font size */
+        color: #2A642A;
+        font-weight: normal; /* Adjust font weight */
+    }
+
+    .text-item hr {
+        margin: 10px 0;
+        border: none;
+        border-top: 1px solid #2A642A; /* Thinner border */
+        width: 80%; /* Adjust width for mobile */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
+    }
+
+    .promise-header {
+        position: relative; /* Remove absolute positioning */
+        left: auto; /* Remove left positioning */
+        top: auto; /* Remove top positioning */
+        background-color: #EBEBFF;
+        padding: 10px;
+        width: 90%; /* Adjust width for mobile */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center; /* Center text */
+        margin-bottom: 20px; /* Space below header */
+    }
+
+    .promise-header h2 {
+        margin: 0;
+        color: #001d00;
+        font-size: 36px; /* Reduce font size */
+        text-align: center; /* Center text */
+    }
+
+    .promise-text {
+        position: relative; /* Remove absolute positioning */
+        left: auto; /* Remove left positioning */
+        top: auto; /* Remove top positioning */
+        width: 90%; /* Adjust width for mobile */
+        color: #001d00;
+        font-size: 24px; /* Reduce font size */
+        line-height: 1.4;
+        text-align: center; /* Center text */
+        font-weight: normal; /* Adjust font weight */
+        padding: 0 10px; /* Add padding for better spacing */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    .promise-text p {
+        margin: 0;
+        font-size: 20px; /* Reduce font size */
+    }
+}
+
+
 .service-header {
     position: absolute;
     top: 3200px; /* Maintain the current distance from the top */
@@ -763,6 +903,7 @@ nav ul li a {
     font-size: 36px;
     text-align: center;
 }
+
 .image-slider {
     position: absolute;
     top: 3300px; /* Adjust this to place the slider under the header */
@@ -962,6 +1103,111 @@ nav ul li a {
     }
 }
 
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .service-header {
+        position: relative; /* Remove absolute positioning */
+        left: auto; /* Remove left positioning */
+        top: auto; /* Remove top positioning */
+        width: 90%; /* Adjust width for mobile */
+        color: #2A642A;
+        font-size: 24px; /* Reduce font size */
+        text-align: center; /* Center align text */
+        margin: 20px auto; /* Center horizontally and add margin */
+    }
+
+    .image-slider {
+        position: relative; /* Remove absolute positioning */
+        top: auto; /* Remove top positioning */
+        left: auto; /* Remove left positioning */
+        right: auto; /* Remove right positioning */
+        width: 90%; /* Adjust width for mobile */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        margin: 0 auto; /* Center horizontally */
+        overflow: hidden; /* Ensure images do not overflow outside the slider */
+    }
+
+    .image-slider img {
+        width: 100%; /* Ensure each image takes up the full width of the slider */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure images are displayed */
+    }
+
+    .slider-icons {
+        position: relative; /* Remove absolute positioning */
+        top: auto; /* Remove top positioning */
+        width: 100%; /* Full width for mobile */
+        display: flex;
+        justify-content: space-between; /* Space out icons */
+        pointer-events: auto; /* Enable pointer events */
+    margin: 70px 0 20px; /* Add margin for spacing, increase top margin */
+    }
+
+    .slider-icons .prev-icon,
+    .slider-icons .next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px; /* Adjust padding for mobile */
+        font-size: 20px; /* Reduce font size */
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .slider-icons .prev-icon {
+    margin-right: -10px; /* Adjust this value to control space before the next icon */
+}
+
+.slider-icons .next-icon {
+    margin-left: -10px; /* Adjust this value to control space after the previous icon */
+}
+
+    .overlay {
+        position: relative; /* Remove absolute positioning */
+        bottom: auto; /* Remove bottom positioning */
+        left: auto; /* Remove left positioning */
+        width: 90%; /* Adjust width for mobile */
+        height: auto; /* Adjust height to fit content */
+        background-color: rgba(0, 128, 0, 0.6); /* Green color with 60% opacity */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin: 20px auto; /* Center horizontally and add margin */
+        padding: 20px; /* Add padding for better spacing */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
+
+    .overlay-text {
+        color: white;
+        font-size: 24px; /* Reduce font size */
+        text-align: center; /* Center align text */
+        padding: 0; /* Remove padding for better fit */
+        margin: 0;
+    }
+
+    .learn-more-button {
+        position: relative; /* Remove absolute positioning */
+        bottom: auto; /* Remove bottom positioning */
+        right: auto; /* Remove right positioning */
+        background-color: #001d00;
+        color: white;
+        padding: 10px 20px; /* Adjust padding for mobile */
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        display: block; /* Ensure button is a block-level element for centering */
+        z-index: 1000; /* Ensure it overlays the image and overlay */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        margin: 20px auto; /* Center horizontally and add margin */
+        text-align: center; /* Center align text */
+        width: auto; /* Auto width to fit content */
+        max-width: 150px; /* Maximum width for the button */
+    }
+}
+
+
+
 
 #footer {
     background-color: #001d00; /* Solid color */
@@ -1148,140 +1394,6 @@ hr {
 
 }
 
-@media (max-width: 768px) {
-    #footer {
-        height: auto; /* Allow the height to adjust based on content */
-        padding: 20px 10px; /* Reduce padding for smaller screens */
-        text-align: center; /* Center align all text */
-    }
-
-    .footer-content {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center the sections */
-    }
-
-    .footer-section {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 20px; /* Space between sections */
-    }
-
-    .footer-section h2 {
-        margin-left: 0; /* Reset the left margin */
-        margin-bottom: 10px; /* Adjust spacing */
-        text-align: center; /* Center the heading */
-    }
-
-    /* Centering smaller texts like Contact Us */
-    .contact-info,
-    .quick-links,
-    .service-links {
-        justify-content: center; /* Center align flex items */
-        align-items: center; /* Center align flex items vertically */
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    .contact-info .contact-text,
-    .quick-links .link-text,
-    .service-links .service-text {
-        margin-left: 0; /* Remove left margin */
-        text-align: left; /* Left-align the text */
-        margin-bottom: 10px; /* Add space between items */
-        width: 100%; /* Ensure full width to properly align text */
-    }
-
-    .link-arrow,
-    .service-arrow,
-    .contact-icon {
-        left: 0; /* Reset left positioning */
-        margin-right: 10px; /* Add margin to separate icon from text */
-        position: relative; /* Position relative for better control */
-        display: inline-block; /* Make sure the icons align with text */
-    }
-
-    .newsletter-header {
-        margin-left: 0; /* Center the header */
-        margin-bottom: 20px; /* Add space below */
-        text-align: center; /* Center the newsletter heading */
-    }
-
-    .newsletter-box {
-        flex-direction: column; /* Stack input and button vertically */
-        align-items: center; /* Center align */
-        margin-right: 0; /* Reset margin */
-        text-align: center; /* Center the entire newsletter box */
-    }
-
-    .newsletter-input {
-        width: 90%; /* Full width input with a bit of margin */
-        max-width: 300px; /* Set a max width for the input */
-        margin-left: 0; /* Reset margin */
-        margin-bottom: 10px; /* Add space below input */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-    }
-
-    .newsletter-btn {
-        width: 90%; /* Full width button with a bit of margin */
-        max-width: 300px; /* Set a max width for the button */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-        position: static; /* Reset positioning */
-        margin-top: 10px; /* Add space above */
-    }
-
-    .newsletter-icons {
-        justify-content: center; /* Center icons horizontally */
-        margin-top: 20px; /* Adjust spacing */
-    }
-
-    .newsletter-icon {
-        width: 30px; /* Adjust icon size */
-        height: 30px; /* Adjust icon size */
-        margin-right: 15px; /* Adjust spacing between icons */
-        margin-left: 0; /* Reset margin */
-    }
-
-    .newsletter-icon:last-child {
-        margin-right: 0; /* Remove margin for the last icon */
-    }
-
-    .footer-bottom {
-        margin-left: 0; /* Center the footer bottom text */
-        margin-top: 20px; /* Add space above */
-        text-align: center; /* Center align the footer bottom */
-    }
-}
-
-    @media (max-width: 768px) {
-    #footer {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    .footer-section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .footer-section h2 {
-        text-align: center;
-    }
-
-    .newsletter-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .newsletter-input,
-    .newsletter-btn {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-
-    .newsletter-icons {
-        justify-content: center;
-    }
-}
 
 /* Larger Screen Adjustments */
 @media (min-width: 1024px) {
@@ -1391,6 +1503,117 @@ hr {
         margin-left: 8%;
     }
 }
+
+       @media only screen and (max-width: 768px) {
+    #footer {
+        height: auto; /* Adjust height to fit content */
+        padding: 20px;
+        margin-top: 20px; /* Reduce margin to fit better on mobile */
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center horizontally */
+    }
+
+    .footer-section {
+        width: 100%; /* Full width for each section */
+        margin-bottom: 20px; /* Space between sections */
+        text-align: center; /* Center text within each section */
+    }
+
+    .footer-section h2 {
+        margin: 10px 0; /* Adjust margins */
+        margin-left: 0; /* Remove left margin */
+        width: auto; /* Adjust width to fit content */
+    }
+
+    .contact-info, .quick-links, .service-links {
+        width: auto; /* Adjust width to fit content */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
+        margin: 0; /* Remove margin */
+    }
+
+    .link-item, .service-item, .contact-item {
+        margin: 10px 0; /* Adjust margin */
+        display: flex;
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    /* Move only the arrows and center them */
+    .link-arrow, .service-arrow {
+        position: relative; /* Use relative positioning */
+        margin-right: 10px; /* Adjust spacing between arrow and text */
+        font-size: 18px; /* Adjust size for mobile */
+        left: 0; /* Center the arrows horizontally */
+    }
+
+    .contact-icon {
+        margin-left: -90px; /* Adjust this value to move the icon further left */
+        width: 20px; /* Adjust size for mobile */
+        height: 20px;
+    }
+
+    .newsletter-header {
+        margin: 0; /* Remove margin */
+    }
+
+  .newsletter-box {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px; /* Add margin-top to move it down */
+}
+
+.newsletter-input {
+    width: 100%; /* Full width for input */
+    max-width: 300px; /* Ensure it doesn't get too wide */
+    margin-bottom: 10px; /* Space between input and button */
+    text-align: left; /* Center text within input */
+}
+
+.newsletter-btn {
+    width: auto; /* Allow button to adjust width based on content */
+    max-width: 300px; /* Limit the maximum width */
+    height: 40px; /* Adjust height for a more compact button */
+    font-size: 14px; /* Adjust font size for readability */
+    padding: 0 60px; /* Adjust horizontal padding */
+    background-color: #ffcccc; /* Button background color */
+    color: #000; /* Button text color */
+    border: 2px solid #000; /* Button border color */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text within button */
+    margin-top: 5px; /* Reduce margin-top for better spacing */
+    align-self: right; /* Ensure button is centered in its flex container */
+}
+
+    .newsletter-icons {
+        margin-top: 30px; /* Adjust margin */
+        justify-content: center; /* Center icons */
+    }
+
+    .newsletter-icon {
+        margin: 0 10px; /* Adjust spacing between icons */
+    }
+
+    .footer-bottom {
+        text-align: center; /* Center text */
+        margin: 10px 0; /* Adjust margin */
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -1602,13 +1825,22 @@ financial opportunities for farmers</p>
 
     <script>
 
-        document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
+      const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+
+             const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav ul');
     const content = document.getElementById('content');
 
-    navLinks.classList.toggle('show'); // Toggle the dropdown menu
-    content.classList.toggle('dim'); // Dim or undim the content
-});
+    // Add event listener to the hamburger menu
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        content.classList.toggle('dim');
+    });
 
 
         let slideIndex = 1;
