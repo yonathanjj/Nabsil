@@ -526,7 +526,7 @@ nav ul li a.active {
 /* 1366px to 1439px */
 @media (min-width: 1366px) and (max-width: 1439px) {
     .market-header {
-        margin-left: -600; /* Center header */
+        margin-left: -900; /* Center header */
         font-size: 70px; /* Adjust font size */
 
     }
@@ -553,41 +553,99 @@ nav ul li a.active {
     }
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
-    .market-images-container {
-        flex-direction: column; /* Stack items vertically */
-        gap: 20px; /* Adjust gap for mobile */
-        margin: 20px auto; /* Adjust margin for mobile */
-        padding: 0 10px; /* Add horizontal padding */
+    .market-header {
+        font-size: 48px; /* Smaller font size for mobile */
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center align for mobile */
     }
 
-    .market-item {
-        width: 100%; /* Full width on mobile */
-        max-width: 300px; /* Limit maximum width for mobile */
-        margin-bottom: 20px; /* Space between items */
+    .market-images-container {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Reduced gap for mobile */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .market-image {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Reduced space between image and button */
     }
 
     .overlay {
-        height: 80px; /* Adjust height for mobile */
+        left: 0; /* Align overlay with the left edge of the image */
+        right: 0; /* Align overlay with the right edge of the image */
+        top: auto; /* Remove top alignment */
+        transform: none; /* Remove transform */
+        height: auto; /* Auto height for overlay */
+        padding: 20px; /* Add more padding */
+        text-align: center; /* Center align text */
     }
 
     .overlay h3 {
-        font-size: 18px; /* Smaller font size for mobile */
+        font-size: 24px; /* Smaller font size for mobile */
     }
 
     .overlay p {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .purchase-request {
+        width: 100%; /* Full width for mobile */
+        height: 50px; /* Increased height for easier tapping */
+        font-size: 18px; /* Smaller font size for mobile */
+        margin-top: 20px; /* Reduced space above the button */
+    }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    .market-header {
+        font-size: 48px; /* Smaller font size for mobile */
+        margin-left: 0; /* Reset margin for better alignment */
+    }
+
+    .market-images-container {
+        display: block;
+        margin-left: 0; /* Reset margin */
+        gap: 20px; /* Adjust gap between images */
+    }
+
+    .market-image {
+        width: 100%; /* Full width on mobile */
+        height: 200px; /* Adjusted height for mobile */
+        margin-bottom: 10px; /* Adjust margin between image and button */
+    }
+
+    .market-images-container > .market-image:first-child,
+    .market-images-container > .market-image:last-child {
+        margin-left: 0; /* Reset margin for better alignment */
+        margin-right: 0; /* Reset margin for better alignment */
+    }
+
+    .overlay {
+        display: none; /* Hide overlay on mobile */
     }
 
     .purchase-request {
         width: 100%; /* Full width on mobile */
-        max-width: 250px; /* Limit maximum width for mobile */
-        font-size: 16px; /* Adjust font size for mobile */
-        margin: 10px auto; /* Center button and adjust margin */
+        height: 50px; /* Adjust height for mobile */
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-top: 30px; /* Space between image and button */
+        margin-bottom: 20px; /* Space below the button */
+        background-color: #001D00; /* Green background color */
+        color: white; /* Text color white */
+        border: none; /* Remove border */
+        border-radius: 10px; /* Match border radius */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Animation on hover */
+    }
+
+    .purchase-request:hover {
+        background-color: #004400; /* Darker green on hover */
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 }
-
 
 
 
@@ -695,6 +753,27 @@ nav ul li a.active {
     margin: 0; /* Remove default margin */
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .image-item, .gallery-overlay {
+        width: 100%; /* Full width on mobile */
+        max-width: none; /* Remove max width */
+    }
+
+    .overlay-header {
+        font-size: 20px; /* Smaller font size on mobile */
+    }
+
+    .overlay-list {
+        font-size: 16px; /* Smaller font size on mobile */
+    }
+
+    .register-header h1 {
+        font-size: 45px; /* Smaller font size on mobile */
+    }
+}
+
+
 .contact-section {
     text-align: center; /* Center-align all content */
     margin: 60px auto; /* Add margin for spacing */
@@ -731,6 +810,22 @@ nav ul li a.active {
 }
 
 
+@media (max-width: 768px) {
+    .contact-header {
+        font-size: 30px; /* Smaller font size for mobile */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .contact-paragraph {
+        font-size: 20px; /* Smaller font size for mobile */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .contact-button {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 12px 24px; /* Adjust padding for mobile */
+    }
+}
 
 
 #footer {
@@ -920,140 +1015,6 @@ hr {
 
 }
 
-@media (max-width: 768px) {
-    #footer {
-        height: auto; /* Allow the height to adjust based on content */
-        padding: 20px 10px; /* Reduce padding for smaller screens */
-        text-align: center; /* Center align all text */
-    }
-
-    .footer-content {
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center the sections */
-    }
-
-    .footer-section {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 20px; /* Space between sections */
-    }
-
-    .footer-section h2 {
-        margin-left: 0; /* Reset the left margin */
-        margin-bottom: 10px; /* Adjust spacing */
-        text-align: center; /* Center the heading */
-    }
-
-    /* Centering smaller texts like Contact Us */
-    .contact-info,
-    .quick-links,
-    .service-links {
-        justify-content: center; /* Center align flex items */
-        align-items: center; /* Center align flex items vertically */
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    .contact-info .contact-text,
-    .quick-links .link-text,
-    .service-links .service-text {
-        margin-left: 0; /* Remove left margin */
-        text-align: left; /* Left-align the text */
-        margin-bottom: 10px; /* Add space between items */
-        width: 100%; /* Ensure full width to properly align text */
-    }
-
-    .link-arrow,
-    .service-arrow,
-    .contact-icon {
-        left: 0; /* Reset left positioning */
-        margin-right: 10px; /* Add margin to separate icon from text */
-        position: relative; /* Position relative for better control */
-        display: inline-block; /* Make sure the icons align with text */
-    }
-
-    .newsletter-header {
-        margin-left: 0; /* Center the header */
-        margin-bottom: 20px; /* Add space below */
-        text-align: center; /* Center the newsletter heading */
-    }
-
-    .newsletter-box {
-        flex-direction: column; /* Stack input and button vertically */
-        align-items: center; /* Center align */
-        margin-right: 0; /* Reset margin */
-        text-align: center; /* Center the entire newsletter box */
-    }
-
-    .newsletter-input {
-        width: 90%; /* Full width input with a bit of margin */
-        max-width: 300px; /* Set a max width for the input */
-        margin-left: 0; /* Reset margin */
-        margin-bottom: 10px; /* Add space below input */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-    }
-
-    .newsletter-btn {
-        width: 90%; /* Full width button with a bit of margin */
-        max-width: 300px; /* Set a max width for the button */
-        padding: 10px; /* Add padding for better appearance */
-        font-size: 16px; /* Increase font size */
-        position: static; /* Reset positioning */
-        margin-top: 10px; /* Add space above */
-    }
-
-    .newsletter-icons {
-        justify-content: center; /* Center icons horizontally */
-        margin-top: 20px; /* Adjust spacing */
-    }
-
-    .newsletter-icon {
-        width: 30px; /* Adjust icon size */
-        height: 30px; /* Adjust icon size */
-        margin-right: 15px; /* Adjust spacing between icons */
-        margin-left: 0; /* Reset margin */
-    }
-
-    .newsletter-icon:last-child {
-        margin-right: 0; /* Remove margin for the last icon */
-    }
-
-    .footer-bottom {
-        margin-left: 0; /* Center the footer bottom text */
-        margin-top: 20px; /* Add space above */
-        text-align: center; /* Center align the footer bottom */
-    }
-}
-
-    @media (max-width: 768px) {
-    #footer {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    .footer-section {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .footer-section h2 {
-        text-align: center;
-    }
-
-    .newsletter-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .newsletter-input,
-    .newsletter-btn {
-        max-width: 100%;
-        border-radius: 10px;
-    }
-
-    .newsletter-icons {
-        justify-content: center;
-    }
-}
 
 /* Larger Screen Adjustments */
 @media (min-width: 1024px) {
