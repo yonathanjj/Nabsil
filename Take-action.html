@@ -851,6 +851,8 @@ nav ul li a.active {
     .container {
         max-width: 100%; /* Ensures the container fits the screen */
         padding: 10px; /* Adjust padding as necessary */
+            overflow-x: hidden;
+
     }
 
     /* Image adjustments */
@@ -883,6 +885,8 @@ nav ul li a.active {
 
 .market-images-container{
 gap: 300px;
+    overflow-x: hidden;
+
 }
 
 
@@ -915,6 +919,32 @@ margin-left: 80px;
 }
 
 }
+
+@media (max-width: 767px) { /* Adjust this value based on your definition of mobile */
+    .newsletter-icons {
+        display: flex;
+        margin-top: 20px; /* Adjusted margin for mobile */
+        margin-left: 10px; /* Reduced margin-left for mobile */
+        gap: 10px; /* Adjusted gap for mobile */
+            overflow-x: hidden;
+
+    }
+
+    .newsletter-icon {
+        width: 25px; /* Slightly smaller icons for mobile */
+        height: 25px; /* Maintain aspect ratio */
+    }
+
+    .newsletter-box {
+        margin-left: 10px; /* Adjust margin-left for the box */
+    }
+
+    .newsletter-input {
+        width: calc(100% - 20px); /* Full width minus some padding */
+        padding: 10px; /* Add padding for better appearance */
+    }
+}
+
 
 
 #footer {
