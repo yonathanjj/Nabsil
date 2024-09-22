@@ -12,6 +12,8 @@
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+
 }
 
 header {
@@ -39,6 +41,7 @@ header {
 nav {
     margin-left: auto;
     margin-right: 3%;
+    font-size: 17px;
 }
 
 nav ul {
@@ -93,9 +96,11 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex; /* Show the hamburger menu on mobile */
+        overflow-x: hidden;
     }
 
     nav ul {
@@ -177,26 +182,28 @@ nav ul li a.active {
             color: #001D00;
             margin: 0;
             line-height: 1;
+            margin-left: 55px;
         }
 
         .content {
             max-width: 1365px;
             margin: 30px auto; /* Center the content */
-            text-align: left;
+            margin-left: 55px;
         }
 
         .content p {
             font-size: 35px;
             color: #333333;
             margin-bottom: 20px;
-            margin-left: -150px;
+            margin-left: 10px;
+
         }
 
         .boxes-container {
             display: flex;
             justify-content: flex-start; /* Align the boxes to the left */
             gap: 30px; /* Reduce the gap between boxes */
-            margin-left: -150px; /* Align boxes with the left edge of the image */
+                margin-left: 10px;
         }
 
         .box {
@@ -234,6 +241,7 @@ nav ul li a.active {
         position: relative;
         padding-top: 56.25%;
         background-repeat: no-repeat;
+        overflow-x: hidden;
     }
 
     .card {
@@ -311,6 +319,7 @@ nav ul li a.active {
         width: 1365px; /* Keep the original size */
         padding-left: 150px;
         padding-right: 150px;
+        overflow-x: hidden;
     }
 
     .content p {
@@ -328,6 +337,7 @@ nav ul li a.active {
         width: 1200px; /* Adjust the width */
         padding-left: 120px;
         padding-right: 120px;
+        overflow-x: hidden;
     }
 
     .content p {
@@ -347,6 +357,7 @@ nav ul li a.active {
         max-width: 1100px; /* Adjust width for smaller screens */
         padding-left: 100px;
         padding-right: 100px;
+        overflow-x: hidden;
     }
 
     .card {
@@ -378,20 +389,20 @@ nav ul li a.active {
         .market-header {
             font-size: 96px;
             color: #001D00;
-            margin-left: -150px; /* Align header with the left edge of the image */
+                margin-left: 10px;
         }
 
       .market-images-container {
     display: flex;
     justify-content: flex-start; /* Align images to the left */
-    gap: 620px; /* Adjusted gap between images */
-    margin-left: -350px; /* Move the images slightly to the right */
+    gap: 300px; /* Adjusted gap between images */
+    margin-left: -180px; /* Move the images slightly to the right */
     margin-top: 50px;
 }
 
 .market-image {
     position: relative;
-    width: 400px; /* Reduced image size */
+    width: 300px; /* Reduced image size */
     height: 404px; /* Reduced image size */
     background-size: cover;
     background-position: center;
@@ -470,6 +481,7 @@ nav ul li a.active {
     .market-header {
         margin-left: -50px; /* Keep alignment consistent */
         font-size: 96px; /* Keep font size large */
+        overflow-x: hidden;
     }
 
     .market-images-container {
@@ -499,6 +511,7 @@ nav ul li a.active {
     .market-header {
         margin-left: -30px; /* Reduce left margin for better alignment */
         font-size: 80px; /* Adjust font size for smaller screens */
+        overflow-x: hidden;
     }
 
     .market-images-container {
@@ -528,6 +541,7 @@ nav ul li a.active {
     .market-header {
         margin-left: -900; /* Center header */
         font-size: 70px; /* Adjust font size */
+        overflow-x: hidden;
 
     }
 
@@ -558,6 +572,7 @@ nav ul li a.active {
         font-size: 48px; /* Smaller font size for mobile */
         margin-left: 0; /* Reset margin */
         text-align: center; /* Center align for mobile */
+        overflow-x: hidden;
     }
 
     .market-images-container {
@@ -603,6 +618,7 @@ nav ul li a.active {
     .market-header {
         font-size: 48px; /* Smaller font size for mobile */
         margin-left: 0; /* Reset margin for better alignment */
+        overflow-x: hidden;
     }
 
     .market-images-container {
@@ -758,6 +774,7 @@ nav ul li a.active {
     .image-item, .gallery-overlay {
         width: 100%; /* Full width on mobile */
         max-width: none; /* Remove max width */
+        overflow-x: hidden;
     }
 
     .overlay-header {
@@ -814,6 +831,7 @@ nav ul li a.active {
     .contact-header {
         font-size: 30px; /* Smaller font size for mobile */
         margin-bottom: 15px; /* Adjust margin */
+        overflow-x: hidden;
     }
 
     .contact-paragraph {
@@ -828,6 +846,28 @@ nav ul li a.active {
 }
 
 
+@media (max-width: 1280px) and (max-height: 1024px) {
+    /* Container adjustments */
+    .container {
+        max-width: 100%; /* Ensures the container fits the screen */
+        padding: 10px; /* Adjust padding as necessary */
+    }
+
+    /* Image adjustments */
+    .image {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Other specific adjustments */
+    /* Example: Adjust font size */
+    body {
+        font-size: 14px; /* Smaller font for better fit */
+    }
+}
+
+
+
 #footer {
     background-color: #001d00; /* Solid color */
     color: #fff;
@@ -839,6 +879,7 @@ nav ul li a.active {
     left: 50%; /* Adjust the left position */
     transform: translateX(-50%); /* Center the footer horizontally */
     margin-top: 50px; /* Add space above the footer */
+    overflow-x: hidden;
 }
 
 
@@ -1279,7 +1320,7 @@ being easy to do business with, and our team is ready to    <br>
             <h2 class="market-header">Market</h2>
             <div class="market-images-container">
                 <!-- First Image and Overlay -->
-                <div class="market-image" style="background-image: url('mol.jpg');">
+                <div class="market-image" style="background-image: url('far.jpg');">
                     <div class="overlay">
                         <h3>Sorghum</h3>
                         <p>A drought-resistant grain, nourishing humans and livestock.</p>
@@ -1287,7 +1328,7 @@ being easy to do business with, and our team is ready to    <br>
                     <div class="purchase-request">Purchase Request</div> <!-- Moved outside the market-image div -->
                 </div>
                 <!-- Second Image and Overlay -->
-                <div class="market-image" style="background-image: url('bvc.jpg');">
+                <div class="market-image" style="background-image: url('far.jpg');">
                     <div class="overlay">
                         <h3>Bean</h3>
                         <p>Nutrient-packed protein powerhouses, essential for balanced diets and global food security.</p>
@@ -1299,7 +1340,7 @@ being easy to do business with, and our team is ready to    <br>
 
             <div class="market-images-container">
                 <!-- Third Image and Overlay -->
-                <div class="market-image" style="background-image: url('gud.jpg');">
+                <div class="market-image" style="background-image: url('far.jpg');">
                     <div class="overlay">
                         <h3>Maize</h3>
                         <p>A versatile crop used for human consumption, animal feed, and bio fuel production.</p>
@@ -1307,7 +1348,7 @@ being easy to do business with, and our team is ready to    <br>
                     <div class="purchase-request">Purchase Request</div> <!-- Moved outside the market-image div -->
                 </div>
                 <!-- Fourth Image and Overlay -->
-                <div class="market-image" style="background-image: url('acr.jpg');">
+                <div class="market-image" style="background-image: url('far.jpg');">
                     <div class="overlay">
                         <h3>Sesame seed</h3>
                         <p>Nutrient-rich, ancient superfood. Flavorful and versatile culinary treasure.</p>
