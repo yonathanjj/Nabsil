@@ -68,12 +68,12 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    color: #2A642A; 
-    background-color: #ffffff; 
-    border-radius: 5px; 
-    font-weight: 700; 
-    padding: 10px 15px; 
-    text-decoration: underline; 
+    color: #2A642A; /* Change text color */
+    background-color: #ffffff; /* Background color for active link */
+    border-radius: 5px; /* Optional rounded corners */
+    font-weight: 700; /* Make the text bolder */
+    padding: 10px 15px; /* Optional padding for better spacing */
+    text-decoration: underline; /* Optional underline to show it's active */
 }
 
 
@@ -449,11 +449,12 @@ nav ul li a.active {
 }
 
 
+/* Mobile Styles */
 @media (max-width: 768px) {
     .content {
-        display: block; 
+        display: block; /* Stack left and right side vertically */
         padding: 20px;
-        margin-top: 60px; 
+        margin-top: 60px; /* Increase space at the top */
         overflow-x: hidden;
     }
 
@@ -463,58 +464,59 @@ nav ul li a.active {
     }
 
     .right-side {
-        margin-top: 40px; 
+        margin-top: 40px; /* Adjust margin to fit mobile view */
         margin-left: 0;
     }
 
     .recent-articles {
-        font-size: 36px; 
-        margin: 40px 0; 
+        font-size: 36px; /* Adjust font size for mobile */
+        margin: 40px 0; /* Increase margin around the section */
         margin-left: 0;
     }
 
     .image-container {
         margin-left: 0;
-        gap: 20px; 
+        gap: 20px; /* Increase gap between images */
+    }
 
     .image-item {
-        flex-direction: column;
-        align-items: center; 
-        margin-left: 0; 
-        margin-top: 30px; 
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items horizontally */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 30px; /* Increase top margin for image items */
     }
 
     .image-item img {
-        width: 100%; 
-        height: auto; 
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .image-item h3, .image-item p {
-        text-align: center; 
+        text-align: center; /* Center text on mobile */
     }
 
     .line {
-        margin-left: 0; 
+        margin-left: 0; /* Remove left margin */
     }
 
     .slider-container {
-        width: 100%; 
-        height: auto; 
-        margin-left: 0; 
-        margin-top: 30px; 
-        overflow: hidden; 
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 30px; /* Increase top margin for slider */
+        overflow: hidden; /* Ensure overflow is hidden */
     }
 
     .slider-images {
-        display: flex; 
-        flex-wrap: nowrap; 
-        transition: transform 0.5s ease-in-out; 
+        display: flex; /* Use flexbox to align images horizontally */
+        flex-wrap: nowrap; /* Ensure images do not wrap */
+        transition: transform 0.5s ease-in-out; /* Smooth transition */
     }
 
     .slider-images img {
-        width: 100vw; 
-        height: auto; 
-        flex-shrink: 0; 
+        width: 100vw; /* Make each image take full viewport width */
+        height: auto; /* Maintain aspect ratio */
+        flex-shrink: 0; /* Prevent images from shrinking */
     }
 
     .slider-dots {
@@ -528,7 +530,7 @@ nav ul li a.active {
         background-color: #000;
         border: none;
         border-radius: 50%;
-        width: 8px; 
+        width: 8px; /* Smaller dots on mobile */
         height: 8px;
         display: inline-block;
         margin: 0 5px;
@@ -539,43 +541,44 @@ nav ul li a.active {
         background-color: #2A642A;
     }
     .rights-section {
-        padding-right: 20px; 
-        justify-content: center; 
+        padding-right: 20px; /* Adjust padding for mobile */
+        justify-content: center; /* Center items horizontally */
         bottom: 0;
-        margin-top: 30px; 
+        margin-top: 30px; /* Increase margin-top for spacing */
     }
 
     .rights-icon {
-        width: 20px; 
+        width: 20px; /* Adjust icon size for mobile */
         height: 20px;
     }
 
     .rights-text {
-        font-size: 12px; 
+        font-size: 12px; /* Adjust font size for mobile */
     }
 
     .image-item:hover {
-        transform: none; 
+        transform: none; /* Remove hover effect on mobile */
     }
     .newsletter-icons {
     display: flex;
-    justify-content: flex-start; 
-    margin-top: 140px; 
-    margin-left: 0; 
-    gap: 20px; 
+    justify-content: flex-start; /* Align icons to the left */
+    margin-top: 140px; /* Keep your existing margin */
+    margin-left: 0; /* Remove left margin to move icons fully left */
+    gap: 20px; /* Space between icons */
 }
 
 .newsletter-icon {
     width: 30px;
     height: 30px;
-    margin: 0; 
+    margin: 0; /* Ensure no margin affects alignment */
 }
 
 .newsletter-box {
-    margin-left: 0;
+    margin-left: 0; /* Remove left margin for the box */
 }
 
 .newsletter-input {
+    /* Add any styles you need */
 }
 
 }
@@ -603,26 +606,26 @@ margin-left: 80px;
 
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) { /* Adjust this value based on your definition of mobile */
     .newsletter-icons {
         display: flex;
-        margin-top: 20px; 
-        margin-left: 10px; 
-        gap: 10px; 
+        margin-top: 20px; /* Adjusted margin for mobile */
+        margin-left: 10px; /* Reduced margin-left for mobile */
+        gap: 10px; /* Adjusted gap for mobile */
     }
 
     .newsletter-icon {
-        width: 25px; 
-        height: 25px; 
+        width: 25px; /* Slightly smaller icons for mobile */
+        height: 25px; /* Maintain aspect ratio */
     }
 
     .newsletter-box {
-        margin-left: 10px;
+        margin-left: 10px; /* Adjust margin-left for the box */
     }
 
     .newsletter-input {
-        width: calc(100% - 20px); 
-        padding: 10px; 
+        width: calc(100% - 20px); /* Full width minus some padding */
+        padding: 10px; /* Add padding for better appearance */
     }
 }
 
@@ -819,113 +822,115 @@ hr {
 
       @media only screen and (max-width: 768px) {
     #footer {
-        height: auto; 
+        height: auto; /* Adjust height to fit content */
         padding: 20px;
-        margin-top: 20px; 
+        margin-top: 20px; /* Reduce margin to fit better on mobile */
 
     }
 
     .footer-content {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center horizontally */
     }
 
     .footer-section {
-        width: 100%; 
-        margin-bottom: 20px; 
-        text-align: center; 
+        width: 100%; /* Full width for each section */
+        margin-bottom: 20px; /* Space between sections */
+        text-align: center; /* Center text within each section */
     }
 
     .footer-section h2 {
-        margin: 10px 0; 
-        margin-left: 0; 
-        width: auto; 
+        margin: 10px 0; /* Adjust margins */
+        margin-left: 0; /* Remove left margin */
+        width: auto; /* Adjust width to fit content */
     }
 
     .contact-info, .quick-links, .service-links {
-        width: auto; 
-        margin: 0; 
-        padding: 0; 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
+        width: auto; /* Adjust width to fit content */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
 
     .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
-        margin: 0; 
+        margin: 0; /* Remove margin */
     }
 
     .link-item, .service-item, .contact-item {
-        margin: 10px 0; 
+        margin: 10px 0; /* Adjust margin */
         display: flex;
-        align-items: center; 
-        justify-content: center; 
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
     }
 
+    /* Move only the arrows and center them */
     .link-arrow, .service-arrow {
-        position: relative; 
-        margin-right: 10px; 
-        font-size: 18px;
-        left: 0; 
+        position: relative; /* Use relative positioning */
+        margin-right: 10px; /* Adjust spacing between arrow and text */
+        font-size: 18px; /* Adjust size for mobile */
+        left: 0; /* Center the arrows horizontally */
     }
 
     .contact-icon {
-        margin-left: -90px; 
-        width: 20px; 
+        margin-left: -90px; /* Adjust this value to move the icon further left */
+        width: 20px; /* Adjust size for mobile */
         height: 20px;
     }
 
     .newsletter-header {
-        margin: 0; 
+        margin: 0; /* Remove margin */
     }
 
   .newsletter-box {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 20px; 
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center horizontally */
+    margin-top: 20px; /* Add margin-top to move it down */
 }
 
 .newsletter-input {
-    width: 100%; 
-    max-width: 300px; 
-    margin-bottom: 10px; 
-    text-align: left; 
+    width: 100%; /* Full width for input */
+    max-width: 300px; /* Ensure it doesn't get too wide */
+    margin-bottom: 10px; /* Space between input and button */
+    text-align: left; /* Center text within input */
 }
 
 .newsletter-btn {
-    width: auto; 
-    max-width: 300px; 
-    height: 40px; 
-    font-size: 14px; 
-    padding: 0 60px; 
-    background-color: #ffcccc; 
-    color: #000; 
-    border: 2px solid #000; 
-    border-radius: 10px; 
-    cursor: pointer; 
-    text-align: center; 
-    margin-top: 5px; 
-    align-self: right; 
+    width: auto; /* Allow button to adjust width based on content */
+    max-width: 300px; /* Limit the maximum width */
+    height: 40px; /* Adjust height for a more compact button */
+    font-size: 14px; /* Adjust font size for readability */
+    padding: 0 60px; /* Adjust horizontal padding */
+    background-color: #ffcccc; /* Button background color */
+    color: #000; /* Button text color */
+    border: 2px solid #000; /* Button border color */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text within button */
+    margin-top: 5px; /* Reduce margin-top for better spacing */
+    align-self: right; /* Ensure button is centered in its flex container */
 }
 
     .newsletter-icons {
-        margin-top: 30px; 
-        justify-content: center; 
+        margin-top: 30px; /* Adjust margin */
+        justify-content: center; /* Center icons */
     }
 
     .newsletter-icon {
-        margin: 0 10px; 
+        margin: 0 10px; /* Adjust spacing between icons */
     }
 
     .footer-bottom {
-        text-align: center; 
-        margin: 10px 0; 
-        margin-left: 0; 
+        text-align: center; /* Center text */
+        margin: 10px 0; /* Adjust margin */
+        margin-left: 0; /* Remove left margin */
     }
 }
 
+/* Larger Screen Adjustments */
 @media (min-width: 1024px) {
     .footer-section {
         max-width: 22%;
@@ -969,26 +974,26 @@ hr {
     }
 
     .newsletter-box {
-        justify-content: flex-start; 
-        margin-left: 10%; 
+        justify-content: flex-start; /* Align the input and button to the left */
+        margin-left: 10%; /* Adjust margin to keep it balanced */
         display: flex;
         align-items: center;
-        gap: 10px; 
+        gap: 10px; /* Add some space between the input and button */
     }
 
     .newsletter-input {
-        width: 250px; 
-        height: 40px; 
+        width: 250px; /* Increase width of input field */
+        height: 40px; /* Reduce height slightly */
         padding: 8px;
-        font-size: 14px; 
-        border-radius: 5px 0 0 5px; 
+        font-size: 14px; /* Adjust font size */
+        border-radius: 5px 0 0 5px; /* Softer corners */
     }
 
     .newsletter-btn {
-        width: 120px; 
-        height: 40px; 
+        width: 120px; /* Adjust button width */
+        height: 40px; /* Match input height */
         font-size: 14px;
-        border-radius: 0 5px 5px 0; 
+        border-radius: 0 5px 5px 0; /* Softer corners */
     }
 
     .newsletter-icons {
@@ -1009,25 +1014,25 @@ hr {
     }
 
     .newsletter-box {
-        margin-left: 8%;
+        margin-left: 8%; /* Fine-tune the margin for balance */
         display: flex;
         align-items: center;
-        gap: 10px; 
+        gap: 10px; /* Space between input and button */
     }
 
     .newsletter-input {
-        width: 280px; 
-        height: 45px; 
+        width: 280px; /* Further increase input width */
+        height: 45px; /* Adjust height for proportion */
         padding: 10px;
-        font-size: 16px; 
-        border-radius: 5px 0 0 5px; 
+        font-size: 16px; /* Increase font size slightly */
+        border-radius: 5px 0 0 5px; /* Softer corners */
     }
 
     .newsletter-btn {
-        width: 130px; 
-        height: 45px; 
+        width: 130px; /* Adjust button width */
+        height: 45px; /* Match input height */
         font-size: 16px;
-        border-radius: 0 5px 5px 0; 
+        border-radius: 0 5px 5px 0; /* Softer corners */
     }
 
     .newsletter-icons {
@@ -1193,6 +1198,7 @@ hr {
 <br>
 <br>
 
+    <!-- Bottom Line and Copyright -->
     <hr>
     <p class="footer-bottom">© All Rights Reserved NABSIL.</p>
 </footer>
@@ -1209,6 +1215,7 @@ navLinks.forEach(link => {
     const navMenu = document.querySelector('nav ul');
     const content = document.getElementById('content');
 
+    // Add event listener to the hamburger menu
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('show');
         content.classList.toggle('dim');
