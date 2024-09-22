@@ -68,18 +68,17 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    color: #2A642A; /* Change text color */
-    background-color: #ffffff; /* Background color for active link */
-    border-radius: 5px; /* Optional rounded corners */
-    font-weight: 700; /* Make the text bolder */
-    padding: 10px 15px; /* Optional padding for better spacing */
-    text-decoration: underline; /* Optional underline to show it's active */
+    color: #2A642A; 
+    background-color: #ffffff; 
+    border-radius: 5px; 
+    font-weight: 700; 
+    padding: 10px 15px; 
+    text-decoration: underline; 
 }
 
 
-/* Hamburger Menu Styles */
 .hamburger-menu {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -97,28 +96,28 @@ nav ul li a.active {
 
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: flex; /* Show the hamburger menu on mobile */
+        display: flex; 
         overflow-x: hidden;
     }
 
     nav ul {
-        max-height: 0; /* Initially hidden */
-        overflow: hidden; /* Hide overflowing content */
+        max-height: 0; 
+        overflow: hidden; 
         flex-direction: column;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.95);
         position: absolute;
         top: 70px;
         left: 0;
-        padding: 0; /* Remove padding initially */
+        padding: 0; 
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         z-index: 1000;
         transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
     }
 
     nav ul.show {
-        max-height: 300px; /* Adjust based on content height */
-        padding: 20px 0; /* Add padding when shown */
+        max-height: 300px; 
+        padding: 20px 0; 
     }
 
     nav ul li {
@@ -132,7 +131,6 @@ nav ul li a.active {
         text-decoration: none;
     }
 
-    /* Dim background content when menu is open */
     #content.dim {
         filter: blur(5px);
         opacity: 0.3;
@@ -152,7 +150,7 @@ nav ul li a.active {
    .contact-header {
     font-size: 96px;
     color: #001D00;
-    margin: 170px 0 10px; /* Keep existing margin values */
+    margin: 170px 0 10px; 
     margin-left: 50px;
     text-align: left;
 }
@@ -169,11 +167,11 @@ nav ul li a.active {
 }
 
         .contact-form {
-    margin: 0 50px 50px; /* Add horizontal margin to move the form inwards from both sides */
+    margin: 0 50px 50px; 
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-        background-color: transparent; /* Ensures no background color */
+        background-color: transparent; 
 
 }
 
@@ -199,7 +197,7 @@ nav ul li a.active {
             color: #000;
             outline: none;
             margin-bottom: 15px;
-                background-color: transparent; /* Ensures no background color */
+                background-color: transparent; 
 
         }
 
@@ -209,18 +207,18 @@ nav ul li a.active {
         }
 
       .contact-form .comment-box {
-    width: calc(100% - -10px); /* Keeps the existing width calculation */
-    padding: 15px 10px; /* Keeps the existing padding */
+    width: calc(100% - -10px); 
+    padding: 15px 10px; 
     border: 2px solid #2A642A;
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
     margin-bottom: 20px;
-    margin-left: 0px; /* Keeps the box shifted to the right */
-    margin-right: -50px; /* Adjust this value to reduce width on the right side */
+    margin-left: 0px; 
+    margin-right: -50px; 
     resize: vertical;
     height: 150px;
-    background-color: transparent; /* Ensures no background color */
+    background-color: transparent; 
 
 }
 
@@ -234,7 +232,7 @@ nav ul li a.active {
     cursor: pointer;
     font-weight: bold;
     margin-top: -30px;
-    margin-left: 0px; /* Add margin-left to move the button to the right */
+    margin-left: 0px; 
     text-align: left;
     transition: background-color 0.3s ease;
 }
@@ -244,107 +242,105 @@ nav ul li a.active {
             background-color: #1E4A1E;
         }
 
-/* Media Query for Mobile Screens */
 @media (max-width: 768px) {
     .contact-header {
-        font-size: 36px; /* Adjust font size for smaller screens */
-        margin: 40px 0 20px; /* Adjust top margin */
+        font-size: 36px; 
+        margin: 40px 0 20px; 
         overflow-x: hidden;
     }
 
     .contact-description {
-        font-size: 18px; /* Adjust font size for smaller screens */
-        margin-bottom: 20px; /* Adjust bottom margin */
+        font-size: 18px; 
+        margin-bottom: 20px; 
     }
 
     .contact-form {
-        padding: 0 10px; /* Add padding on mobile */
+        padding: 0 10px; 
     }
 
     .contact-form .form-group {
-        gap: 10px; /* Reduce gap for mobile */
+        gap: 10px; 
     }
 
     .contact-form label {
-        font-size: 14px; /* Adjust for smaller screens */
+        font-size: 14px; 
     }
 
     .contact-form .input-line {
-        font-size: 14px; /* Adjust for smaller screens */
+        font-size: 14px; 
     }
 
     .contact-form .comment-box {
-        font-size: 14px; /* Adjust for smaller screens */
+        font-size: 14px; 
     }
 
     .submit-button {
-        font-size: 16px; /* Adjust for smaller screens */
-        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 16px; 
+        padding: 10px 15px; 
     }
 }
 
 
-/* Mobile Styles */
 @media (max-width: 768px) {
     .contact-content {
-        padding: 20px; /* Reduce padding for mobile view */
-        padding-top: 70px; /* Adjust top padding */
+        padding: 20px; 
+        padding-top: 70px; 
         overflow-x: hidden;
     }
 
     .contact-header {
-        font-size: 48px; /* Smaller font size for mobile */
-        margin: 50px 0 20px; /* Adjust margin */
-        margin-left: 0; /* Center align */
-        text-align: center; /* Center text */
+        font-size: 48px;
+        margin: 50px 0 20px; 
+        margin-left: 0; 
+        text-align: center; 
     }
 
     .contact-description {
-        font-size: 18px; /* Smaller font size for mobile */
-        max-width: 100%; /* Ensure it fits within the screen */
-        margin-bottom: 30px; /* Adjust margin */
-        margin-left: 0; /* Center align */
-        text-align: center; /* Center text */
+        font-size: 18px; 
+        max-width: 100%; 
+        margin-bottom: 30px; 
+        margin-left: 0;
+        text-align: center; 
     }
 
     .contact-form {
-        margin: 0; /* Remove side margins */
-        padding: 0 10px; /* Add padding to avoid form touching edges */
-        flex-direction: column; /* Stack form elements vertically */
-        gap: 15px; /* Adjust gap between form elements */
+        margin: 0; 
+        padding: 0 10px;
+        flex-direction: column; 
+        gap: 15px; 
     }
 
     .form-group {
-        flex: 1 1 100%; /* Full width for each form group */
+        flex: 1 1 100%; 
         display: flex;
         flex-direction: column;
     }
 
     .contact-form label {
-        font-size: 18px; /* Smaller font size for mobile */
+        font-size: 18px; 
     }
 
     .contact-form .input-line {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 10px; /* Add padding for better touch interaction */
+        font-size: 14px;
+        padding: 10px; 
     }
 
     .contact-form .input-line::placeholder {
-        font-size: 12px; /* Smaller placeholder font size */
+        font-size: 12px; 
     }
 
     .contact-form .comment-box {
-        width: 100%; /* Full width on mobile */
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 10px; /* Adjust padding */
-        margin-right: 0; /* Remove right margin */
+        width: 100%; 
+        font-size: 14px; 
+        padding: 10px; 
+        margin-right: 0; 
     }
 
     .submit-button {
-        width: 100%; /* Full width on mobile */
-        font-size: 16px; /* Smaller font size for mobile */
-        padding: 15px; /* Increase padding for easier clicking */
-        margin-top: 10px; /* Adjust margin */
+        width: 100%; 
+        font-size: 16px; 
+        padding: 15px;
+        margin-top: 10px; 
     }
 }
 
@@ -360,7 +356,7 @@ nav ul li a.active {
     font-size: 48px;
     color: #001D00;
     margin-bottom: 30px;
-    margin-left: -240px; /* Add negative margin-left to move the element to the left */
+    margin-left: -240px; 
     position: relative;
     text-align: left;
 }
@@ -371,7 +367,7 @@ nav ul li a.active {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #001D00; /* Adjusted color to match header text */
+    background-color: #001D00; 
     position: absolute;
     bottom: -10px;
     left: ;
@@ -383,9 +379,9 @@ nav ul li a.active {
     border: 2px solid #ced4da;
     border-radius: 5px;
     margin-bottom: 20px;
-    margin-left: -240px; /* Add negative margin-left to move the element to the left */
+    margin-left: -240px; 
     padding: 15px;
-    width: calc(100% + 210px); /* Adjust width to accommodate the negative margin */
+    width: calc(100% + 210px); 
     height: auto;
     cursor: pointer;
     justify-content: space-between;
@@ -416,53 +412,51 @@ nav ul li a.active {
 }
 
 
-
-/* Mobile Styles */
 @media (max-width: 768px) {
     .faqs {
-        margin-left: 20px; /* Reduced left margin */
-        margin-right: 20px; /* Added right margin */
-        max-width: 100%; /* Full width on mobile */
+        margin-left: 20px; 
+        margin-right: 20px; 
+        max-width: 100%; 
         overflow-x: hidden;
     }
 
     .faqs h2 {
-        font-size: 24px; /* Smaller font size for mobile */
-        margin-bottom: 20px; /* Adjusted margin */
-        margin-left: 0; /* Remove negative margin-left */
-        text-align: center; /* Center align the text */
+        font-size: 24px;
+        margin-bottom: 20px; 
+        margin-left: 0; 
+        text-align: center; 
         position: relative;
     }
 
     .faqs h2::after {
-        width: 50%; /* Adjust width for mobile */
-        left: 50%; /* Center the line */
-        transform: translateX(-50%); /* Center the line */
+        width: 50%; 
+        left: 50%; 
+        transform: translateX(-50%); 
     }
 
     .faq-item {
-        width: 100%; /* Full width on mobile */
-        margin-left: 0; /* Remove negative margin-left */
-        padding: 10px; /* Adjust padding */
+        width: 100%; 
+        margin-left: 0;
+        padding: 10px; 
     }
 
     .faq-item summary {
-        font-size: 18px; /* Smaller font size for mobile */
+        font-size: 18px; 
     }
 
     .faq-item p {
-        font-size: 16px; /* Smaller font size for mobile */
-        padding-left: 10px; /* Adjust padding */
+        font-size: 16px; 
+        padding-left: 10px; 
     }
 
 
 }
 .newsletter-icons {
     display: flex;
-    justify-content: flex-start; /* Align icons to the left */
-    margin-top: 140px; /* Keep your existing margin */
-    margin-left: 0; /* Remove left margin to move icons fully left */
-    gap: 10px; /* Space between icons */
+    justify-content: flex-start; 
+    margin-top: 140px; 
+    margin-left: 0; 
+    gap: 10px; 
 }
 
 
@@ -470,54 +464,53 @@ nav ul li a.active {
 .newsletter-icon {
     width: 30px;
     height: 30px;
-    margin: 0; /* Ensure no margin affects alignment */
+    margin: 0; 
 }
 
 .newsletter-box {
-    margin-left: 20px; /* Remove left margin for the box */
+    margin-left: 20px; 
 }
 
 .newsletter-input {
-    /* Add any styles you need */
 }
 
 
-@media (max-width: 767px) { /* Adjust this value based on your definition of mobile */
+@media (max-width: 767px) { 
     .newsletter-icons {
         display: flex;
-        margin-top: 20px; /* Adjusted margin for mobile */
-        margin-left: 10px; /* Reduced margin-left for mobile */
-        gap: 10px; /* Adjusted gap for mobile */
+        margin-top: 20px; 
+        margin-left: 10px; 
+        gap: 10px; 
     }
 
     .newsletter-icon {
-        width: 25px; /* Slightly smaller icons for mobile */
-        height: 25px; /* Maintain aspect ratio */
+        width: 25px; 
+        height: 25px; 
     }
 
     .newsletter-box {
-        margin-left: 10px; /* Adjust margin-left for the box */
+        margin-left: 10px; 
     }
 
     .newsletter-input {
-        width: calc(100% - 20px); /* Full width minus some padding */
-        padding: 10px; /* Add padding for better appearance */
+        width: calc(100% - 20px); 
+        padding: 10px; 
     }
 }
 
 
 
 #footer {
-    background-color: #001d00; /* Solid color */
+    background-color: #001d00; 
     color: #fff;
     height: 320px;
-    width: 100vw; /* Use viewport width to span the entire width of the viewport */
+    width: 100vw; 
     position: relative;
     padding: 20px;
     box-sizing: border-box;
-    left: 50%; /* Adjust the left position */
-    transform: translateX(-50%); /* Center the footer horizontally */
-    margin-top: 50px; /* Add space above the footer */
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 50px; 
     overflow-x: hidden;
 }
 
@@ -670,8 +663,8 @@ nav ul li a.active {
 .newsletter-icon {
     width: 30px;
     height: 30px;
-    margin-right: 20px; /* Adjust spacing between icons as needed */
-    margin-left: -100px; /* Remove negative margin */
+    margin-right: 20px; 
+    margin-left: -100px; 
 }
 
 .newsletter-icon:last-child {
@@ -697,110 +690,109 @@ hr {
 
       @media only screen and (max-width: 768px) {
     #footer {
-        height: auto; /* Adjust height to fit content */
+        height: auto; 
         padding: 20px;
-        margin-top: 20px; /* Reduce margin to fit better on mobile */
+        margin-top: 20px; 
     }
 
     .footer-content {
         display: flex;
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center horizontally */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .footer-section {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 20px; /* Space between sections */
-        text-align: center; /* Center text within each section */
+        width: 100%; 
+        margin-bottom: 20px; 
+        text-align: center; 
     }
 
     .footer-section h2 {
-        margin: 10px 0; /* Adjust margins */
-        margin-left: 0; /* Remove left margin */
-        width: auto; /* Adjust width to fit content */
+        margin: 10px 0; 
+        margin-left: 0; 
+        width: auto; 
     }
 
     .contact-info, .quick-links, .service-links {
-        width: auto; /* Adjust width to fit content */
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        width: auto; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
-        margin: 0; /* Remove margin */
+        margin: 0; 
     }
 
     .link-item, .service-item, .contact-item {
-        margin: 10px 0; /* Adjust margin */
+        margin: 10px 0; 
         display: flex;
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center items horizontally */
+        align-items: center; 
+        justify-content: center; 
     }
 
-    /* Move only the arrows and center them */
     .link-arrow, .service-arrow {
-        position: relative; /* Use relative positioning */
-        margin-right: 10px; /* Adjust spacing between arrow and text */
-        font-size: 18px; /* Adjust size for mobile */
-        left: 0; /* Center the arrows horizontally */
+        position: relative; 
+        margin-right: 10px; 
+        font-size: 18px;
+        left: 0; 
     }
 
     .contact-icon {
-        margin-left: -90px; /* Adjust this value to move the icon further left */
-        width: 20px; /* Adjust size for mobile */
+        margin-left: -90px; 
+        width: 20px; 
         height: 20px;
     }
 
     .newsletter-header {
-        margin: 0; /* Remove margin */
+        margin: 0; 
     }
 
   .newsletter-box {
     display: flex;
-    flex-direction: column; /* Stack input and button vertically */
-    align-items: center; /* Center horizontally */
-    margin-top: 20px; /* Add margin-top to move it down */
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px; 
 }
 
 .newsletter-input {
-    width: 100%; /* Full width for input */
-    max-width: 300px; /* Ensure it doesn't get too wide */
-    margin-bottom: 10px; /* Space between input and button */
-    text-align: left; /* Center text within input */
+    width: 100%; 
+    max-width: 300px; 
+    margin-bottom: 10px; 
+    text-align: left; 
 }
 
 .newsletter-btn {
-    width: auto; /* Allow button to adjust width based on content */
-    max-width: 300px; /* Limit the maximum width */
-    height: 40px; /* Adjust height for a more compact button */
-    font-size: 14px; /* Adjust font size for readability */
-    padding: 0 60px; /* Adjust horizontal padding */
-    background-color: #ffcccc; /* Button background color */
-    color: #000; /* Button text color */
-    border: 2px solid #000; /* Button border color */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center text within button */
-    margin-top: 5px; /* Reduce margin-top for better spacing */
-    align-self: right; /* Ensure button is centered in its flex container */
+    width: auto; 
+    max-width: 300px; 
+    height: 40px; 
+    font-size: 14px; 
+    padding: 0 60px; 
+    background-color: #ffcccc; 
+    color: #000; 
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    text-align: center; 
+    margin-top: 5px; 
+    align-self: right; 
 }
 
     .newsletter-icons {
-        margin-top: 30px; /* Adjust margin */
-        justify-content: center; /* Center icons */
+        margin-top: 30px; 
+        justify-content: center; 
     }
 
     .newsletter-icon {
-        margin: 0 10px; /* Adjust spacing between icons */
+        margin: 0 10px;
     }
 
     .footer-bottom {
-        text-align: center; /* Center text */
-        margin: 10px 0; /* Adjust margin */
-        margin-left: 0; /* Remove left margin */
+        text-align: center; 
+        margin: 10px 0; 
+        margin-left: 0; 
     }
 }
 /* Larger Screen Adjustments */
@@ -843,26 +835,26 @@ hr {
     }
 
     .newsletter-box {
-        justify-content: flex-start; /* Align the input and button to the left */
-        margin-left: 10%; /* Adjust margin to keep it balanced */
+        justify-content: flex-start; 
+        margin-left: 10%; 
         display: flex;
         align-items: center;
-        gap: 10px; /* Add some space between the input and button */
+        gap: 10px; 
     }
 
     .newsletter-input {
-        width: 250px; /* Increase width of input field */
-        height: 40px; /* Reduce height slightly */
+        width: 250px; 
+        height: 40px;
         padding: 8px;
-        font-size: 14px; /* Adjust font size */
-        border-radius: 5px 0 0 5px; /* Softer corners */
+        font-size: 14px;
+        border-radius: 5px 0 0 5px; 
     }
 
     .newsletter-btn {
-        width: 120px; /* Adjust button width */
-        height: 40px; /* Match input height */
+        width: 120px; 
+        height: 40px;
         font-size: 14px;
-        border-radius: 0 5px 5px 0; /* Softer corners */
+        border-radius: 0 5px 5px 0; 
     }
 
     .newsletter-icons {
@@ -882,25 +874,25 @@ hr {
     }
 
     .newsletter-box {
-        margin-left: 8%; /* Fine-tune the margin for balance */
+        margin-left: 8%; 
         display: flex;
         align-items: center;
-        gap: 10px; /* Space between input and button */
+        gap: 10px; 
     }
 
     .newsletter-input {
-        width: 280px; /* Further increase input width */
-        height: 45px; /* Adjust height for proportion */
+        width: 280px; 
+        height: 45px; 
         padding: 10px;
-        font-size: 16px; /* Increase font size slightly */
-        border-radius: 5px 0 0 5px; /* Softer corners */
+        font-size: 16px;
+        border-radius: 5px 0 0 5px; 
     }
 
     .newsletter-btn {
-        width: 130px; /* Adjust button width */
-        height: 45px; /* Match input height */
+        width: 130px; 
+        height: 45px;
         font-size: 16px;
-        border-radius: 0 5px 5px 0; /* Softer corners */
+        border-radius: 0 5px 5px 0; 
     }
 
     .newsletter-icons {
@@ -1001,9 +993,7 @@ hr {
     </div>
 <footer id="footer">
     <div class="footer-content">
-        <!-- Contact Us Section -->
-  <!-- Quick Link Section -->
-        <!-- Contact Us Section -->
+     
 <div class="footer-section contact-info">
     <h2>Contact Us</h2>
     <div class="contact-item">
@@ -1091,7 +1081,6 @@ navLinks.forEach(link => {
     const navMenu = document.querySelector('nav ul');
     const content = document.getElementById('content');
 
-    // Add event listener to the hamburger menu
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('show');
         content.classList.toggle('dim');
