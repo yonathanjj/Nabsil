@@ -552,6 +552,78 @@ nav ul li a.active {
     }
 }
 
+         .newsletter-icons {
+    display: flex;
+    justify-content: flex-start; /* Align icons to the left */
+    margin-top: 140px; /* Keep your existing margin */
+    margin-left: 0; /* Remove left margin to move icons fully left */
+    gap: 20px; /* Space between icons */
+}
+
+.newsletter-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0; /* Ensure no margin affects alignment */
+}
+
+.newsletter-box {
+    margin-left: 0; /* Remove left margin for the box */
+}
+
+.newsletter-input {
+    /* Add any styles you need */
+}
+
+}
+
+@media (max-width: 1280px) and (max-height: 1024px) {
+.newsletter-icons {
+    display: flex;
+    margin-top: 140px;
+    margin-left: 250px;
+    gap: 20px;
+}
+
+.newsletter-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.newsletter-box {
+margin-left: 80px;
+}
+
+.newsletter-input {
+
+}
+
+}
+
+@media (max-width: 767px) { /* Adjust this value based on your definition of mobile */
+    .newsletter-icons {
+        display: flex;
+        margin-top: 20px; /* Adjusted margin for mobile */
+        margin-left: 10px; /* Reduced margin-left for mobile */
+        gap: 10px; /* Adjusted gap for mobile */
+    }
+
+    .newsletter-icon {
+        width: 25px; /* Slightly smaller icons for mobile */
+        height: 25px; /* Maintain aspect ratio */
+    }
+
+    .newsletter-box {
+        margin-left: 10px; /* Adjust margin-left for the box */
+    }
+
+    .newsletter-input {
+        width: calc(100% - 20px); /* Full width minus some padding */
+        padding: 10px; /* Add padding for better appearance */
+    }
+}
+
+
+
 #footer {
     background-color: #001d00;
         color: #fff;
