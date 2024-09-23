@@ -68,18 +68,18 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    color: #2A642A; /* Change text color */
-    background-color: #ffffff; /* Background color for active link */
-    border-radius: 5px; /* Optional rounded corners */
-    font-weight: 700; /* Make the text bolder */
-    padding: 10px 15px; /* Optional padding for better spacing */
-    text-decoration: underline; /* Optional underline to show it's active */
+    color: #2A642A;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 10px 15px;
+    text-decoration: underline;
 }
 
 
 /* Hamburger Menu Styles */
 .hamburger-menu {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -97,12 +97,12 @@ nav ul li a.active {
 
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: flex; /* Show the hamburger menu on mobile */
+        display: flex;
     }
 
     nav ul {
-        max-height: 0; /* Initially hidden */
-        overflow: hidden; /* Hide overflowing content */
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.95);
@@ -116,8 +116,8 @@ nav ul li a.active {
     }
 
     nav ul.show {
-        max-height: 300px; /* Adjust based on content height */
-        padding: 20px 0; /* Add padding when shown */
+        max-height: 300px;
+        padding: 20px 0;
     }
 
     nav ul li {
@@ -131,7 +131,7 @@ nav ul li a.active {
         text-decoration: none;
     }
 
-    /* Dim background content when menu is open */
+
     #content.dim {
         filter: blur(5px);
         opacity: 0.3;
@@ -143,7 +143,7 @@ nav ul li a.active {
 
         .slideshow-container {
             width: 100%;
-            height: 920px; /* Set fixed height */
+            height: 920px;
             position: relative;
             overflow: hidden;
         }
@@ -164,7 +164,7 @@ nav ul li a.active {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .active-slide {
@@ -178,12 +178,12 @@ nav ul li a.active {
     }
 
       .slide-content h1 {
-    font-size: 96px; /* Slightly reduced font size */
+    font-size: 96px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: -70px;
-    transform: translateX(-55px); /* Move header slightly to the left */
-    margin-right: -130px; /* Adds more spacing between the logo and the links */
+    transform: translateX(-55px);
+    margin-right: -130px;
 
 
 }
@@ -192,10 +192,10 @@ nav ul li a.active {
     font-size: 64px;
     color: #ffffff;
     margin-bottom: 50px;
-    margin-bottom: 30px; /* Adjust gap below the paragraph */
-        transform: translateX(-150px); /* Move header slightly to the left */
+    margin-bottom: 30px;
+        transform: translateX(-150px);
 
-     margin-left: 100px; /* Adds more spacing between the logo and the links */
+     margin-left: 100px;
 }
 
 
@@ -208,7 +208,7 @@ nav ul li a.active {
     text-decoration: none;
     display: inline-block;
     animation: pulse 1.5s infinite;
-    margin-left: -50px; /* Move the button to the left by 200px */
+    margin-left: -50px;
 }
 
 
@@ -252,59 +252,59 @@ nav ul li a.active {
 
 @media (max-width: 1600px) {
     .slide-content h1 {
-        margin-bottom: 20px; /* Increase the margin to create more space */
-        font-size: 64px; /* Reduce font size for larger screens */
-        transform: translateX(-20px); /* Less translation */
-        margin-left: -20px; /* Adjust button position */
+        margin-bottom: 20px;
+        font-size: 64px;
+        transform: translateX(-20px);
+        margin-left: -20px;
     }
 
     .slide-content p {
-        margin-top: -10px; /* Add space above the paragraph */
+        margin-top: -10px;
         margin-bottom: 10px;
-        font-size: 50px; /* Adjust font size */
-        transform: translateX(-100px); /* Less translation */
-        margin-left: 65px; /* Adjust spacing */
+        font-size: 50px;
+        transform: translateX(-100px);
+        margin-left: 65px; 
     }
 
     .register-button {
-        margin-left: -20px; /* Adjust button position */
+        margin-left: -20px; 
     }
 
     .dot-container {
-        margin-left: -20px; /* Adjust button position */
+        margin-left: -20px; 
     }
 }
 
 @media (max-width: 768px) {
     .slideshow-container {
-        height: 60vh; /* Adjust height for mobile */
+        height: 60vh; 
         overflow-x: hidden;
     }
 
     .slide-content {
         padding: 20px;
-        box-sizing: border-box; /* Ensure padding is included in width/height */
+        box-sizing: border-box; 
     }
 
     .slide-content h1 {
-        font-size: 40px; /* Smaller font size for mobile */
-        margin-bottom: 20px; /* Adjust bottom margin */
-        transform: translateX(0); /* Remove horizontal movement */
-        margin-right: 0; /* Reset margin-right */
-        margin-left: 20px; /* Add margin-left to prevent edge clipping */
+        font-size: 40px; 
+        margin-bottom: 20px; 
+        transform: translateX(0); 
+        margin-right: 0; 
+        margin-left: 20px; 
     }
 
     .slide-content p {
-        font-size: 24px; /* Smaller font size for mobile */
-        margin-bottom: 20px; /* Adjust gap below the paragraph */
-        transform: translateX(0); /* Remove horizontal movement */
-        margin-left: 20px; /* Add margin-left to prevent edge clipping */
+        font-size: 24px; 
+        margin-bottom: 20px; 
+        transform: translateX(0); 
+        margin-left: 20px; 
     }
 
     .register-button {
         padding: 10px 20px;
         font-size: 16px;
-        /* Centering the button horizontally */
+    
         left: 50%;
         transform: translateX(-50%);
     }
@@ -313,7 +313,7 @@ nav ul li a.active {
         bottom: 5px;
         left: 50%;
         transform: translateX(-50%);
-                margin-right: 20px; /* Add margin-left to prevent edge clipping */
+                margin-right: 20px; 
 
     }
 }
@@ -631,7 +631,7 @@ nav ul li a.active {
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
     .about-section {
-        text-align: center; /* Center text on mobile */
+        text-align: center; 
         padding: 20px;
         margin-top: 20px;
         overflow-x: hidden;
@@ -639,51 +639,51 @@ nav ul li a.active {
 
     .about-section h1 {
         font-size: 48px;
-        margin-right: 0; /* Remove margin-right for mobile */
+        margin-right: 0; 
         margin-top: 20px;
-        transform: translateY(0); /* Reset vertical translation */
+        transform: translateY(0); 
     }
 
     .about-content {
         display: flex;
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         align-items: center;
-        margin-left: 0; /* Remove left margin for mobile */
+        margin-left: 0; 
     }
 
     .about-image {
-        width: 100%; /* Make image responsive */
+        width: 100%;
         height: auto;
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 20px; /* Space between image and overlay */
+        margin-left: 0; 
+        margin-bottom: 20px; 
     }
 
     .about-overlay {
-        width: 90%; /* Adjust width for mobile */
+        width: 90%; 
         padding: 20px;
-        position: static; /* Remove absolute positioning */
-        top: auto; /* Remove top positioning */
-        right: auto; /* Remove right positioning */
-        margin-top: 250px; /* Space between image and overlay */
+        position: static; 
+        top: auto; 
+        right: auto; 
+        margin-top: 250px; 
     }
 
     .about-overlay p {
-        font-size: 18px; /* Adjust font size for readability */
+        font-size: 18px; 
         padding: 10px;
-        text-align: center; /* Center-align text */
+        text-align: center;
     }
 
     .read-more-button {
         padding: 10px 20px;
         font-size: 16px;
-        margin-top: 20px; /* Space between text and button */
-    }
+        margin-top: 20px;
+    
 }
 
 
 
 
-  /* Keep the existing styles for larger screens */
+  
 .text-and-lines {
     position: absolute;
     right: 100px;
@@ -746,7 +746,7 @@ nav ul li a.active {
     margin: 0;
 }
 
-/* Responsive adjustments for 1600px screens */
+
 @media (max-width: 1600px) {
     .text-and-lines {
         right: 80px;
@@ -773,7 +773,7 @@ nav ul li a.active {
     }
 }
 
-/* Responsive adjustments for 1440px screens */
+
 @media (max-width: 1440px) {
     .text-and-lines {
         right: 60px;
@@ -800,7 +800,7 @@ nav ul li a.active {
     }
 }
 
-/* Responsive adjustments for 1366px screens */
+
 @media (max-width: 1366px) {
     .text-and-lines {
         right: 50px;
@@ -828,91 +828,91 @@ nav ul li a.active {
 }
 
 
-/* Mobile styles */
+
 @media only screen and (max-width: 768px) {
     .text-and-lines {
-        position: relative; /* Remove absolute positioning */
-        right: auto; /* Remove right positioning */
-        top: auto; /* Remove top positioning */
-        width: 90%; /* Adjust width for mobile */
+        position: relative; 
+        right: auto;
+        top: auto; 
+        width: 90%; 
         color: #2A642A;
-        font-size: 24px; /* Reduce font size */
+        font-size: 24px; 
         line-height: 1.4;
-        padding: 20px; /* Add padding for better spacing */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
-        margin: 0 auto; /* Center horizontally */
-        text-align: center; /* Center text */
+        padding: 20px; 
+        box-sizing: border-box; 
+        margin: 0 auto; 
+        text-align: center; 
         overflow-x: hidden;
     }
 
     .text-item {
-        margin-bottom: 20px; /* Adjust margin for mobile */
-        text-align: center; /* Center text */
-        font-weight: normal; /* Adjust font weight */
+        margin-bottom: 20px; 
+        text-align: center; 
+        font-weight: normal; 
     }
 
     .text-item p {
         margin: 0;
-        font-size: 20px; /* Reduce font size */
+        font-size: 20px; 
         color: #2A642A;
-        font-weight: normal; /* Adjust font weight */
+        font-weight: normal; 
     }
 
     .text-item hr {
         margin: 10px 0;
         border: none;
-        border-top: 1px solid #2A642A; /* Thinner border */
-        width: 80%; /* Adjust width for mobile */
-        margin-left: auto; /* Center horizontally */
-        margin-right: auto; /* Center horizontally */
+        border-top: 1px solid #2A642A; 
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto; 
     }
 
     .promise-header {
-        position: relative; /* Remove absolute positioning */
-        left: auto; /* Remove left positioning */
-        top: auto; /* Remove top positioning */
+        position: relative; 
+        left: auto; 
+        top: auto; 
         background-color: #EBEBFF;
         padding: 10px;
-        width: 90%; /* Adjust width for mobile */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
-        margin: 0 auto; /* Center horizontally */
-        text-align: center; /* Center text */
-        margin-bottom: 20px; /* Space below header */
+        width: 90%; 
+        box-sizing: border-box; 
+        margin: 0 auto; 
+        text-align: center; 
+        margin-bottom: 20px; 
     }
 
     .promise-header h2 {
         margin: 0;
         color: #001d00;
-        font-size: 36px; /* Reduce font size */
-        text-align: center; /* Center text */
+        font-size: 36px; 
+        text-align: center; 
     }
 
     .promise-text {
-        position: relative; /* Remove absolute positioning */
-        left: auto; /* Remove left positioning */
-        top: auto; /* Remove top positioning */
-        width: 90%; /* Adjust width for mobile */
+        position: relative; 
+        left: auto; 
+        top: auto; 
+        width: 90%; 
         color: #001d00;
-        font-size: 24px; /* Reduce font size */
+        font-size: 24px; 
         line-height: 1.4;
-        text-align: center; /* Center text */
-        font-weight: normal; /* Adjust font weight */
-        padding: 0 10px; /* Add padding for better spacing */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
-        margin: 0 auto; /* Center horizontally */
+        text-align: center; 
+        font-weight: normal; 
+        padding: 0 10px; 
+        box-sizing: border-box; 
+        margin: 0 auto; 
     }
 
     .promise-text p {
         margin: 0;
-        font-size: 20px; /* Reduce font size */
+        font-size: 20px; 
     }
 }
 
 
 .service-header {
     position: absolute;
-    top: 3200px; /* Maintain the current distance from the top */
-    left: 1400px; /* Adjust this value to move the header to the left */
+    top: 3200px; 
+    left: 1400px; 
     color: #2A642A;
     font-size: 36px;
     text-align: center;
@@ -920,12 +920,12 @@ nav ul li a.active {
 
 .image-slider {
     position: absolute;
-    top: 3300px; /* Adjust this to place the slider under the header */
+    top: 3300px; 
     left: 100px;
     right: 95px;
-    height: 900px; /* Set the desired height for the slider */
+    height: 900px; 
     border-radius: 10px;
-    overflow: hidden; /* Ensure images do not overflow outside the slider */
+    overflow: hidden;
 }
 
 .image-slider img {
@@ -936,12 +936,12 @@ nav ul li a.active {
 }
 
 .image-slider img {
-    display: none; /* Hide all images by default */
-    width: 100%; /* Ensure each image takes up the full width of the slider */
+    display: none; 
+    width: 100%; 
 }
 
 .image-slider img:first-child {
-    display: block; /* Show the first image initially */
+    display: block; 
 }
 .slider-icons {
     position: absolute;
@@ -976,7 +976,7 @@ nav ul li a.active {
     left: 140px;
     width: 500px;
     height: 200px;
-    background-color: rgba(0, 128, 0, 0.6); /* Green color with 60% opacity */
+    background-color: rgba(0, 128, 0, 0.6); 
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -986,7 +986,7 @@ nav ul li a.active {
 
 .overlay-text {
     color: white;
-    font-size: 50px; /* Adjust size to fit in overlay */
+    font-size: 50px; 
     text-align: center;
     padding: 10px;
     margin: 0;
@@ -1003,225 +1003,225 @@ nav ul li a.active {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    z-index: 1000; /* Ensure it overlays the image and overlay */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 1000; 
+    transition: background-color 0.3s ease; 
 
 }
 /* Responsive styles */
 @media (max-width: 1920px) {
     .service-header {
-        font-size: 32px; /* Adjust as needed */
-        left: 1300px; /* Adjust as needed */
+        font-size: 32px; 
+        left: 1300px; 
         overflow-x: hidden;
     }
 
     .image-slider {
-        height: 800px; /* Adjust height as needed */
+        height: 800px; 
     }
 
     .overlay {
-        width: 450px; /* Adjust size as needed */
-        height: 180px; /* Adjust size as needed */
-                                bottom: -3100px; /* Adjust as needed */
+        width: 450px; 
+        height: 180px; 
+        bottom: -3100px; 
 
     }
 
     .overlay-text {
-        font-size: 45px; /* Adjust size as needed */
+        font-size: 45px; 
     }
 
     .learn-more-button {
-        right: 1300px; /* Adjust as needed */
-                                        bottom: -3120px; /* Adjust as needed */
+        right: 1300px;
+        bottom: -3120px; 
 
     }
 }
 
 @media (max-width: 1600px) {
     .service-header {
-        font-size: 28px; /* Adjust as needed */
-        left: 1200px; /* Adjust as needed */
+        font-size: 28px; 
+        left: 1200px; 
         overflow-x: hidden;
     }
 
     .image-slider {
-        height: 700px; /* Adjust height as needed */
+        height: 700px; 
     }
 
     .overlay {
-        width: 400px; /* Adjust size as needed */
-        height: 160px; /* Adjust size as needed */
-                        bottom: -3000px; /* Adjust as needed */
+        width: 400px; 
+        height: 160px; 
+        bottom: -3000px; 
 
     }
 
     .overlay-text {
-        font-size: 40px; /* Adjust size as needed */
+        font-size: 40px; 
 
     }
 
     .learn-more-button {
-        right: 1050px; /* Adjust as needed */
-                                bottom: -3010px; /* Adjust as needed */
+        right: 1050px; 
+        bottom: -3010px; 
 
     }
 }
 
 @media (max-width: 1440px) {
     .service-header {
-        font-size: 24px; /* Adjust as needed */
-        left: 1000px; /* Adjust as needed */
+        font-size: 24px; 
+        left: 1000px; 
         overflow-x: hidden;
     }
 
     .image-slider {
-        height: 600px; /* Adjust height as needed */
+        height: 600px; 
     }
 
     .overlay {
-        width: 350px; /* Adjust size as needed */
-        height: 140px; /* Adjust size as needed */
-                bottom: -2900px; /* Adjust as needed */
+        width: 350px; 
+        height: 140px; 
+        bottom: -2900px; 
 
     }
 
     .overlay-text {
-        font-size: 35px; /* Adjust size as needed */
+        font-size: 35px; 
     }
 
     .learn-more-button {
-        right: 950px; /* Adjust as needed */
-                        bottom: -2910px; /* Adjust as needed */
+        right: 950px; 
+        bottom: -2910px; 
 
     }
 }
 
 @media (max-width: 1366px) {
     .service-header {
-        font-size: 20px; /* Adjust as needed */
-        left: 800px; /* Adjust as needed */
+        font-size: 20px; 
+        left: 800px; 
         overflow-x: hidden;
     }
 
     .image-slider {
-        height: 500px; /* Adjust height as needed */
+        height: 500px; 
     }
 
     .overlay {
-        width: 300px; /* Adjust size as needed */
-        height: 120px; /* Adjust size as needed */
+        width: 300px; 
+        height: 120px; 
     }
 
     .overlay-text {
-        font-size: 30px; /* Adjust size as needed */
+        font-size: 30px;
     }
 
     .learn-more-button {
-        right: 850px; /* Adjust as needed */
+        right: 850px; 
     }
 }
 
 /* Mobile styles */
 @media only screen and (max-width: 768px) {
     .service-header {
-        position: relative; /* Remove absolute positioning */
-        left: auto; /* Remove left positioning */
-        top: auto; /* Remove top positioning */
-        width: 90%; /* Adjust width for mobile */
+        position: relative;
+        left: auto;
+        top: auto; 
+        width: 90%; 
         color: #2A642A;
-        font-size: 24px; /* Reduce font size */
-        text-align: center; /* Center align text */
-        margin: 20px auto; /* Center horizontally and add margin */
+        font-size: 24px;
+        text-align: center; 
+        margin: 20px auto; 
         overflow-x: hidden;
     }
 
     .image-slider {
-        position: relative; /* Remove absolute positioning */
-        top: auto; /* Remove top positioning */
-        left: auto; /* Remove left positioning */
-        right: auto; /* Remove right positioning */
-        width: 90%; /* Adjust width for mobile */
-        height: auto; /* Adjust height to maintain aspect ratio */
-        margin: 0 auto; /* Center horizontally */
-        overflow: hidden; /* Ensure images do not overflow outside the slider */
+        position: relative; 
+        top: auto; 
+        left: auto; 
+        right: auto; 
+        width: 90%; 
+        height: auto; 
+        margin: 0 auto;
+        overflow: hidden; 
     }
 
     .image-slider img {
-        width: 100%; /* Ensure each image takes up the full width of the slider */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Ensure images are displayed */
+        width: 100%; 
+        height: auto;
+        display: block; 
     }
 
     .slider-icons {
-        position: relative; /* Remove absolute positioning */
-        top: auto; /* Remove top positioning */
-        width: 100%; /* Full width for mobile */
+        position: relative; 
+        top: auto; 
+        width: 100%; 
         display: flex;
-        justify-content: space-between; /* Space out icons */
-        pointer-events: auto; /* Enable pointer events */
-    margin: 70px 0 20px; /* Add margin for spacing, increase top margin */
+        justify-content: space-between; 
+        pointer-events: auto; 
+    margin: 70px 0 20px; 
     }
 
     .slider-icons .prev-icon,
     .slider-icons .next-icon {
         background-color: rgba(0, 0, 0, 0.5);
         color: #fff;
-        padding: 10px; /* Adjust padding for mobile */
-        font-size: 20px; /* Reduce font size */
+        padding: 10px; 
+        font-size: 20px; 
         border-radius: 50%;
         cursor: pointer;
     }
 
     .slider-icons .prev-icon {
-    margin-right: -10px; /* Adjust this value to control space before the next icon */
+    margin-right: -10px; 
 }
 
 .slider-icons .next-icon {
-    margin-left: -10px; /* Adjust this value to control space after the previous icon */
+    margin-left: -10px; 
 }
 
     .overlay {
-        position: relative; /* Remove absolute positioning */
-        bottom: auto; /* Remove bottom positioning */
-        left: auto; /* Remove left positioning */
-        width: 90%; /* Adjust width for mobile */
-        height: auto; /* Adjust height to fit content */
-        background-color: rgba(0, 128, 0, 0.6); /* Green color with 60% opacity */
+        position: relative;
+        bottom: auto; 
+        left: auto; 
+        width: 90%; 
+        height: auto;
+        background-color: rgba(0, 128, 0, 0.6); 
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin: 20px auto; /* Center horizontally and add margin */
-        padding: 20px; /* Add padding for better spacing */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        margin: 20px auto; 
+        padding: 20px; 
+        box-sizing: border-box; 
     }
 
     .overlay-text {
         color: white;
-        font-size: 24px; /* Reduce font size */
-        text-align: center; /* Center align text */
-        padding: 0; /* Remove padding for better fit */
+        font-size: 24px; 
+        text-align: center; 
+        padding: 0; 
         margin: 0;
     }
 
     .learn-more-button {
-        position: relative; /* Remove absolute positioning */
-        bottom: auto; /* Remove bottom positioning */
-        right: auto; /* Remove right positioning */
+        position: relative; 
+        bottom: auto; 
+        right: auto; 
         background-color: #001d00;
         color: white;
-        padding: 10px 20px; /* Adjust padding for mobile */
+        padding: 10px 20px; 
         border-radius: 10px;
         font-weight: bold;
         text-decoration: none;
-        display: block; /* Ensure button is a block-level element for centering */
-        z-index: 1000; /* Ensure it overlays the image and overlay */
-        transition: background-color 0.3s ease; /* Smooth transition for background color */
-        margin: 20px auto; /* Center horizontally and add margin */
-        text-align: center; /* Center align text */
-        width: auto; /* Auto width to fit content */
-        max-width: 150px; /* Maximum width for the button */
+        display: block;
+        z-index: 1000; 
+        transition: background-color 0.3s ease; 
+        margin: 20px auto; 
+        text-align: center; 
+        width: auto; 
+        max-width: 150px; 
     }
 }
 
@@ -1249,26 +1249,26 @@ margin-left: 80px;
 
 }
 
-@media (max-width: 767px) { /* Adjust this value based on your definition of mobile */
+@media (max-width: 767px) {
     .newsletter-icons {
         display: flex;
-        margin-top: 20px; /* Adjusted margin for mobile */
-        margin-left: 10px; /* Reduced margin-left for mobile */
-        gap: 10px; /* Adjusted gap for mobile */
+        margin-top: 20px; 
+        margin-left: 10px;
+        gap: 10px; 
     }
 
     .newsletter-icon {
-        width: 25px; /* Slightly smaller icons for mobile */
-        height: 25px; /* Maintain aspect ratio */
+        width: 25px; 
+        height: 25px; 
     }
 
     .newsletter-box {
-        margin-left: 10px; /* Adjust margin-left for the box */
+        margin-left: 10px; 
     }
 
     .newsletter-input {
-        width: calc(100% - 20px); /* Full width minus some padding */
-        padding: 10px; /* Add padding for better appearance */
+        width: calc(100% - 20px); 
+        padding: 10px; 
     }
 }
 
@@ -1279,13 +1279,13 @@ margin-left: 80px;
     background-color: #001d00; /* Solid color */
     color: #fff;
     height: 320px;
-    width: 100vw; /* Use viewport width to span the entire width of the viewport */
+    width: 100vw; 
     position: relative;
     padding: 20px;
     box-sizing: border-box;
-    left: 50%; /* Adjust the left position */
-    transform: translateX(-50%); /* Center the footer horizontally */
-    margin-top: 1950px; /* Add space above the footer */
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 1950px; 
 }
 
 
@@ -1471,12 +1471,14 @@ hr {
 @media (min-width: 1366px) {
     .footer-section {
         max-width: 20%;
+        overflow-x: hidden;
     }
 }
 
 @media (min-width: 1600px) {
     .footer-section {
         max-width: 18%;
+        overflow-x: hidden;
     }
 
     .newsletter-box {
@@ -1501,26 +1503,26 @@ hr {
     }
 
     .newsletter-box {
-        justify-content: flex-start; /* Align the input and button to the left */
-        margin-left: 10%; /* Adjust margin to keep it balanced */
+        justify-content: flex-start; 
+        margin-left: 10%; 
         display: flex;
         align-items: center;
-        gap: 10px; /* Add some space between the input and button */
+        gap: 10px; 
     }
 
     .newsletter-input {
-        width: 250px; /* Increase width of input field */
-        height: 40px; /* Reduce height slightly */
+        width: 250px; 
+        height: 40px; 
         padding: 8px;
-        font-size: 14px; /* Adjust font size */
-        border-radius: 5px 0 0 5px; /* Softer corners */
+        font-size: 14px; 
+        border-radius: 5px 0 0 5px; 
     }
 
     .newsletter-btn {
-        width: 120px; /* Adjust button width */
-        height: 40px; /* Match input height */
+        width: 120px; 
+        height: 40px; 
         font-size: 14px;
-        border-radius: 0 5px 5px 0; /* Softer corners */
+        border-radius: 0 5px 5px 0; 
     }
 
     .newsletter-icons {
@@ -1537,26 +1539,27 @@ hr {
 @media (min-width: 1440px) {
     .footer-section {
         width: 25%;
+        overflow-x: hidden;
     }
 
     .newsletter-box {
-        margin-left: 8%; /* Fine-tune the margin for balance */
+        margin-left: 8%; 
         display: flex;
         align-items: center;
-        gap: 10px; /* Space between input and button */
+        gap: 10px; 
     }
 
     .newsletter-input {
-        width: 280px; /* Further increase input width */
-        height: 45px; /* Adjust height for proportion */
+        width: 280px; 
+        height: 45px; 
         padding: 10px;
-        font-size: 16px; /* Increase font size slightly */
+        font-size: 16px; 
         border-radius: 5px 0 0 5px; /* Softer corners */
     }
 
     .newsletter-btn {
-        width: 130px; /* Adjust button width */
-        height: 45px; /* Match input height */
+        width: 130px; 
+        height: 45px; 
         font-size: 16px;
         border-radius: 0 5px 5px 0; /* Softer corners */
     }
@@ -1572,110 +1575,111 @@ hr {
 
        @media only screen and (max-width: 768px) {
     #footer {
-        height: auto; /* Adjust height to fit content */
+        height: auto; 
         padding: 20px;
-        margin-top: 20px; /* Reduce margin to fit better on mobile */
+        margin-top: 20px;
+        overflow-x: hidden;
     }
 
     .footer-content {
         display: flex;
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center horizontally */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .footer-section {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 20px; /* Space between sections */
-        text-align: center; /* Center text within each section */
+        width: 100%; 
+        margin-bottom: 20px; 
+        text-align: center; 
     }
 
     .footer-section h2 {
-        margin: 10px 0; /* Adjust margins */
-        margin-left: 0; /* Remove left margin */
-        width: auto; /* Adjust width to fit content */
+        margin: 10px 0; 
+        margin-left: 0; 
+        width: auto; 
     }
 
     .contact-info, .quick-links, .service-links {
-        width: auto; /* Adjust width to fit content */
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        width: auto; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
-        margin: 0; /* Remove margin */
+        margin: 0; 
     }
 
     .link-item, .service-item, .contact-item {
-        margin: 10px 0; /* Adjust margin */
+        margin: 10px 0;
         display: flex;
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center items horizontally */
+        align-items: center; 
+        justify-content: center; 
     }
 
     /* Move only the arrows and center them */
     .link-arrow, .service-arrow {
-        position: relative; /* Use relative positioning */
-        margin-right: 10px; /* Adjust spacing between arrow and text */
-        font-size: 18px; /* Adjust size for mobile */
-        left: 0; /* Center the arrows horizontally */
+        position: relative; 
+        margin-right: 10px;
+        font-size: 18px; 
+        left: 0; 
     }
 
     .contact-icon {
-        margin-left: -90px; /* Adjust this value to move the icon further left */
-        width: 20px; /* Adjust size for mobile */
+        margin-left: -90px; 
+        width: 20px; 
         height: 20px;
     }
 
     .newsletter-header {
-        margin: 0; /* Remove margin */
+        margin: 0; 
     }
 
   .newsletter-box {
     display: flex;
-    flex-direction: column; /* Stack input and button vertically */
-    align-items: center; /* Center horizontally */
-    margin-top: 20px; /* Add margin-top to move it down */
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px; 
 }
 
 .newsletter-input {
-    width: 100%; /* Full width for input */
-    max-width: 300px; /* Ensure it doesn't get too wide */
-    margin-bottom: 10px; /* Space between input and button */
-    text-align: left; /* Center text within input */
+    width: 100%; 
+    max-width: 300px; 
+    margin-bottom: 10px; 
+    text-align: left;
 }
 
 .newsletter-btn {
-    width: auto; /* Allow button to adjust width based on content */
-    max-width: 300px; /* Limit the maximum width */
-    height: 40px; /* Adjust height for a more compact button */
-    font-size: 14px; /* Adjust font size for readability */
-    padding: 0 60px; /* Adjust horizontal padding */
-    background-color: #ffcccc; /* Button background color */
-    color: #000; /* Button text color */
-    border: 2px solid #000; /* Button border color */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center text within button */
-    margin-top: 5px; /* Reduce margin-top for better spacing */
-    align-self: right; /* Ensure button is centered in its flex container */
+    width: auto; 
+    max-width: 300px; 
+    height: 40px; 
+    font-size: 14px; 
+    padding: 0 60px;
+    background-color: #ffcccc; 
+    color: #000;
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    text-align: center; 
+    margin-top: 5px; 
+    align-self: right; 
 }
 
     .newsletter-icons {
-        margin-top: 30px; /* Adjust margin */
-        justify-content: center; /* Center icons */
+        margin-top: 30px; 
+        justify-content: center; 
     }
 
     .newsletter-icon {
-        margin: 0 10px; /* Adjust spacing between icons */
+        margin: 0 10px;
     }
 
     .footer-bottom {
-        text-align: center; /* Center text */
-        margin: 10px 0; /* Adjust margin */
-        margin-left: 0; /* Remove left margin */
+        text-align: center; 
+        margin: 10px 0; 
+        margin-left: 0; 
     }
 }
 
