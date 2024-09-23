@@ -760,28 +760,44 @@ gap: 50px;
 }
 
 
+
 .contact-info {
     display: flex;
     flex-direction: column;
-
 }
 
 .contact-item {
     display: flex;
-    align-items: center;
-    margin-bottom: -10px;
-    width: 700px;
-
+    align-items: center; /* Center vertically */
+    margin-bottom: 10px; /* Space between items */
+    width: 700px; /* Adjust as needed */
 }
 
 .contact-icon {
     width: 24px;
     height: 24px;
-    position: absolute;
-    left: 175px;
+    margin-right: -170px; /* Space between icon and text */
+    margin-left: 130px;
 }
+
 .contact-text {
-    margin-left: 10px;
+    margin-left: 100px; /* Optional space */
+}
+@media (max-width: 667px) {
+    .contact-item {
+        display: flex; /* Ensure it's set to flex */
+        align-items: center; /* Vertically center the items */
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    .contact-icon {
+        margin-left: -20px; /* Adjust this value to move the icon left */
+        margin-right: 10px; /* Space between icon and text */
+    }
+
+    .contact-text {
+        margin-left: 0; /* Remove additional space */
+    }
 }
 
 
