@@ -675,6 +675,33 @@ gap: 50px;
 }
 
 
+        @media screen and (max-width: 1280px) {
+    .values-section {
+        display: flex; /* Ensure the section is using flex layout */
+        justify-content: flex-start; /* Align items to the start */
+        align-items: center; /* Center items vertically */
+        margin-top: 130px; /* Keep original margin */
+    }
+
+    .values-header {
+        order: 2; /* Set the header to appear second */
+        margin-left: 5px; /* Keep the original margin */
+        margin-right: -20px; /* Keep the original margin */
+        margin-top: 150px; /* Adjust this value to move the header up */
+        text-align: center; /* Center text within the header */
+    }
+
+    .card-values {
+        order: 10; /* Set the card values to appear first */
+        margin-top: 150px; /* Adjust if necessary */
+        display: flex; /* Enable flex for centering */
+        justify-content: center; /* Center content horizontally within the card */
+        align-items: center; /* Center content vertically within the card */
+    }
+}
+
+
+
 
 #footer {
     background-color: #001d00;
