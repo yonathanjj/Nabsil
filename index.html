@@ -1277,18 +1277,18 @@ margin-left: 80px;
 
 
 
-
 #footer {
-    background-color: #001d00; /* Solid color */
+    background-color: #001d00;
     color: #fff;
     height: 320px;
-    width: 100vw; /* Use viewport width to span the entire width of the viewport */
+    width: 100vw;
     position: relative;
     padding: 20px;
     box-sizing: border-box;
-    left: 50%; /* Adjust the left position */
-    transform: translateX(-50%); /* Center the footer horizontally */
-    margin-top: 1950px; /* Add space above the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    overflow-x: hidden;
 }
 
 
@@ -1445,12 +1445,12 @@ margin-left: 80px;
     margin-left: 170px;
 
 }
-
 .newsletter-icons {
     display: flex;
     justify-content: left;
     margin-top: 140px;
-    gap: 20px;
+        gap: 20px;
+
 }
 
 .newsletter-icon {
@@ -1459,6 +1459,7 @@ margin-left: 80px;
     margin-right: 410px;
     margin-left: -410px;
         gap: 20px;
+
 }
 
 .newsletter-icon:last-child {
@@ -1467,6 +1468,7 @@ margin-left: 80px;
 .newsletter-btn:hover {
     background-color: #ffb3b3;
 }
+
 hr {
     margin: 10px 0;
     border: none;
@@ -1482,22 +1484,24 @@ hr {
 }
 
 
-/* Larger Screen Adjustments */
 @media (min-width: 1024px) {
     .footer-section {
         max-width: 22%;
+
     }
 }
 
 @media (min-width: 1366px) {
     .footer-section {
         max-width: 20%;
+
     }
 }
 
 @media (min-width: 1600px) {
     .footer-section {
         max-width: 18%;
+
     }
 
     .newsletter-box {
@@ -1515,33 +1519,34 @@ hr {
     .footer-section {
         width: 30%;
         text-align: left;
-    }
+
+            }
 
     .contact-info, .quick-links, .service-links {
         margin: 0;
     }
 
     .newsletter-box {
-        justify-content: flex-start; /* Align the input and button to the left */
-        margin-left: 10%; /* Adjust margin to keep it balanced */
+        justify-content: flex-start; 
+        margin-left: 10%; 
         display: flex;
         align-items: center;
-        gap: 10px; /* Add some space between the input and button */
+        gap: 10px; 
     }
 
     .newsletter-input {
-        width: 250px; /* Increase width of input field */
-        height: 40px; /* Reduce height slightly */
+        width: 250px;
+        height: 40px; 
         padding: 8px;
-        font-size: 14px; /* Adjust font size */
-        border-radius: 5px 0 0 5px; /* Softer corners */
+        font-size: 14px; 
+        border-radius: 5px 0 0 5px; 
     }
 
     .newsletter-btn {
-        width: 120px; /* Adjust button width */
-        height: 40px; /* Match input height */
+        width: 120px;
+        height: 40px; 
         font-size: 14px;
-        border-radius: 0 5px 5px 0; /* Softer corners */
+        border-radius: 0 5px 5px 0; 
     }
 
     .newsletter-icons {
@@ -1558,28 +1563,28 @@ hr {
 @media (min-width: 1440px) {
     .footer-section {
         width: 25%;
-    }
+}
 
     .newsletter-box {
-        margin-left: 8%; /* Fine-tune the margin for balance */
+        margin-left: 8%; 
         display: flex;
         align-items: center;
-        gap: 10px; /* Space between input and button */
+        gap: 10px; 
     }
 
     .newsletter-input {
-        width: 280px; /* Further increase input width */
-        height: 45px; /* Adjust height for proportion */
+        width: 280px; 
+        height: 45px; 
         padding: 10px;
-        font-size: 16px; /* Increase font size slightly */
-        border-radius: 5px 0 0 5px; /* Softer corners */
+        font-size: 16px; 
+        border-radius: 5px 0 0 5px;
     }
 
     .newsletter-btn {
-        width: 130px; /* Adjust button width */
-        height: 45px; /* Match input height */
+        width: 130px; 
+        height: 45px; 
         font-size: 16px;
-        border-radius: 0 5px 5px 0; /* Softer corners */
+        border-radius: 0 5px 5px 0; 
     }
 
     .newsletter-icons {
@@ -1591,112 +1596,112 @@ hr {
     }
 }
 
-       @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 768px) {
     #footer {
-        height: auto; /* Adjust height to fit content */
+        height: auto; 
         padding: 20px;
-        margin-top: 20px; /* Reduce margin to fit better on mobile */
+        margin-top: 20px; 
+
     }
 
     .footer-content {
         display: flex;
-        flex-direction: column; /* Stack sections vertically */
-        align-items: center; /* Center horizontally */
+        flex-direction: column; 
+        align-items: center;
     }
 
     .footer-section {
-        width: 100%; /* Full width for each section */
-        margin-bottom: 20px; /* Space between sections */
-        text-align: center; /* Center text within each section */
+        width: 100%; 
+        margin-bottom: 20px; 
+        text-align: center; 
     }
 
     .footer-section h2 {
-        margin: 10px 0; /* Adjust margins */
-        margin-left: 0; /* Remove left margin */
-        width: auto; /* Adjust width to fit content */
+        margin: 10px 0; 
+        margin-left: 0; 
+        width: auto;
     }
 
     .contact-info, .quick-links, .service-links {
-        width: auto; /* Adjust width to fit content */
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        width: auto; 
+        margin: 0;
+        padding: 0; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .contact-info .contact-text, .quick-links .link-text, .service-links .service-text {
-        margin: 0; /* Remove margin */
+        margin: 0; 
     }
 
     .link-item, .service-item, .contact-item {
-        margin: 10px 0; /* Adjust margin */
+        margin: 10px 0; 
         display: flex;
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center items horizontally */
+        align-items: center; 
+        justify-content: center; 
     }
 
-    /* Move only the arrows and center them */
     .link-arrow, .service-arrow {
-        position: relative; /* Use relative positioning */
-        margin-right: 10px; /* Adjust spacing between arrow and text */
-        font-size: 18px; /* Adjust size for mobile */
-        left: 0; /* Center the arrows horizontally */
+        position: relative; 
+        margin-right: 10px; 
+        font-size: 18px; 
+        left: 0; 
     }
 
     .contact-icon {
-        margin-left: -90px; /* Adjust this value to move the icon further left */
-        width: 20px; /* Adjust size for mobile */
+        margin-left: -90px; 
+        width: 20px; 
         height: 20px;
     }
 
     .newsletter-header {
-        margin: 0; /* Remove margin */
+        margin: 0; 
     }
 
   .newsletter-box {
     display: flex;
-    flex-direction: column; /* Stack input and button vertically */
-    align-items: center; /* Center horizontally */
-    margin-top: 20px; /* Add margin-top to move it down */
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px; 
 }
 
 .newsletter-input {
-    width: 100%; /* Full width for input */
-    max-width: 300px; /* Ensure it doesn't get too wide */
-    margin-bottom: 10px; /* Space between input and button */
-    text-align: left; /* Center text within input */
+    width: 100%; 
+    max-width: 300px; 
+    margin-bottom: 10px; 
+    text-align: left; 
 }
 
 .newsletter-btn {
-    width: auto; /* Allow button to adjust width based on content */
-    max-width: 300px; /* Limit the maximum width */
-    height: 40px; /* Adjust height for a more compact button */
-    font-size: 14px; /* Adjust font size for readability */
-    padding: 0 60px; /* Adjust horizontal padding */
-    background-color: #ffcccc; /* Button background color */
-    color: #000; /* Button text color */
-    border: 2px solid #000; /* Button border color */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center text within button */
-    margin-top: 5px; /* Reduce margin-top for better spacing */
-    align-self: right; /* Ensure button is centered in its flex container */
+    width: auto; 
+    max-width: 300px; 
+    height: 40px; 
+    font-size: 14px; 
+    padding: 0 60px; 
+    background-color: #ffcccc; 
+    color: #000; 
+    border: 2px solid #000; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    text-align: center; 
+    margin-top: 5px; 
+    align-self: right;
 }
 
     .newsletter-icons {
-        margin-top: 30px; /* Adjust margin */
-        justify-content: center; /* Center icons */
+        margin-top: 30px; 
+        justify-content: center; 
     }
 
     .newsletter-icon {
-        margin: 0 10px; /* Adjust spacing between icons */
+        margin: 0 10px;
     }
 
     .footer-bottom {
-        text-align: center; /* Center text */
-        margin: 10px 0; /* Adjust margin */
-        margin-left: 0; /* Remove left margin */
+        text-align: center;
+        margin: 10px 0; 
+        margin-left: 0; 
     }
 }
 
